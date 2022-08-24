@@ -650,7 +650,17 @@ The field has become of significance due to the expanded reliance on [computer s
 
 cryptography
 
+[Artificial Intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence):
 
+ [intelligent agents](https://en.wikipedia.org/wiki/Intelligent_agent)：智能工具
+
+machine learning: 
+
+[computer vision](https://en.wikipedia.org/wiki/Computer_vision): **Computer vision** is an [interdisciplinary scientific field](https://en.wikipedia.org/wiki/Interdisciplinarity) that deals with how [computers](https://en.wikipedia.org/wiki/Computer) can gain high-level understanding from [digital images](https://en.wikipedia.org/wiki/Digital_image) or [videos](https://en.wikipedia.org/wiki/Video). From the perspective of [engineering](https://en.wikipedia.org/wiki/Engineering), it seeks to understand and automate tasks that the [human visual system](https://en.wikipedia.org/wiki/Human_visual_system) can do.[[1\]](https://en.wikipedia.org/wiki/Computer_vision#cite_note-Ballard-Brown-1982-1)[[2\]](https://en.wikipedia.org/wiki/Computer_vision#cite_note-Huang-1996-2)
+
+> **计算机视觉**是一个[跨学科的科学领域](https://en.wikipedia.org/wiki/Interdisciplinarity)，涉及[计算机](https://en.wikipedia.org/wiki/Computer)如何从[数字图像](https://en.wikipedia.org/wiki/Digital_image)或[视频](https://en.wikipedia.org/wiki/Video)中获得高水平的理解。从[工程](https://en.wikipedia.org/wiki/Engineering)的角度来看，它试图理解并自动完成[人类视觉系统](https://en.wikipedia.org/wiki/Human_visual_system)可以完成的任务。[[1]](https://en.wikipedia.org/wiki/Computer_vision#cite_note-Ballard-Brown-1982-1)[[2]](https://en.wikipedia.org/wiki/Computer_vision#cite_note-Huang-1996-2)
+
+[Natural Language Processing](https://en.wikipedia.org/wiki/Natural_language_processing): 
 
 virtual reality
 

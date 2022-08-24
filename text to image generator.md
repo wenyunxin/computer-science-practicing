@@ -144,6 +144,12 @@ psychedelic wings, diffuse lighting, fantasy, intricate, elegant, highly detaile
 
 "a cute black cat by Studio Ghibli" -n 4 -i
 
+### stable diffusion official version prompt
+
+A dream of a distant galaxy, by Caspar David Friedrich, matte painting trending on artstation HQ
+
+
+
 ### prompt
 
 from 和菜头：
@@ -160,7 +166,9 @@ my experiment:
 
 a beautiful landscape matte painting of cherry trees with petals flying in the sky, beside a river, by Christophe Vacher, Trending on artstation ——效果不是想象中的那样
 
-an oil on canvas of a village, by Gediminas Pranckevicius, Trending on artstation
+a village, by Gediminas Pranckevicius
+
+a cinematic hyperrealism highly detailed photograph of blue ocean, by Gediminas Pranckevicius, Trending on artstation 
 
 
 
@@ -213,42 +221,6 @@ an oil on canvas of a village, by Gediminas Pranckevicius, Trending on artstatio
 **a film noir of** blue ocean, by Caspar David Friedrich, Trending on artstation （拍一部关于大海的黑色电影，从中截下一张剧照？）
 
 
-
-my prompt:
-
-电影导演是否可以作为艺术家参数？
-
-画宫崎骏的《天空之城》的场景：A beautiful detailed landscape matte painting of Castle in the Sky, by Hayao Miyazaki 出8图，有点动画场景的意思
-
-鹰击长空，鱼翔浅底：A beautiful painting of eagle flying the  sky and fish in the shallows, by Rob Gonsalves 效果不佳
-
-a serene landscape of an island with tangerine trees, beside a river, by Christophe Vacher 效果不佳
-
-a serene landscape of a river island, by Peter Mohrbacher 效果不佳
-
-a serene landscape of a lake, by Rob Gonsalves（这个艺术家画风景画效果不是很好）
-
-a serene landscape of a lake  出三图，标准风景画
-
-a beautiful detailed landscape matte painting of a delta 有点效果
-
-a beautiful detailed landscape of Rome 效果不佳
-
-a serene landscape of continuous mountains 出三图，有点像水墨画
-
-a serene landscape of sea, fly seagull over it 出三图，效果极差
-
-a serene landscape of a forest 出三图，标准风景画
-
-a serene landscape of sunrise seacoast 出三图，效果不佳
-
-A beautiful detailed landscape matte painting of coastal sunset, by Caspar David Friedrich, Trending on artstation 出四图，两种意境可以
-
-a serene landscape of a garden 出三图，一图可以，有画作的感觉
-
-**A scenic view of a Scottish loch in the Isle of Skye** 出三图，噪点大，一图标准风景图
-
-**A scenic view of a lake in the fjords, by David Noton**
 
 ## Tips for Disco Duffision
 
