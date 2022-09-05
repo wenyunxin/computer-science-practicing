@@ -1502,3 +1502,40 @@ Dash集成各个编程语言的API？Github的Coplite插件？
 [OA.mg](https://oa.mg/): 论文搜索网站
 
 [top 5 product and management skills: SQL, Excel, Clear Communication, Story, Prioritization](https://www.craigkerstiens.com/2021/04/27/top-5-product-and-management-skills-sql-excel-clear-communication-story-prioritization/)
+
+## [阮一峰科技周刊2.26](https://www.ruanyifeng.com/blog/2022/08/weekly-issue-220.html)
+
+[OpenAI](https://openai.com/blog/dall-e-now-available-in-beta/)公司的人工智能模型[DALL-E 2](https://openai.com/dall-e-2/)，最近向社会公众开放。
+
+“**而要把人工智能看成放大自己能力、扩大成果的一个机会**”
+
+“人工智能正在遍地开花，影响的绝不仅仅是设计师：GitHub 公司的 Copilot 软件会自动生成代码（替代程序员），OpenAI 公司的 GPT-3 模型会生成文本（替代作家），Deepmind 公司的 Alphafold 模型会预测蛋白质结构（替代生化学家）...... 而且，它们还在以极快速度进化，每天都变得更加"智能"。
+
+我认为，理智的态度不是去挑战或否定人工智能，幻想人类有胜过它们之处，也不是感到焦虑和绝望。唯一可行的选择就是把它们看成是一个机会，它们是更好更值得学习和使用的工具，我们应该主动去了解这些模型，适应它们，使用它们，尽快将它们转化为自己的生产力。
+
+如果我是一个设计师，现在就会学习使用 DALL·E 2，看看怎么发挥它的最大作用。毕竟如果这种模型会成功，肯定离不开推广和操作它的人，机会也许就在这里，与其把它留给别人，不如早点拿在自己手里。”
+
+其实拥抱人工智能是未来人类生活的主旋律，人工智能是数字生产力。用机器学习的方法学习机器学习。
+
+[高级大头照服务](https://www.wsj.com/articles/perfect-linkedin-profile-headshot-photo-is-worth-1-000-and-a-job-11660160047)：很多求职网站和社交网站，需要上传真人头像。给人留下的印象越好，越能获取所想要的意向。
+
+红帽子播客：[Command Line Heroes](https://www.redhat.com/en/command-line-heroes)
+
+## [阮一峰科技周刊9.2](https://www.ruanyifeng.com/blog/2022/09/weekly-issue-221.html)
+
+[视频直播统计数据](https://www.statista.com/topics/8906/live-streaming/#dossierKeyfigures)
+
+[马斯克：星链手机连网](https://www.cnbc.com/2022/08/25/spacex-and-t-mobile-team-up-to-use-starlink-satellites.html)
+
+[大疆无人机飞越珠峰](https://www.youtube.com/watch?v=Zz9oI3B6v4c)
+
+[音频转换为视频](https://astrofox.io/)
+
+[Stable Diffusion模型](https://github.com/CompVis/stable-diffusion)
+
+[王建硕谈什么是web3](https://www.youtube.com/watch?v=1QKbm3Sv2Uw)
+
+[The new old way of learning languages:](https://theamericanscholar.org/the-new-old-way-of-learning-languages/) Zipf定律，即任何单词的词频，与该单词在词频表中的排名保持一个固定比例。
+
+[on the phenomenon of bullshit jobs](https://www.strike.coop/bullshit-jobs/)
+

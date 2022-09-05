@@ -134,6 +134,8 @@ entrance of a fabulous marble and gold castle in the sun, surrouoded with mystic
 
 “a gargantuan ancient chinese palace under deep ocean with Coral, Fish and Seagrass by Wadim Kashin, featured in artstation, octane render, cinematic, elegant, intricate, 8k" -H 576 -W 960 -C 12.0 -n 8 -i
 
+a hyperdetailed digital oil portrait of a bookish college student wearing glasses, in the style of Guy Denning and Ruan Jia. Trending on ArtStation and DeviantArt. Digital art.
+
 肖像画：A hyperdetailed digital oil portrait painting of a gorilla in the style of Guy Denning and Ruan Jia. Trending on ArtStation and DeviantArt. Digital art.
 
 "a Space X design inspired, white colored, tall rounded rectangular shaped multi-level cargo personnel planetary transport vehicle with orange accents, wires and tubes, communication systems, antennas, on top is a hemisphere shaped life support pod, stairs, off road wheels, on a flat desert planet, sunlight, dramatic contrasting light, high quality, 3D render, long shot, clear blue sky, detailed" -n 8 -i -S 1692814302
@@ -168,7 +170,7 @@ a beautiful landscape matte painting of cherry trees with petals flying in the s
 
 a village, by Gediminas Pranckevicius
 
-a cinematic hyperrealism highly detailed photograph of blue ocean, by Gediminas Pranckevicius, Trending on artstation 
+a abstract flat color Low Poly style vector design of a mountain, by Gediminas Pranckevicius, Trending on artstation
 
 
 
@@ -196,7 +198,7 @@ a cinematic hyperrealism highly detailed photograph of blue ocean, by Gediminas 
 
 （注意，flat color 和 designed poster 跟 Caspar David Friedrich 这位艺术家的风格特征冲突））
 
-**a abstract flat color Low Poly style vector design of** blue ocean, by Caspar David Friedrich, Trending on artstatio （抽象风格的 Low Poly 矢量画，平涂颜色（Low Poly 需要搭配步数和切片类的参数的设置才能取得更好的效果，垫底图更好））
+**a abstract flat color Low Poly style vector design of** blue ocean, by Caspar David Friedrich, Trending on artstation （抽象风格的 Low Poly 矢量画，平涂颜色（Low Poly 需要搭配步数和切片类的参数的设置才能取得更好的效果，垫底图更好））
 
 **a detailed woodcut print of** ocean and sailing, Expressionism genre, by Ansel Adams （木刻版画 不朽的 Ansel Adams 比 black & white 这样的颜色修饰词还要好用。德国表现主义是一种咆哮、扭曲、尖锐、黑暗、充满张力、愤怒和破碎感的流派，代表画家席勒、蒙克、柯勒惠支、柯克西卡和康定斯基）
 

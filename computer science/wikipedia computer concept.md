@@ -1931,4 +1931,308 @@ Cluster analysis is the assignment of a set of observations into subsets (called
 >
 > 聚类分析是将一组观察值分配到子集（称为*聚类*）中，以便根据一个或多个预先指定的标准，同一聚类中的观察值是相似的，而来自不同聚类的观察值是不相似的。不同的聚类技术对数据的结构做了不同的假设，通常由一些*相似性指标*来定义，例如，通过*内部紧凑性*，或同一聚类成员之间的相似性，以及*分离*，聚类之间的差异来评估。其他方法是基于*估计的密度*和*图形连接*。
 >
-> 
+
+
+
+---
+
+# Metasyntax
+
+In [logic](https://en.wikipedia.org/wiki/Logic) and [computer science](https://en.wikipedia.org/wiki/Computer_science), a **metasyntax** describes the allowable structure and composition of phrases and sentences of a [metalanguage](https://en.wikipedia.org/wiki/Metalanguage), which is used to describe either a [natural language](https://en.wikipedia.org/wiki/Natural_language) or a computer [programming language](https://en.wikipedia.org/wiki/Programming_language).[[1\]](https://en.wikipedia.org/wiki/Metasyntax#cite_note-1) Some of the widely used formal metalanguages for computer languages are [Backus–Naur form](https://en.wikipedia.org/wiki/Backus–Naur_form) (BNF), [extended Backus–Naur form](https://en.wikipedia.org/wiki/Extended_Backus–Naur_form) (EBNF), [Wirth syntax notation](https://en.wikipedia.org/wiki/Wirth_syntax_notation) (WSN), and [augmented Backus–Naur form](https://en.wikipedia.org/wiki/Augmented_Backus–Naur_form) (ABNF).
+
+> 在[逻辑学](https://en.wikipedia.org/wiki/Logic)和[计算机科学](https://en.wikipedia.org/wiki/Computer_science)中，**元语法**描述了被用来描述[自然语言](https://en.wikipedia.org/wiki/Natural_language)或计算机[编程语言](https://en.wikipedia.org/wiki/Programming_language)的[元语言](https://en.wikipedia.org/wiki/Metalanguage)的可允许的结构和短语和句子的组成。一些广泛使用的计算机语言的形式元语言是[Backus-Naur形式](https://en.wikipedia.org/wiki/Backus-Naur_form)（BNF），[扩展的Backus-Naur形式](https://en.wikipedia.org/wiki/Extended_Backus-Naur_form)（EBNF），[Wirth syntax notation](https://en.wikipedia.org/wiki/Wirth_syntax_notation)（WSN），以及[增强的Backus-Naur形式](https://en.wikipedia.org/wiki/Augmented_Backus-Naur_form) （ABNF）。
+
+These metalanguages have their own metasyntax each composed of [terminal symbols](https://en.wikipedia.org/wiki/Terminal_symbol), [nonterminal symbols](https://en.wikipedia.org/wiki/Nonterminal_symbol), and *metasymbols*. A terminal symbol, such as a word or a token, is a stand-alone structure in a language being defined. A nonterminal symbol represents a [syntactic](https://en.wikipedia.org/wiki/Syntactic) category, which defines one or more valid phrasal or sentence structure consisted of an n-element subset. Metasymbols provide syntactic information for denotational purposes in a given metasyntax. Terminals, nonterminals, and metasymbols do not apply across all metalanguages.
+
+> 这些元语言有自己的元语法，每一种都由[终端符号](https://en.wikipedia.org/wiki/Terminal_symbol)、[非终端符号](https://en.wikipedia.org/wiki/Nonterminal_symbol)和*元符号*组成。一个终端符号，如一个词或一个标记，是被定义的语言中一个独立的结构。一个非终端符号代表一个[句法](https://en.wikipedia.org/wiki/Syntactic)类别，它定义了一个或多个由n个元素子集组成的有效短语或句子结构。元符号在特定的元语法中为指称目的提供句法信息。终端、非终端和元符号并不适用于所有元语言。
+
+Typically, the metalanguage for token-level languages (formally called "[regular languages](https://en.wikipedia.org/wiki/Regular_language)") does not have nonterminals because nesting is not an issue in these regular languages. English, as a metalanguage for describing certain languages, does not contain metasymbols since all explanation could be done using English expression. There are only certain formal metalanguages used for describing recursive languages (formally called [context-free languages](https://en.wikipedia.org/wiki/Context-free_language)) that have terminals, nonterminals, and metasymbols in their metasyntax.
+
+> 通常，标记级语言（正式名称为"[常规语言](https://en.wikipedia.org/wiki/Regular_language)"）的元语言没有非终端符，因为嵌套在这些常规语言中不是一个问题。英语，作为描述某些语言的元语言，不包含元符号，因为所有的解释都可以用英语表达。只有某些用于描述递归语言的正式元语言（正式称为[无语境语言](https://en.wikipedia.org/wiki/Context-free_language)）在其元语法中具有终端、非终端和元符号。
+
+## Element of metesyntax
+
+- Terminals: a stand-alone syntactic structure. Terminals could be denoted by double quoting the name of the terminals.
+
+  e.g. `"else"`, `"if"`, `"then"`, `while`
+
+- Nonterminals: a symbolic representation defining a set of allowable syntactic structures that is composed of a subset of elements. Nonterminals could be denoted by angle bracketing the name of the nonterminals.
+
+  e.g. `<int>`, `<char>`, `<boolean>`
+
+- Metasymbol: a symbolic representation denoting syntactic information.
+
+  e.g. `:=`, `|`, `{}`, `()`, `[]`, `*`
+
+> - 终端符：一个独立的句法结构。终端符可以通过双引号来表示终端符的名称。
+>
+>   例如：`"else"`, `"if"`, `"then"`, `"while"`。
+>
+> - 非终端符：一个符号表示法，定义了一组可允许的句法结构，由一个元素子集组成。非终结符可以用角括号表示非终结符的名称。
+>
+>   例如：`<int>`, `<char>`, `<boolean>`。
+>
+> - 元符号：表示句法信息的符号代表。
+>
+>   例如：`:=`, `|`, `{}`, `()`, `[]`, `*`。
+
+## Method of phrase termination
+
+- Juxtaposition: e.g. `A B`
+- Alternation: e.g. `A|B`
+- Repetition: e.g. `{A B}`
+- Optional phrase: e.g. `[A B]`
+- Grouping: e.g. `(A|B)`
+
+> - 并列：如：`A B`
+> - 备选：如：`A|B`
+> - 重复：例如：`{A B}`
+> - 可选短语：如：`[A B]`
+> - 分组：如：`(A|B)`
+
+## Specific metasyntax conventions
+
+### The standard convention
+
+- '[Backus–Naur form](https://en.wikipedia.org/wiki/Backus–Naur_form)' denotes [nonterminal symbols](https://en.wikipedia.org/wiki/Nonterminal_symbol) by angle bracketing the name of the [syntactic category](https://en.wikipedia.org/wiki/Syntactic_category), while it denotes [terminal symbols](https://en.wikipedia.org/wiki/Terminal_symbol) by double quoting the terminal words. Terminals can never appear on the left-hand side of the metasymbol `::=` in a [derivation](https://en.wikipedia.org/wiki/Parse_tree) rule. The body of the definition on the right-hand side may be composed with several alternative forms with each alternative syntactic construct being separated by the metasymbol `|`. Each of these alternative construct may be either terminal or nonterminal.
+
+> '[Backus-Naur形式](https://en.wikipedia.org/wiki/Backus-Naur_form)'通过角括号表示[非终端符号](https://en.wikipedia.org/wiki/Nonterminal_symbol)，而它通过双引号扩住终端词表示[终端符号](https://en.wikipedia.org/wiki/Terminal_symbol)。在[派生](https://en.wikipedia.org/wiki/Parse_tree)（语法分析树）规则中，终端词永远不能出现在元符号`::=`的左侧。右侧的定义主体可以由几个备选形式组成，每个备选的句法结构都由元符号`|`分隔。每个备选结构都可以是终端符或非终端符。
+
+- '[Extended Backus–Naur form](https://en.wikipedia.org/wiki/Extended_Backus–Naur_form)' uses all facilities in BNF and introduces two more metasymbols for additional features. One of these two new features is applied to denote an optional phrase in a statement by square bracketing the optional phrase. The second feature is applied to denote a phrase that is to be repeated zero or more times by curly bracketing the phrase.
+
+> '[Extended Backus-Naur form](https://en.wikipedia.org/wiki/Extended_Backus-Naur_form)'使用了BNF中的所有功能，并为额外的特征引入了两个元符号。这两个新特征中的一个被用来表示语句中的可选短语，即用方括号表示可选短语。第二个特征用于表示一个重复了0次或更多次的短语，用大括号括住该短语。
+
+- '[Wirth syntax notation](https://en.wikipedia.org/wiki/Wirth_syntax_notation)' uses all facilities in EBNF except that the nonterminals are not necessarily angle bracketed but is always defined on the right-hand side of `=` in its production rule. It also does not require every nonterminal to be explicitly defined. Nonterminals such as `<text>` and `<opt-whitespace>` are implicitly defined as ASCII-character and optional white space respectively.
+
+> '[Wirth syntax notation](https://en.wikipedia.org/wiki/Wirth_syntax_notation)'使用EBNF中的所有功能，除了非终端不一定要用角括号，但在其产生规则中总是定义在`=`的右侧。它也不要求每个非终端符都被明确定义。诸如`<text>`和`<opt-whitespace>`这样的非终端符分别被隐含地定义为ASCII字符和可选的空格。
+
+- '[Augmented Backus–Naur form](https://en.wikipedia.org/wiki/Augmented_Backus–Naur_form)' denotes nonterminal symbols by starting a one-word-name with an alphabet as the name of the syntactic category. Angle brackets are not required. Terminal symbols are either denoted by double quoted words or denoted by the following numeric structure: a `%`, followed by `b` or `x` or `d`, followed by a numeric value or a *concatenation of numeric values* separated by `.`. Metasymbol `-` is placed between two numeric values to denote *value range*. As that of BNF, the terminals of ABNF never occurs on the left-hand-side of the metasymbol `=` in the derivation rule. Metasymbol `/` denotes *alternations*. White space is used to separate elements in the body of the definition. The metasyntax for *repetition* in ABNF has several forms. A `*` preceding an element denotes the element to be repeated zero or more times. Numeric value n1 followed by `*` followed by numeric value n2 followed by an element denotes the element to be repeated at least n1 times and at most n2 times. A single numeric value n preceding an element denotes the element to be repeated n times. *Comments* may be express after metasymbol `;`. As in EBNF, square bracketing a phrase denotes the phrase to be *optional*.
+
+> '[Augmented Backus-Naur form](https://en.wikipedia.org/wiki/Augmented_Backus-Naur_form)'通过以一个字母作为句法类别的名称开始一个单字名来表示非终端符号。角括号是不需要的。终端符号要么用双引号表示，要么用以下数字结构表示：一个`%`，后面是`b`或`x`或`d`，后面是一个数字值或一个由`.`分隔的*数字值的连词*。元符号`-`放在两个数值之间，表示*数值范围*。和BNF一样，ABNF的终端永远不会出现在派生规则中的元符号`=`的左侧。元符号`/`表示*备选项*。空格用于分隔定义主体中的元素。ABNF中的*重复*的元语法有几种形式。一个元素前面的`*`表示该元素将被重复零次或多次。数字值n1后面是`*`，后面是数字值n2，后面是一个元素，表示这个元素至少要重复n1次，最多重复n2次。一个元素前的单一数值n表示该元素将被重复n次。*注释*可以在元符号`;`之后表达。在EBNF中，一个短语的方括号表示该短语是*可选择的*。
+
+### Variations
+
+The metasyntax convention of these formal metalanguages are not yet formalized. Many metasyntactic variations or extensions exist in the reference manual of various computer programming languages. One variation to the standard convention for denoting nonterminals and terminals is to remove metasymbols such as angle brackets and quotations and apply *font types* to the intended words. In [Ada](https://en.wikipedia.org/wiki/Ada_(programming_language)), for example, syntactic categories are denoted by applying lower case [sans-serif font](https://en.wikipedia.org/wiki/Sans-serif_font) on the intended words or symbols. All terminal words or symbols, in Ada, consist of characters of code position between 16#20# and 16#7E# (inclusive). The definition for each character set is referred to the International Standard described by [ISO/IEC](https://en.wikipedia.org/wiki/ISO/IEC) 10646:2003. In [C](https://en.wikipedia.org/wiki/C_(programming_language)) and [Java](https://en.wikipedia.org/wiki/Java_(programming_language)), syntactic categories are denoted using [italic font](https://en.wikipedia.org/wiki/Italic_font) while terminal symbols are denoted by [gothic](https://en.wikipedia.org/wiki/Sans-serif) font. In [J](https://en.wikipedia.org/wiki/J_(programming_language)), its metasyntax does not apply metasymbols to describe J's syntax at all. Rather, all syntactic explanations are done in a metalanguage very similar to English called Dictionary, which is uniquely documented for J.
+
+> 这些形式化的元语言的元语法惯例还没有正式确定。在各种计算机编程语言的参考手册中存在许多元语法的变化或扩展。表示非终端和终端的标准惯例的一个变体是删除元符号，如角括号和引号，并将*字体类型*应用于预定的词语。例如，在[Ada](https://en.wikipedia.org/wiki/Ada_(programming_language))中，句法类别的表示方法是将小写的[sans-serif font](https://en.wikipedia.org/wiki/Sans-serif_font)应用于预期的单词或符号。在Ada中，所有的终端词或符号都由代码位置在16#20#和16#7E#（包括）之间的字符组成。每个字符集的定义都参考了[ISO/IEC](https://en.wikipedia.org/wiki/ISO/IEC) 10646:2003所描述的国际标准。在[C](https://en.wikipedia.org/wiki/C_(programming_language))和[Java](https://en.wikipedia.org/wiki/Java_(programming_language))中，句法类别用[斜体](https://en.wikipedia.org/wiki/Italic_font)表示，而终端符号则用[哥特式](https://en.wikipedia.org/wiki/Sans-serif)字体表示。在[J](https://en.wikipedia.org/wiki/J_(programming_language))中，其元语法完全没有应用元符号来描述J的句法。相反，所有的句法解释都是在一种与英语非常相似的元语言中完成的，这种语言被称为Dictionary，是J独有的文档。
+
+### Advantage of extension
+
+The purpose of the new extensions is to provide a simpler and unambiguous metasyntax. In terms of simplicity, BNF's metanotation definitely does not help to make the metasyntax easier-to-read as the open-end and close-end metasymbols appear too abundantly. In terms of ambiguity, BNF's metanotation generates unnecessary complexity when quotation marks, apostrophes, less-than signs or greater-than signs come to serve as terminal symbols, which they often do. The extended metasyntax utilizes properties such as case, font, and code position of characters to reduce unnecessary aforementioned complexity. Moreover, some metalanguages use fonted separator categories to incorporate metasyntactic features for layout conventions, which are not formally supported by BNF.
+
+> 新扩展的目的是为了提供一个更简单和明确的元语法。就简单性而言，BNF的元注释绝对无助于使元语法更容易阅读，因为开口和闭口的元符号出现得太多了。在模糊性方面，当引号、撇号、小于号或大于号被用作终端符号时，BNF的元符号产生了不必要的复杂性，而它们经常这样做。扩展的元语法利用字符的大小写、字体和代码位置等属性来减少上述不必要的复杂性。此外，一些元语言使用字体化的分隔符类别来纳入布局惯例的元语法特征，而这并没有得到BNF的正式支持。
+
+## See also
+
+- [Adaptive grammar](https://en.wikipedia.org/wiki/Adaptive_grammar)
+- [Comparison of parser generators](https://en.wikipedia.org/wiki/Comparison_of_parser_generators)
+- [Metapragmatics](https://en.wikipedia.org/wiki/Metapragmatics)
+- [Metasemantics](https://en.wikipedia.org/wiki/Metasemantics)
+- [Metavariable (logic)](https://en.wikipedia.org/wiki/Metavariable_(logic))
+
+
+
+---
+
+# Backus-Naur form
+
+In [computer science](https://en.wikipedia.org/wiki/Computer_science), **Backus–Naur form** ([/ˌbækəs ˈnaʊər/](https://en.wikipedia.org/wiki/Help:IPA/English)) or **Backus normal form** (**BNF**) is a [metasyntax](https://en.wikipedia.org/wiki/Metasyntax) notation for [context-free grammars](https://en.wikipedia.org/wiki/Context-free_grammar), often used to describe the [syntax](https://en.wikipedia.org/wiki/Syntax_(programming_languages)) of [languages](https://en.wikipedia.org/wiki/Formal_language#Programming_languages) used in computing, such as computer [programming languages](https://en.wikipedia.org/wiki/Programming_language), [document formats](https://en.wikipedia.org/wiki/Document_format), [instruction sets](https://en.wikipedia.org/wiki/Instruction_set) and [communication protocols](https://en.wikipedia.org/wiki/Communication_protocol). They are applied wherever exact descriptions of languages are needed: for instance, in official language specifications, in manuals, and in textbooks on programming language theory.
+
+> 在[计算机科学](https://en.wikipedia.org/wiki/Computer_science)中，**Backus-Naur形式**（[/ˌbækəs ˈnaʊər/](https://en.wikipedia.org/wiki/Help:IPA/English)）或**Backus normal form**（**BNF**）是[无语境语法](https://en.wikipedia.org/wiki/Metasyntax)的一种[元语法](https://en.wikipedia.org/wiki/Context-free_grammar)符号，通常用于描述计算机中使用的语言的语法，用于计算机[编程语言](https://en.wikipedia.org/wiki/Programming_language)、[文档格式](https://en.wikipedia.org/wiki/Document_format)、[指令集](https://en.wikipedia.org/wiki/Instruction_set)和[通信协议](https://en.wikipedia.org/wiki/Communication_protocol)。它们被应用于需要对语言进行精确描述的地方：例如，在官方语言规范、手册和编程语言理论的教科书中。
+
+Many extensions and variants of the original Backus–Naur notation are used; some are exactly defined, including [extended Backus–Naur form](https://en.wikipedia.org/wiki/Extended_Backus–Naur_form) (EBNF) and [augmented Backus–Naur form](https://en.wikipedia.org/wiki/Augmented_Backus–Naur_form) (ABNF).
+
+> 使用了许多原始Backus-Naur符号的扩展和变体；有些是确切定义的，包括[扩展Backus-Naur形式](https://en.wikipedia.org/wiki/Extended_Backus-Naur_form) (EBNF)和[增强Backus-Naur形式](https://en.wikipedia.org/wiki/Augmented_Backus-Naur_form) (ABNF)。
+>
+
+## Overview
+
+A BNF specification is a set of derivation rules, written as
+
+> BNF规范是一组推导规则，写为
+
+```bash
+<symbol> ::= __expresssion__
+```
+
+where:
+
+- \<[symbol](https://en.wikipedia.org/wiki/Symbol)> [[1\]](https://en.wikipedia.org/wiki/Backus–Naur_form#cite_note-class-1) is a *[nonterminal](https://en.wikipedia.org/wiki/Nonterminal)* (variable) and the [__expression__](https://en.wikipedia.org/wiki/Expression_(mathematics)) consists of one or more sequences of either terminal or nonterminal symbols;
+- `::=` means that the symbol on the left must be replaced with the expression on the right.
+- more sequences [of symbols] are separated by the [vertical bar](https://en.wikipedia.org/wiki/Vertical_bar) "|", indicating a [choice](https://en.wikipedia.org/wiki/Alternation_(formal_language_theory)), the whole being a possible substitution for the symbol on the left.
+
+Symbols that never appear on a left side are *[terminals](https://en.wikipedia.org/wiki/Terminal_symbol)*. On the other hand, symbols that appear on a left side are *[non-terminals](https://en.wikipedia.org/wiki/Nonterminal_symbol)* and are always enclosed between the pair <>.[[1\]](https://en.wikipedia.org/wiki/Backus–Naur_form#cite_note-class-1)
+
+> 其中：
+>
+> - \<[symbol](https://en.wikipedia.org/wiki/Symbol)> [[1]](https://en.wikipedia.org/wiki/Backus-Naur_form#cite_note-class-1)是一个*[非终端符](https://en.wikipedia.org/wiki/Nonterminal)*(变量)，[\__expression__](https://en.wikipedia.org/wiki/Expression_(数学))由一个或多个终端或非终端符号的序列组成。
+> - `::=`意味着左边的符号必须被右边的表达式所替换。
+> - 更多的[符号]序列被[竖条](https://en.wikipedia.org/wiki/Vertical_bar)"|"隔开，表示一个[选择](https://en.wikipedia.org/wiki/Alternation_(formal_language_theory))，整体是左边的符号的可能替代物。
+>
+> 从未出现在左边的符号是*[终端符](https://en.wikipedia.org/wiki/Terminal_symbol)*。另一方面，出现在左边的符号是*[非终端符](https://en.wikipedia.org/wiki/Nonterminal_symbol)*，并且总是被包围在一对<>之间。
+
+## Example
+
+As an example, consider this possible BNF for a U.S. [postal address](https://en.wikipedia.org/wiki/Address_(geography)):
+
+> 作为一个例子，思考一下美国[邮政地址](https://en.wikipedia.org/wiki/Address_(geography))的这个可能的BNF：
+
+```bash
+<postal-address> ::= <name-part> <street-address> <zip-part>
+<name-part> ::= <personal-part> <last-name> <opt-suffix-part> <EOL> | <personal-part> <name-part>
+<personal-part> ::= <initial> "." | <first-name>
+<street-address> ::= <house-num> <street-num> <opt-apt-num> <EOL>
+<zip-part> ::= <town-name> "," <state-code> <ZIP-code> <EOL>
+<opt-suffix-part> ::= "Sr." | "Jr." | <roman-numeral> | ""
+<opt-apt-num> ::= <apt-num> | ""
+```
+
+This translates into English as:
+
+- A postal address consists of a name-part, followed by a [street-address](https://en.wikipedia.org/wiki/Street_name) part, followed by a [zip-code](https://en.wikipedia.org/wiki/ZIP_Code) part.
+- A name-part consists of either: a personal-part followed by a [last name](https://en.wikipedia.org/wiki/Last_name) followed by an optional [suffix](https://en.wikipedia.org/wiki/Suffix_(name)) (Jr., Sr., or dynastic number) and [end-of-line](https://en.wikipedia.org/wiki/End-of-line), or a personal part followed by a name part (this rule illustrates the use of [recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science)) in BNFs, covering the case of people who use multiple first and middle names and initials).
+- A personal-part consists of either a [first name](https://en.wikipedia.org/wiki/First_name) or an [initial](https://en.wikipedia.org/wiki/Initial) followed by a dot.
+- A street address consists of a house number, followed by a street name, followed by an optional [apartment](https://en.wikipedia.org/wiki/Apartment) specifier, followed by an end-of-line.
+- A zip-part consists of a [town](https://en.wikipedia.org/wiki/Town)-name, followed by a comma, followed by a [state code](https://en.wikipedia.org/wiki/U.S._postal_abbreviations), followed by a ZIP-code followed by an end-of-line.
+- An opt-suffix-part consists of a suffix, such as "Sr.", "Jr." or a [roman-numeral](https://en.wikipedia.org/wiki/Roman_numerals), or an empty string (i.e. nothing).
+- An opt-apt-num consists of an apartment number or an empty string (i.e. nothing).
+
+Note that many things (such as the format of a first-name, apartment number, ZIP-code, and Roman numeral) are left unspecified here. If necessary, they may be described using additional BNF rules.
+
+> 这句话翻译成英文就是：
+>
+> - 邮政地址由姓名部分组成，然后是[街道地址](https://en.wikipedia.org/wiki/Street_name)部分，然后是[邮政编码](https://en.wikipedia.org/wiki/ZIP_Code)部分。
+> - 姓名部分包括：个人部分，后面是[姓氏](https://en.wikipedia.org/wiki/Last_name)，后面是可选的[后缀](https://en.wikipedia.org/wiki/Suffix_(name))(Jr., Sr., or dynastic number)和[行末](https://en.wikipedia.org/wiki/End-of-line)，或者个人部分后面是姓名部分（此规则说明了BNF中[递归](https://en.wikipedia.org/wiki/Recursion_(computer_science))的使用，包括使用多个姓和中名及首字母的人的情况）。
+> - 个人部分由[名](https://en.wikipedia.org/wiki/First_name)或[首字母](https://en.wikipedia.org/wiki/Initial)组成，后面有一个点。
+> - 一个街道地址由一个门牌号和一个街道名称组成，然后是一个可选的[公寓](https://en.wikipedia.org/wiki/Apartment)指定符，最后是一个行末。
+> - 一个邮编部分由一个[镇](https://en.wikipedia.org/wiki/Town)名称组成，后面是一个逗号，接着是一个[州代码](https://en.wikipedia.org/wiki/U.S._postal_abbreviations)，然后是一个邮政编码，最后是行末。
+> - opt-suffix-part由一个后缀组成，如 "Sr."、"Jr. "或[罗马数字](https://en.wikipedia.org/wiki/Roman_numerals)，或一个空字符串（即没有）。
+> - opt-apt-num由一个公寓号码或一个空字符串（即什么都没有）组成。
+>
+> 请注意，许多东西（例如名字、公寓号码、邮政编码和罗马数字的格式）在这里没有被指定。如果有必要，可以使用额外的BNF规则来描述它们。
+
+## History
+
+The idea of describing the structure of language using [rewriting rules](https://en.wikipedia.org/wiki/Rewrite_rule) can be traced back to at least the work of [Pāṇini](https://en.wikipedia.org/wiki/Pāṇini), an ancient Indian Sanskrit grammarian and a revered scholar in Hinduism who lived sometime between the 6th and 4th century [BC](https://en.wikipedia.org/wiki/Before_Christ).[[2\]](https://en.wikipedia.org/wiki/Backus–Naur_form#cite_note-2)[[3\]](https://en.wikipedia.org/wiki/Backus–Naur_form#cite_note-3) His notation to describe [Sanskrit](https://en.wikipedia.org/wiki/Sanskrit) word structure is equivalent in power to that of Backus and has many similar properties.
+
+In Western society, grammar was long regarded as a subject for teaching, rather than scientific study; descriptions were informal and targeted at practical usage. In the first half of the 20th century, [linguists](https://en.wikipedia.org/wiki/Linguistics) such as [Leonard Bloomfield](https://en.wikipedia.org/wiki/Leonard_Bloomfield) and [Zellig Harris](https://en.wikipedia.org/wiki/Zellig_Harris) started attempts to formalize the description of language, including phrase structure.
+
+Meanwhile, [string rewriting rules](https://en.wikipedia.org/wiki/Semi-Thue_system) as [formal logical systems](https://en.wikipedia.org/wiki/Formal_logical_systems) were introduced and studied by mathematicians such as [Axel Thue](https://en.wikipedia.org/wiki/Axel_Thue) (in 1914), [Emil Post](https://en.wikipedia.org/wiki/Emil_Post) (1920s–40s) and [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) (1936). [Noam Chomsky](https://en.wikipedia.org/wiki/Noam_Chomsky), teaching linguistics to students of [information theory](https://en.wikipedia.org/wiki/Information_theory) at [MIT](https://en.wikipedia.org/wiki/MIT), combined linguistics and mathematics by taking what is essentially Thue's formalism as the basis for the description of the syntax of [natural language](https://en.wikipedia.org/wiki/Natural_language). He also introduced a clear distinction between generative rules (those of [context-free grammars](https://en.wikipedia.org/wiki/Context-free_grammar)) and transformation rules (1956).[[4\]](https://en.wikipedia.org/wiki/Backus–Naur_form#cite_note-4)[[5\]](https://en.wikipedia.org/wiki/Backus–Naur_form#cite_note-Chomsky1957-5)
+
+> 用[改写规则](https://en.wikipedia.org/wiki/Rewrite_rule)来描述语言结构的想法至少可以追溯到[Pāṇini](https://en.wikipedia.org/wiki/Pāṇini)的工作，他是古代印度的梵文语法学家，也是印度教中受人尊敬的学者，生活在[公元前](https://en.wikipedia.org/wiki/Before_Christ)6世纪的某个时期。[[2\]](https://en.wikipedia.org/wiki/Backus-Naur_form#cite_note-2)[[3\]](https://en.wikipedia.org/wiki/Backus-Naur_form#cite_note-3) 他用来描述[梵文](https://en.wikipedia.org/wiki/Sanskrit)单词结构的符号与Backus的功能相当，有很多类似的特性。
+>
+> 在西方社会，语法长期以来被视为教学科目，而不是科学研究；描述是非正式的，以实际使用为目标。在20世纪上半叶，[语言学家](https://en.wikipedia.org/wiki/Linguistics)如[Leonard Bloomfield](https://en.wikipedia.org/wiki/Leonard_Bloomfield)和[Zellig Harris](https://en.wikipedia.org/wiki/Zellig_Harris)开始尝试将语言的描述正规化，包括短语结构。
+>
+> 同时，[字符串重写规则](https://en.wikipedia.org/wiki/Semi-Thue_system)作为[形式逻辑系统](https://en.wikipedia.org/wiki/Formal_logical_systems)被数学家引入并研究，如[Axel Thue](https://en.wikipedia.org/wiki/Axel_Thue)（1914年）、[Emil Post](https://en.wikipedia.org/wiki/Emil_Post)（1920-40年代）和[Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing)（1936）。[Noam Chomsky](https://en.wikipedia.org/wiki/Noam_Chomsky)在[麻省理工学院](https://en.wikipedia.org/wiki/MIT)向[信息论](https://en.wikipedia.org/wiki/Information_theory)的学生讲授语言学，他把语言学和数学结合起来，把本质上是Thue的形式主义作为描述[自然语言](https://en.wikipedia.org/wiki/Natural_language)语法的基础。他还介绍了生成规则（那些[无语境语法](https://en.wikipedia.org/wiki/Context-free_grammar)）和转换规则（1956）之间的明确区别。[[4\]](https://en.wikipedia.org/wiki/Backus-Naur_form#cite_note-4)
+
+[John Backus](https://en.wikipedia.org/wiki/John_Backus), a programming language designer at [IBM](https://en.wikipedia.org/wiki/IBM), proposed a [metalanguage](https://en.wikipedia.org/wiki/Metalanguage) of "metalinguistic formulas"[[1\]](https://en.wikipedia.org/wiki/Backus–Naur_form#cite_note-class-1)[[7\]](https://en.wikipedia.org/wiki/Backus–Naur_form#cite_note-Backus.1969-7)[[8\]](https://en.wikipedia.org/wiki/Backus–Naur_form#cite_note-8) to describe the syntax of the new programming language IAL, known today as [ALGOL 58](https://en.wikipedia.org/wiki/ALGOL_58) (1959). His notation was first used in the ALGOL 60 report.
+
+BNF is a notation for Chomsky's context-free grammars. Backus was familiar with Chomsky's work.[[9\]](https://en.wikipedia.org/wiki/Backus–Naur_form#cite_note-9)
+
+As proposed by Backus, the formula defined "classes" whose names are enclosed in angle brackets. For example, `<ab>`. Each of these names denotes a class of basic symbols.[[1\]](https://en.wikipedia.org/wiki/Backus–Naur_form#cite_note-class-1)
+
+Further development of [ALGOL](https://en.wikipedia.org/wiki/ALGOL) led to [ALGOL 60](https://en.wikipedia.org/wiki/ALGOL_60). In the committee's 1963 report, [Peter Naur](https://en.wikipedia.org/wiki/Peter_Naur) called Backus's notation *Backus normal form*. [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) argued that BNF should rather be read as *Backus–Naur form*, as it is "not a [normal form](https://en.wikipedia.org/wiki/Normal_form_(term_rewriting)) in the conventional sense",[[10\]](https://en.wikipedia.org/wiki/Backus–Naur_form#cite_note-10) unlike, for instance, [Chomsky normal form](https://en.wikipedia.org/wiki/Chomsky_normal_form). The name *Pāṇini Backus form* was also once suggested in view of the fact that the expansion *Backus normal form* may not be accurate, and that [Pāṇini](https://en.wikipedia.org/wiki/Pāṇini) had independently developed a similar notation earlier.[[11\]](https://en.wikipedia.org/wiki/Backus–Naur_form#cite_note-11)
+
+> [John Backus](https://en.wikipedia.org/wiki/John_Backus)，[IBM](https://en.wikipedia.org/wiki/IBM)的一名编程语言设计师，提出了一种 "金属语言"(https://en.wikipedia.org/wiki/Metalanguage)[[1\]](https://en.wikipedia.org/wiki/Backus-Naur_form#cite_note-class-1)[[7\]](https://en.wikipedia.org/wiki/Backus-Naur_form#cite_note-Backus.1969-7)[[8\]](https://en.wikipedia.org/wiki/Backus-Naur_form#cite_note-8)来描述新编程语言IAL的语法，今天被称为[ALGOL 58](https://en.wikipedia.org/wiki/ALGOL_58) （1959）。他的符号在ALGOL 60报告中首次使用。
+>
+> BNF是乔姆斯基的无上下文语法的一种符号。Backus熟悉Chomsky的工作。[[9\]](https://en.wikipedia.org/wiki/Backus-Naur_form#cite_note-9)
+>
+> 按照Backus的提议，该公式定义了 "类"，其名称用角括号括起来。例如，`<ab>`。这些名称中的每一个都表示一类基本符号。[[1]](https://en.wikipedia.org/wiki/Backus-Naur_form#cite_note-class-1)
+>
+> [ALGOL](https://en.wikipedia.org/wiki/ALGOL)的进一步发展导致了[ALGOL 60](https://en.wikipedia.org/wiki/ALGOL_60)。在委员会1963年的报告中，[Peter Naur](https://en.wikipedia.org/wiki/Peter_Naur)称Backus的符号为*Backus正常形式*。[Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth)认为BNF应该被理解为*Backus-Naur形式*，因为它 "不是传统意义上的[正常形式](https://en.wikipedia.org/wiki/Normal_form_(term_rewriting))"，[[10]](https://en.wikipedia.org/wiki/Backus-Naur_form#cite_note-10)与例如[Chomsky正常形式](https://en.wikipedia.org/wiki/Chomsky_normal_form)不同。鉴于*Pāṇini Backus form*的扩展可能并不准确，而且[Pāṇini](https://en.wikipedia.org/wiki/Pāṇini)在更早的时候就独立开发了一个类似的符号，因此也曾经提出过*Pāṇini Backus form*这个名字。[[11\]](https://en.wikipedia.org/wiki/Backus-Naur_form#cite_note-11)
+
+BNF is described by Peter Naur in the ALGOL 60 report as *metalinguistic formula*:[[12\]](https://en.wikipedia.org/wiki/Backus–Naur_form#cite_note-ALGOL60RPT-12)
+
+> Sequences of characters enclosed in the brackets <> represent metalinguistic variables whose values are sequences of symbols. The marks "::=" and "|" (the latter with the meaning of "or") are metalinguistic connectives. Any mark in a formula, which is not a variable or a connective, denotes itself. Juxtaposition of marks or variables in a formula signifies juxtaposition of the sequence denoted.
+
+> BNF由Peter Naur在ALGOL 60报告中描述为*metalinguistic formula*：[[12\]](https://en.wikipedia.org/wiki/Backus-Naur_form#cite_note-ALGOL60RPT-12)
+>
+> >括号内的字符序列<>代表元语言学变量，其值是符号序列。标记"::="和"|"（后者有 "或 "的含义）是元语言学的连接词。公式中的任何标记，如果不是变量或连接词，则表示其本身。公式中的标记或变量的并列表示所表示的序列的并列。
+
+Another example from the ALGOL 60 report illustrates a major difference between the BNF metalanguage and a Chomsky context-free grammar. Metalinguistic variables do not require a rule defining their formation. Their formation may simply be described in natural language within the <> brackets. The following ALGOL 60 report section 2.3 comments specification, exemplifies how this works:
+
+> For the purpose of including text among the symbols of a program the following "comment" conventions hold:
+>
+> | The sequence of basic symbols:                               | is equivalent to |
+> | ------------------------------------------------------------ | ---------------- |
+> | **;** **comment** <any sequence not containing ';'>;         | **;**            |
+> | **begin** **comment** <any sequence not containing ';'>;     | **begin**        |
+> | **end** <any sequence not containing 'end' or ';' or 'else'> | **end**          |
+>
+> Equivalence here means that any of the three structures shown in the left column may be replaced, in any occurrence outside of strings, by the symbol shown in the same line in the right column without any effect on the action of the program.
+
+> ALGOL 60报告中的另一个例子说明了BNF金属语言和乔姆斯基无语境语法之间的一个主要区别。金属语言的变量不需要定义其形成的规则。它们的形成可以简单地在<>括号内用自然语言描述。下面的ALGOL 60报告第2.3节注释规范，举例说明了这是如何进行的。
+>
+> > 为了在程序的符号中包括文本，以下 "注释 "惯例是有效的。
+> >
+> > | 基本符号的序列。                             | 相当于   |
+> > | -------------------------------------------- | -------- |
+> > | **;** **comment** <任何不包含';'的序列；     | **;** ** |
+> > | **开始** **评论** <任何不含';'>的序列；      | **开始** |
+> > | **结束** <任何不含'结束'或';'或'其他'的序列> | **结束** |
+> >
+> > 这里的等价性是指左栏所示的三种结构中的任何一种，在字符串之外的任何场合，都可以被右栏同一行所示的符号所替代，而不会对程序的运行产生任何影响。https://en.wikipedia.org/wiki/Backus–Naur_form#cite_note-class-1)
+
+...
+
+## Further examples
+
+BNF's syntax itself may be represented with a BNF like the following:
+
+> BNF的语法本身可以用下面这样的BNF来表示：
+
+```bash
+<syntax> ::= <rule> | <rule> <syntax>
+<rule> ::= <opt-whitespace> "<" <rule-name> ">" <opt-whitespace> "::=" <opt-whitespace> <expression> <line-end>
+<opt-whitespace> ::= " " <opt-whitespace> | ""
+<expression> ::= <list> | <list> <opt-whitespace> "|" <opt-whitespace> <expression>
+<line-end>       ::= <opt-whitespace> <EOL> | <line-end> <line-end>
+ <list>           ::= <term> | <term> <opt-whitespace> <list>
+ <term>           ::= <literal> | "<" <rule-name> ">"
+ <literal>        ::= '"' <text1> '"' | "'" <text2> "'"
+ <text1>          ::= "" | <character1> <text1>
+ <text2>          ::= '' | <character2> <text2>
+ <character>      ::= <letter> | <digit> | <symbol>
+ <letter>         ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z"
+ <digit>          ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+ <symbol>         ::=  "|" | " " | "!" | "#" | "$" | "%" | "&" | "(" | ")" | "*" | "+" | "," | "-" | "." | "/" | ":" | ";" | ">" | "=" | "<" | "?" | "@" | "[" | "\" | "]" | "^" | "_" | "`" | "{" | "}" | "~"
+ <character1>     ::= <character> | "'"
+ <character2>     ::= <character> | '"'
+ <rule-name>      ::= <letter> | <rule-name> <rule-char>
+ <rule-char>      ::= <letter> | <digit> | "-"
+```
+
+Note that "" is the [empty string](https://en.wikipedia.org/wiki/Empty_string).
+
+The original BNF did not use quotes as shown in `<literal>` rule. This assumes that no [whitespace](https://en.wikipedia.org/wiki/Whitespace_(computer_science)) is necessary for proper interpretation of the rule.
+
+`<EOL>` represents the appropriate [line-end](https://en.wikipedia.org/wiki/Newline) specifier (in [ASCII](https://en.wikipedia.org/wiki/ASCII), carriage-return, line-feed or both depending on the [operating system](https://en.wikipedia.org/wiki/Operating_system)). `<rule-name>` and `<text>` are to be substituted with a declared rule's name/label or literal text, respectively.
+
+In the U.S. postal address example above, the entire block-quote is a syntax. Each line or unbroken grouping of lines is a rule; for example one rule begins with `<name-part> ::=`. The other part of that rule (aside from a line-end) is an expression, which consists of two lists separated by a pipe `|`. These two lists consists of some terms (three terms and two terms, respectively). Each term in this particular rule is a rule-name.
+
+> 注意，""是[空字符串](https://en.wikipedia.org/wiki/Empty_string)。
+>
+> 最初的BNF没有使用引号，如`<literal>`规则中所示。这假定没有[空白](https://en.wikipedia.org/wiki/Whitespace_(computer_science))对于规则的正确解释是必要的。
+>
+> `<EOL>`代表适当的[行结束](https://en.wikipedia.org/wiki/Newline)指定符（在[ASCII](https://en.wikipedia.org/wiki/ASCII)中，回车符、换行符或两者都有，取决于[操作系统](https://en.wikipedia.org/wiki/Operating_system)）。`<rule-name>`和`<text>`将分别被替换为声明的规则名称/标签或字面文本。
+>
+> 在上面的美国邮政地址例子中，整个块状引号是一个语法。每一行或不间断的一组行是一条规则；例如，一条规则以`<name-part> ::=`开始。该规则的另一部分（除了行尾）是一个表达式，它由两个列表组成，用管子`|`分开。这两个列表由一些术语组成（分别是三个术语和两个术语）。这个特定规则中的每个术语都是一个规则名称。
+
+...
+
+## See also
+
+- [Compiler Description Language](https://en.wikipedia.org/wiki/Compiler_Description_Language) (CDL)
+- [Syntax diagram](https://en.wikipedia.org/wiki/Syntax_diagram) – railroad diagram
+- [Translational Backus–Naur form](https://en.wikipedia.org/wiki/Translational_Backus–Naur_form) (TBNF)
+- [Wirth syntax notation](https://en.wikipedia.org/wiki/Wirth_syntax_notation) – an alternative to BNF from 1977
+- [Definite clause grammar](https://en.wikipedia.org/wiki/Definite_clause_grammar) – a more expressive alternative to BNF used in Prolog
+- [Van Wijngaarden grammar](https://en.wikipedia.org/wiki/Van_Wijngaarden_grammar) – used in preference to BNF to define [Algol68](https://en.wikipedia.org/wiki/Algol68)
+- [Meta-II](https://en.wikipedia.org/wiki/Meta-II) – an early compiler writing tool and notation
+
+reference:
+
+The meaning of syntactic formula may be further explained by saying that words enclosed in the brackets `< >`, like `<ab>`, denote classes whose members are sequences of basic symbols. Class designations of this kind are found in any description of a language. For describing ordinary natural languages designation like word, verb, noun, are used.
+
+> 句法公式的含义可以进一步解释为：括号内的词`< >`，如`<ab>`，表示其成员为基本符号序列的类。在任何语言的描述中都可以找到这种类的称呼。在描述普通自然语言时，会使用像单词、动词、名词这样的指定。
+

@@ -704,6 +704,14 @@ Hashing is an example of a [space-time tradeoff](https://en.wikipedia.org/wiki/S
 
 
 
+---
+
+## Internet
+
+VPS: 
+
+
+
 
 
 ## Jupyter
@@ -719,6 +727,22 @@ jupyter lab stop 8888
 
 
 apply Stylus css to jupyter lab
+
+---
+
+
+
+## prepare for coding
+
+### IDE
+
+### Git
+
+### Symbols table
+
+
+
+
 
 ## Python
 
@@ -772,9 +796,9 @@ bitwise operation  位操作
 
 product  乘积
 
-floor division
+floor division 下取整除法（或整数除法），符号是 `//`
 
-interpolation
+interpolation 插值？
 
 binary  operation  二元操作？
 
@@ -802,13 +826,17 @@ list:  Lists are mutable sequences, typically used to store collections of homog
 
 tuple: Tuples are immutable sequences, typically used to store collections of heterogeneous data (such as the 2-tuples produced by the [`enumerate()`](https://docs.python.org/3/library/functions.html#enumerate) built-in). Tuples are also used for cases where an immutable sequence of homogeneous data is needed (such as allowing storage in a [`set`](https://docs.python.org/3/library/stdtypes.html#set) or [`dict`](https://docs.python.org/3/library/stdtypes.html#dict) instance).
 
-string interpolation operation
+string interpolation operation 
 
 string formatting operations
 
 set:  A *set* object is an unordered collection of distinct [hashable](https://docs.python.org/3/glossary.html#term-hashable) objects. Common uses include membership testing, removing duplicates from a sequence, and computing mathematical operations such as intersection, union, difference, and symmetric difference. (For other containers see the built-in [`dict`](https://docs.python.org/3/library/stdtypes.html#dict), [`list`](https://docs.python.org/3/library/stdtypes.html#list), and [`tuple`](https://docs.python.org/3/library/stdtypes.html#tuple) classes, and the [`collections`](https://docs.python.org/3/library/collections.html#module-collections) module.)
 
 Mapping: A [mapping](https://docs.python.org/3/glossary.html#term-mapping) object maps [hashable](https://docs.python.org/3/glossary.html#term-hashable) values to arbitrary objects. Mappings are mutable objects. There is currently only one standard mapping type, the *dictionary*.
+
+interactive interpreter  交互式解释器
+
+
 
 
 
@@ -903,7 +931,9 @@ unit test, document string file?
 
 pip install package_name
 
-pip install --upgrade package_name
+pip install --upgrade package_name 升级
+
+windows升级pip: python.exe -m pip install --ungrade pip
 
 pip show package_nae    展示所安装包的信息
 
@@ -912,6 +942,42 @@ pip list     展示所以安装的包
 pip freeze > requirements.txt    以安装的格式展示已安装的包列表（cat requirements.txt来显示）
 
 <img src="../pic/station image.png">
+
+pandoc 将rst文件转换为md文件
+
+pandoc -o .md .rst
+
+notedown将md文件转换为ipynb文件
+
+```python
+notedown input.md > output.ipynb
+```
+
+2022.8.30 安装rst2ipynb后，不能正常转换，出现错误：Error running filter rst2ipynb-sageblock-filter:
+
+查看rst2ipnb文档，发现其工作原理是先通过pandoc将rst文档转化为md文档，然后用notedown将md文档转化为ipynb
+
+拆解使用，先用pandoc将rst文档转化为md文档
+
+```bash
+for f in *.rst
+    do
+        pandoc -o ${f/%.rst/.md} $f
+    done
+    
+mv *.md md/
+```
+
+用notedown将md文件转换为ipynb文件 notedown input.md > output.ipynb
+
+```bash
+for f in *.md
+    do
+        notedown $f > ${f/%.md/.ipynb}
+    done
+    
+mv *.ipynb ../ipynbs/
+```
 
 
 
@@ -961,4 +1027,8 @@ shifts
 看到[函数定义](https://docs.python.org/3/reference/compound_stmts.html#function-definitions)的默认参数的默认值的设置规则的时候才明白，以前看过一个爬虫函数将在函数运行中发生变化的参数默认值设置成 `parameter=None` 的原因。至此加深了编程需要看原始文档的印象。
 
 
+
+## Documentation
+
+ `+`, `-`, `*` and `/` work just like in most other languages
 
