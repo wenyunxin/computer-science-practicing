@@ -170,19 +170,15 @@ a beautiful landscape matte painting of cherry trees with petals flying in the s
 
 a village, by Gediminas Pranckevicius
 
-a abstract flat color Low Poly style vector design of a mountain, by Gediminas Pranckevicius, Trending on artstation
+a oil on canvas of a forest, by Gediminas Pranckevicius, Trending on artstation
 
 
 
 西乔的[prompt教程示例](https://mp.weixin.qq.com/s/N0mdvztGLrKxFBz0HywCSA)：
 
-"a detailed matte landscape painting of a big cherry tree with petals flying in the sky, moonlight, by Victo Ngai, artstation, Detail, HD."
-
 **A beautiful detailed landscape matte painting of** blue ocean, by Caspar David Friedrich, Trending on artstation （数字绘画+3D渲染）
 
 **a cinematic hyperrealism highly detailed photograph of** blue ocean, by Caspar David Friedrich, Trending on artstation （超级细腻的电影感的超现实主义的照片）
-
-**a black and white engraving of** blue ocean, by Caspar David Friedrich, Trending on artstation （黑白雕版画 （注意图像外缘出现了版画手工印刷的特征））
 
 **a detailed photorealistic computer rendering of** blue ocean, by Caspar David Friedrich, Trending on artstation （细腻的照片级的数字渲染出来的）
 
@@ -199,6 +195,8 @@ a abstract flat color Low Poly style vector design of a mountain, by Gediminas P
 （注意，flat color 和 designed poster 跟 Caspar David Friedrich 这位艺术家的风格特征冲突））
 
 **a abstract flat color Low Poly style vector design of** blue ocean, by Caspar David Friedrich, Trending on artstation （抽象风格的 Low Poly 矢量画，平涂颜色（Low Poly 需要搭配步数和切片类的参数的设置才能取得更好的效果，垫底图更好））
+
+**a black and white engraving of** blue ocean, by Caspar David Friedrich, Trending on artstation （黑白雕版画 （注意图像外缘出现了版画手工印刷的特征））
 
 **a detailed woodcut print of** ocean and sailing, Expressionism genre, by Ansel Adams （木刻版画 不朽的 Ansel Adams 比 black & white 这样的颜色修饰词还要好用。德国表现主义是一种咆哮、扭曲、尖锐、黑暗、充满张力、愤怒和破碎感的流派，代表画家席勒、蒙克、柯勒惠支、柯克西卡和康定斯基）
 

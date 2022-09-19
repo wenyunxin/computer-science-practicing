@@ -1539,3 +1539,14 @@ Dash集成各个编程语言的API？Github的Coplite插件？
 
 [on the phenomenon of bullshit jobs](https://www.strike.coop/bullshit-jobs/)
 
+## [阮一峰科技周刊9.9](https://www.ruanyifeng.com/blog/2022/09/weekly-issue-222.html)
+
+[The forty-year programmer](https://codefol.io/posts/the-forty-year-programmer/): you might to be a software developer for a long time. If you're good at the basics you can learn anything you want. 1. Software development is young; 2. You don't have to start young; 3. Order isn't make-or-break, try different things is the key; 4. It's early yet; 5. The work is good; 6. It's not a sprint or a marathon, it's a diary; 7. don't confuse work and career; 8. there are no defined levels; 9. the better you get, the less you look like everybody else; 10. You learn deep principles by doing the basics' 11. what tech you use matters; 11. look to other fields, learn from other fields; 12. programmers are contrary; 13. be careful about productivity tips; 14. but seriously, mostly just do it
+
+[the CSS behind Figma](https://ishadeed.com/article/figma-css/)
+
+[Becoming a Full-Time Creator as a Software Engineer: Controversial Advice](https://blog.pragmaticengineer.com/how-to-become-a-full-time-creator/)
+
+[all you need to know about asterisks in Python](https://bas.codes/posts/python-asterisks)
+
+[Neural network from scratch](https://aegeorge42.github.io/)

@@ -245,7 +245,7 @@ hex     hexadecimal   十六进制
 
 field  字段
 
-specifier  指定符
+specifier  指定符，分类符
 
 unary  一元的
 
@@ -758,7 +758,7 @@ interactive prompt 交互提示符
 
 [class](https://docs.python.org/3/tutorial/classes.html) 类
 
-list comprehension 列表解析式
+list comprehension 列表推导式
 
 [walrus operator](https://realpython.com/lessons/assignment-expressions/#:~:text=Assignment%20expression%20are%20written%20with,value%20in%20the%20same%20expression.): Assignment Expressions allow you to assign and return a value in the same expression.
 
@@ -787,8 +787,6 @@ container  容器
 primary  原语？被引用主标；主语？
 
 subscription  下标引用
-
-formal parameter  形式参数？
 
 unary arithmetic  一元算术
 
@@ -820,7 +818,7 @@ EOF: abbr. 文件结束符（end of file）
 
 collection 集，数据集
 
-short-circuit operator  短路运算符？
+short-circuit operator  **最短线路**运算符
 
 list:  Lists are mutable sequences, typically used to store collections of homogeneous items (where the precise degree of similarity will vary by application).
 
@@ -836,7 +834,7 @@ Mapping: A [mapping](https://docs.python.org/3/glossary.html#term-mapping) objec
 
 interactive interpreter  交互式解释器
 
-
+string literals 字符串常量？
 
 
 
@@ -885,45 +883,51 @@ suspend  延缓
 
 
 
-### some sorted
-
-numerical operator, comparision operator, (`not` `and` `or`) operator
+### delibareted practicing
 
 string format:
 
-sequence types: string, bytes, tuple, list, range
+#### function
+
+formal parameter  形式参数；在函数定义时命名的参数
+
+symbol table:
+
+enclosing function: it is a function in which another function is define. It's also known as outer function. 
+
+nested functions: are functions within function. It's also called inner function.
+
+nonlocal variables are variables are not within the scope of nested functions, but variable of enclosing functions.
+
+default arguments value
+
+positional arguments 位置参数
+
+keyword arguments 关键字参数
+
+positional-only  arguments 唯位置参数
+
+positional-or-key word arguments 可位置可关键字参数
+
+keyword-only argumetns 唯关键字参数
+
+#### class:
+
+match statements:
+
+modules:
 
 collection: dictionary, set, frozen set
 
-position argument:
-
-keyword-only arguments:
-
-itorator: One method needs to be defined for container objects to provide [iterable](https://docs.python.org/3/glossary.html#term-iterable) support:
+iterator: One method needs to be defined for container objects to provide [iterable](https://docs.python.org/3/glossary.html#term-iterable) support:
 
 container.\_\_iter__()
 
-class object : returen a new featureless object.  [`object`](https://docs.python.org/3/library/functions.html#object) is a base for all classes. It has methods that are common to all instances of Python classes. This function does not accept any arguments.
+regular expression:
 
-octal: 八进制
 
-hex: 十六进制，Two methods support conversion to and from hexadecimal strings. Since Python’s floats are stored internally as binary numbers, converting a float to or from a *decimal* string usually involves a small rounding error. In contrast, hexadecimal strings allow exact representation and specification of floating-point numbers. This can be useful when debugging, and in numerical work.
 
- [decorator](https://docs.python.org/3/glossary.html#term-decorator): 
 
-accessor
-
-await 异步调用未理解
-
-the priority of comparison is higher than Boolean operation 
-
-bitwise operation:
-
-two’s complement:  二进制补码
-
-which library that compute the time of a operation takes?
-
-unit test, document string file?
 
 
 
@@ -981,6 +985,28 @@ mv *.ipynb ../ipynbs/
 
 
 
+### some note
+
+a `tuple` is not really immutable when it contains mutable elements, such a list which referening to a variable. Then modify the list variable can implicitly modify the tuple. A tuple in which all elements are immutable is stricitly immutable.
+
+[walrus operator](https://docs.python.org/3/faq/design.html#why-can-t-i-use-an-assignment-in-an-expression) `:=` is using inside expressions.
+
+a `package` in Python is a collection of `modules` for implementing specify functions.
+
+Here are some basic argument **specifiers** you should know:
+
+```python
+%s - String (or any object with a string representation, like numbers)
+%d - Integers
+%f - Floating point numbers
+%.<number of digits>f - Floating point numbers with a fixed amount of digits to the right of the dot.
+%x/%X - Integers in hex representation (lowercase/uppercase)
+```
+
+file encoding format: utf-8
+
+
+
 
 
 ## amazing libraries and frameworks
@@ -1030,5 +1056,8 @@ shifts
 
 ## Documentation
 
- `+`, `-`, `*` and `/` work just like in most other languages
+This could also be done by passing the `table` dictionary as keyword arguments with the `**` notation.
+
+> 这也可以通过将`table`字典作为关键字参数用`**`符号来完成。
+>
 

@@ -1,10 +1,13 @@
-def fib1(n):
+# Fibonacci numbers module
+
+def fib(n):
     a, b = 0, 1
     while a < n:
         print(a, end=' ')
         a, b = b, a+b
     print()
 
+    
 def fib2(n):   # return Fibonacci series up to n
     result = []
     a, b = 0, 1
@@ -13,6 +16,7 @@ def fib2(n):   # return Fibonacci series up to n
         a, b = b, a+b
     return result
 
-print(42)
-print(42)
-('the answer', 42)
+
+if __name__ == "__main__":
+    import sys
+    fib(int(sys.argv[1]))
