@@ -1503,7 +1503,7 @@ Dash集成各个编程语言的API？Github的Coplite插件？
 
 [top 5 product and management skills: SQL, Excel, Clear Communication, Story, Prioritization](https://www.craigkerstiens.com/2021/04/27/top-5-product-and-management-skills-sql-excel-clear-communication-story-prioritization/)
 
-## [阮一峰科技周刊2.26](https://www.ruanyifeng.com/blog/2022/08/weekly-issue-220.html)
+## [阮一峰科技周刊8.26](https://www.ruanyifeng.com/blog/2022/08/weekly-issue-220.html)
 
 [OpenAI](https://openai.com/blog/dall-e-now-available-in-beta/)公司的人工智能模型[DALL-E 2](https://openai.com/dall-e-2/)，最近向社会公众开放。
 
@@ -1550,3 +1550,37 @@ Dash集成各个编程语言的API？Github的Coplite插件？
 [all you need to know about asterisks in Python](https://bas.codes/posts/python-asterisks)
 
 [Neural network from scratch](https://aegeorge42.github.io/)
+
+## [阮一峰科技周刊9.16](https://www.ruanyifeng.com/blog/2022/09/weekly-issue-223.html)
+
+[understanding all of Python, through its builtins](https://sadh.life/post/builtins/)
+
+[publishing your work increases your luck](https://github.com/readme/guides/publishing-your-work)
+
+## [阮一峰科技周刊9.23](https://www.ruanyifeng.com/blog/2022/09/weekly-issue-224.html)
+
+“这一次，Figma 以200亿美元被收购，证明 Web 应用并没有过时。**即使不走原生应用那条路，依然有机会成功。**”
+
+[Rust in production at Figma](https://www.figma.com/blog/rust-in-production-at-figma/)
+
+[why is esbuild fast](https://esbuild.github.io/faq/#why-is-esbuild-fast)
+
+[Adobe宣布网页版Photoshop将全部免费提供](https://finance.sina.com.cn/tech/2022-06-15/doc-imizmscu6902624.shtml): 今年6月，Adobe 将王牌产品 PhotoShop 的网页版向所有人[免费提供](https://finance.sina.com.cn/tech/2022-06-15/doc-imizmscu6902624.shtml)。我觉得，这跟收购 Figma 是有关系的。Adobe 愿意花这么大的代价买下 Figma，不仅仅是为了产品本身，也是为了获得背后的技术，帮助开发自己的 Web 应用，彻底走向云端化。
+
+[could next party in Danish parliament be led by AI?](https://www.thelocal.dk/20220804/danish-ai-driven-political-party-eyes-parliament/)
+
+[卫星手机](https://zh.wikipedia.org/wiki/%E5%8D%AB%E6%98%9F%E7%94%B5%E8%AF%9D)
+
+[选购3D打印机](https://sspai.com/post/75665)
+
+[7 tools for visualizing a codebase](https://lmy.medium.com/7-tools-for-visualizing-a-codebase-41b7cddb1a14)
+
+[Memory Management in Python - Part 2: Equality](https://anvil.works/articles/pointers-in-my-python-2)
+
+[git gc - You're not going to need it](https://donatstudios.com/yagni-git-gc)
+
+[life stats](https://neal.fun/life-stats/): interesting stats about life.
+
+[中文博客榜](https://xyzrank.com/#/)
+
+[Awesome Cloud Security 云安全资源汇总](https://wiki.teamssix.com/cloudsecurityresources/)

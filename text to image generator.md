@@ -172,7 +172,7 @@ a village, by Gediminas Pranckevicius
 
 a oil on canvas of a forest, by Gediminas Pranckevicius, Trending on artstation
 
-
+a cinematic hyperrealism highly detailed photograph of Howl's Moving Castle, by Gediminas Pranckevicius, Trending on artstation
 
 西乔的[prompt教程示例](https://mp.weixin.qq.com/s/N0mdvztGLrKxFBz0HywCSA)：
 

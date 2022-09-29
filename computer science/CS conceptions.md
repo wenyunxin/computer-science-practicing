@@ -836,9 +836,7 @@ interactive interpreter  交互式解释器
 
 string literals 字符串常量？
 
-
-
-
+constants 常数（Python的built-in constants有：`False`, `True`, `None`, `NotImplemented`, `Ellipsis`）. `__debug__`, `True`, `False` and `None` are the only **true constants** in Python, i.e. these 4 are the only global variables in Python that you cannot overwrite with a new value.
 
 
 
@@ -913,7 +911,15 @@ keyword-only argumetns 唯关键字参数
 
 #### class:
 
-match statements:
+iterator:
+
+generator:
+
+generator expressions:
+
+
+
+#### match statements:
 
 modules:
 
@@ -923,7 +929,9 @@ iterator: One method needs to be defined for container objects to provide [itera
 
 container.\_\_iter__()
 
-regular expression:
+#### Exceptions:
+
+#### regular expression:
 
 
 
@@ -1005,7 +1013,17 @@ Here are some basic argument **specifiers** you should know:
 
 file encoding format: utf-8
 
+`__radd__` ? 
 
+the search order(local scope - enclosing scope - gloabal scope - builtin scope)
+
+
+
+#### Funky globals
+
+`__name__`: Contains the name of the module. For example, `builtins.__name__` will be the string `'builtins'`. When you run a Python file, that is also run as a module, and the module name for that is `__main__`. This should explain how `if __name__ == '__main__'` works when used in Python files.
+
+`__debug__`: This is a global, constant value in Python, which is almost always set to `True`. What it refers to, is Python running in *debug mode*. And Python always runs in debug mode by default.
 
 
 
@@ -1056,8 +1074,6 @@ shifts
 
 ## Documentation
 
-This could also be done by passing the `table` dictionary as keyword arguments with the `**` notation.
+The [`pprint`](https://docs.python.org/3/library/pprint.html#module-pprint) module offers more sophisticated control over printing both built-in and user defined objects in a way that is readable by the interpreter. When the result is longer than one line, the “pretty printer” adds line breaks and indentation to more clearly reveal data structure:
 
-> 这也可以通过将`table`字典作为关键字参数用`**`符号来完成。
->
-
+> 
