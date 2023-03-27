@@ -174,6 +174,8 @@ a oil on canvas of a forest, by Gediminas Pranckevicius, Trending on artstation
 
 a cinematic hyperrealism highly detailed photograph of Howl's Moving Castle, by Gediminas Pranckevicius, Trending on artstation
 
+A beautiful detailed landscape matte painting of Breath of the Wild, by Caspar David Friedrich, Trending on artstation
+
 西乔的[prompt教程示例](https://mp.weixin.qq.com/s/N0mdvztGLrKxFBz0HywCSA)：
 
 **A beautiful detailed landscape matte painting of** blue ocean, by Caspar David Friedrich, Trending on artstation （数字绘画+3D渲染）

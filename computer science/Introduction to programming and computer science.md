@@ -1584,3 +1584,99 @@ Dash集成各个编程语言的API？Github的Coplite插件？
 [中文博客榜](https://xyzrank.com/#/)
 
 [Awesome Cloud Security 云安全资源汇总](https://wiki.teamssix.com/cloudsecurityresources/)
+
+## [阮一峰科技周刊9.30](https://www.ruanyifeng.com/blog/2022/09/weekly-issue-225.html)
+
+[Google 小工具](https://www.google.com/search?q=google+dice+roller&newwindow=1&sxsrf=ALiCzsbjKBqsi41Ez_d3Fq0VrJy9_S4Qtg%3A1664892202370&ei=Kj08Y46ZFvOA1e8PpuG22Aw&ved=0ahUKEwiO1r7i3sb6AhVzQPUHHaawDcsQ4dUDCA0&uact=5&oq=google+dice+roller&gs_lcp=Cgdnd3Mtd2l6EAMyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECdKBAhBGABKBAhGGABQiQlY7ydgoiloAXABeACAAQCIAQCSAQCYAQCgAQGwAQrAAQE&sclient=gws-wiz)
+
+[avoid spaghetti code with scope minimization](https://massimo-nazaria.github.io/blog/2022/02/10/avoid-spaghetti-code-with-scope-minimization.html)
+
+[DB-Engines Ranking](https://db-engines.com/en/ranking)
+
+[fasteR: Fast Lane to learning R!](https://github.com/matloff/fasteR)
+
+[building friend catchers](https://ferrucc.io/posts/friendcatchers/)
+
+## [阮一峰科技周刊10.14](https://www.ruanyifeng.com/blog/2022/10/weekly-issue-226.html)
+
+[游戏玩家的最后一片乐园，也被谷歌“强拆”了](http://finance.sina.com.cn/tech/csj/2022-10-06/doc-imqmmtha9943707.shtml)：这不禁让人思考内容创造者和平台的关系，过分依赖一个平台风险无疑是巨大的。
+
+[eSIM卡与万物互联趋势](https://finance.sina.com.cn/jjxw/2022-09-29/doc-imqqsmrp0933136.shtml)
+
+[PowerToys: 11个小工具集](https://www.fourth-wall.co.uk/post/powertoys-11-awesome-features-microsoft-won-t-add-to-windows)
+
+[25个有用的Mac小应用](https://medium.com/@aplaceofmind/10-little-macos-apps-that-make-a-big-difference-in-2022-part-1-c6428f92a079)
+
+[Make-A-Video: generates videos from text](https://makeavideo.studio/)
+
+[Pagefind: 静态网站全文搜索工具](https://pagefind.app/)，其[介绍](https://cloudcannon.com/blog/introducing-pagefind/)
+
+[程序员的实用深度学习](https://course.fast.ai/)
+
+[AI博客](https://podcast.ai/)：其背后的原理应该是generates sound from text吧
+
+[便利贴的正确撕法](https://tylercipriani.com/blog/2022/05/28/on-the-proper-use-of-post-its/)
+
+[Sunset of the social network](https://www.axios.com/2022/07/25/sunset-social-network-facebook-tiktok)
+
+## [阮一峰科技周刊10.21](https://www.ruanyifeng.com/blog/2022/10/weekly-issue-227.html)
+
+[culture docs: Facebook, Netflix and Value](https://bytepawn.com/culture-docs-facebook-netflix-and-valve.html)
+
+[50岁码农面试记](https://www.1point3acres.com/bbs/thread-918311-1-1.html)：作者是加拿大华人，一直从事数据库管理。工作了20年后，他想转开发，于是猛刷 Leetcode，开始投简历求职。（完善LinkedIn，找内推，如一亩三分地等网站，到企业官网找）
+
+[the Top 10 tips to write clean code](https://technologywolf.net/the-top-10-tips-to-write-clean-code/)
+
+[AI绘画资料](https://github.com/hua1995116/awesome-ai-painting)
+
+[long names are long](https://journal.stuffwithstuff.com/2016/06/16/long-names-are-long/)：如何给变量起名
+
+## [阮一峰科技周刊10.28](https://www.ruanyifeng.com/blog/2022/10/weekly-issue-228.html)
+
+[I'd never been involved in anything as secret as this](https://www.politico.com/news/magazine/2021/04/30/osama-bin-laden-death-white-house-oral-history-484793)
+
+[track the three pillars of observability across your stack](https://www.datadoghq.com/three-pillars-of-observability/)
+
+[apology for video games research](https://togelius.blogspot.com/2022/08/apology-for-video-games-research.html)
+
+## [阮一峰科技周刊11.4](https://www.ruanyifeng.com/blog/2022/11/weekly-issue-229.html)
+
+[考古学博士刘拓生前拍摄的照片新闻](https://www.thehour.cn/news/551673.html)
+
+[刘拓在一席的演讲](https://www.youtube.com/watch?v=eeRUBj3XOjI)
+
+[why software engineers like woodworking](https://www.zainrizvi.io/blog/why-software-engineers-like-woodworking/)
+
+[preparedness paradox](https://en.wikipedia.org/wiki/Preparedness_paradox)
+
+## [阮一峰科技周刊11.11](https://www.ruanyifeng.com/blog/2022/11/weekly-issue-230.html)
+
+“**信息时代同样是一个电力饥渴的时代。** 一旦人类社会真的变得高度自动化和智能化，不知道还需要增加多少发电厂。”
+
+小程序容器[FinClip](https://www.finclip.com/)
+
+[Full Stack Python](https://www.fullstackpython.com/)
+
+[Learn from Google's Data Engineers: Don't optimize your SQL](https://web.archive.org/web/20220128144246/https://scribe.rip/m/global-identity?redirectUrl=https%253A%252F%252Fblog.devgenius.io%252Flearn-from-googles-data-engineers-don-t-optimize-your-sql-43f0da30701)
+
+## [阮一峰科技周刊11.18](https://www.ruanyifeng.com/blog/2022/11/weekly-issue-231.html)
+
+[HTML vs Body in CSS](https://css-tricks.com/html-vs-body-in-css/)
+
+[Effective Shell](https://effective-shell.com/)
+
+[A chat with Ray Dalio](https://thehustle.co/ray-dalio-chat/)
+
+## [阮一峰科技周刊11.25](https://www.ruanyifeng.com/blog/2022/09/weekly-issue-224.html)
+
+[canva.cn](https://www.canva.cn/en/?display-com-option=true)：**信息传播已经从文字时代，进入了图片时代和视频时代。这注定了平面设计工具和视频工具的市场将越来越大。**
+
+[the future of the Web is on the Edge](https://deno.com/blog/the-future-of-web-is-on-the-edge)
+
+[stable.ai 2.0](https://stability.ai/blog/stable-diffusion-v2-release)
+
+[Lexica](https://lexica.art/)
+
+[Observations on 6 years of journaling](https://herman.bearblog.dev/years-of-journaling/)
+
+[What makes a senior engineer?Writing software vs building systems](https://codewithstyle.info/software-vs-systems/)

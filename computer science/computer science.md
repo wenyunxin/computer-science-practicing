@@ -2307,3 +2307,208 @@ People argue that technological unemployment at this scale would be unprecedente
 It’s impossible to know what the future holds, but it’s great that this discussion and debate is already happening, so as these technologies emerge, we can plan and react intelligently. What’s much more likely, regardless of whether you see computers as future friend or foe, is that they will outlive humanity. Many futurists and science fiction writers have speculated that computers will head out into space and colonize the galaxy, ambivalent to time scales, radiation, and all that other stuff that makes long-distance space travel difficult for us humans. And when the sun is burned up and the Earth is space dust, maybe our technological children will be hard at work exploring every nook and cranny of the universe, hopefully in honor of their parents’ tradition to build knowledge, improve the state of the universe, and to boldly go where no one has gone before! In the meantime, computers have a long way to go, and computer scientists are hard at work advancing all of the topics we talked about over the past forty episodes. **In the next decade or so, we’ll likely see technologies like virtual and augmented reality, self-driving vehicles, drones, wearable computers, and service robots go mainstream**. The internet will continue to evolve new services, stream new media, and connect people in different ways. New programming languages and paradigms will be developed to facilitate the creation of new and amazing software. And new hardware will make complex operations blazingly fast, like neural networks and 3D graphics. Personal computers are also ripe for innovation, perhaps shedding their forty-year old desktop metaphor and being reborn as omnipresent and lifelong virtual assistants. And there’s so much we didn’t get to talk about in this series, like **cryptocurrencies**, **wireless communication**, **3D printing**, **bioinformatics**, and **quantum computing**. We’re in a golden age of computing and there’s so much going on, it’s impossible to summarize. But most importantly, you can be a part of this amazing transformation and challenge, by learning about computing, and taking what’s arguably humanity’s greatest invention, to make the world a better place. Thanks for watching. 
 
 > 我们不可能知道未来会发生什么，但是这种讨论和辩论已经开始了，这很好，所以当这些技术出现的时候，我们可以明智地计划和反应。不管你把计算机看作是未来的朋友还是敌人，更有可能的是，它们会比人类更长寿。许多未来学家和科幻小说家推测，计算机将进入太空并殖民银河系，对时间尺度、辐射和所有其他使我们人类难以进行长距离太空旅行的东西感到矛盾。当太阳被烧毁，地球成为太空尘埃的时候，也许我们的科技儿童会努力工作，探索宇宙的每一个角落，希望他们能继承父母的传统，建立知识，改善宇宙的状况，并大胆地去无人涉足的地方。与此同时，计算机还有很长的路要走，计算机科学家们正在努力推进我们在过去四十多集里谈到的所有话题。**在未来十年左右，我们可能会看到像虚拟和增强现实、自动驾驶汽车、无人机、可穿戴计算机和服务机器人等技术成为主流**。互联网将继续发展新的服务，流传新的媒体，并以不同方式连接人们。新的编程语言和范式将被开发出来，以促进新的和惊人的软件的创建。而新的硬件将使复杂的操作快得惊人，如神经网络和3D图形。个人电脑的创新也已经成熟，也许会摆脱四十年前的桌面隐喻，重生为无所不在的终身虚拟助手。还有很多我们在这个系列中没有谈到的东西，比如**加密货币**、**无线通信**、**3D打印**、**生物信息学**和**量子计算**。我们正处在一个计算的黄金时代，发生的事情太多了，不可能总结。但最重要的是，你可以通过学习计算知识，成为这个惊人的转变和挑战的一部分，并利用这个可以说是人类最伟大的发明，使世界变得更美好。感谢您的观看。
+
+---
+
+
+
+# On Intelligence
+
+book: [On Intelligence](https://www.amazon.com/Intelligence-Understanding-Creation-Intelligent-Machines-ebook/dp/B003J4VE5Y/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1664984794&sr=8-1)
+
+author: [Jeff Hawkins](https://en.wikipedia.org/wiki/Jeff_Hawkins)
+
+## Prologue
+
+My desire is not only to understand what intelligence is and how the brain works, but how to build machines that work the same way. I want to build truly intelligent machines.
+
+I believe the best way to solve this problem is to use the detailed biology of the brain as a constraint and as a guide, yet think about intelligence as a computational problem—a position somewhere between biology and computer science.
+
+In August 2002 I started a research center, the Redwood Neuroscience Institute (RNI), dedicated to brain theory. There are many neuroscience centers in the world, but no others are dedicated to finding an overall theoretical understanding of the neocortex—the part of the human brain responsible for intelligence.
+
+[neocortex](https://en.wikipedia.org/wiki/Neocortex)
+
+bear fruit  PHRASE	短语取得成果;奏效;产生好的结果 If the effort that you put into something or a particular way of doing something bears fruit, it is successful and produces good results.
+
+example: our efforts in AI are starting to bear fruit.
+
+Hopefully when you have finished this book, you will have new insight into why you think what you think and why you behave the way you behave.
+
+It is the ability to make predictions about the future that is the crux of intelligence.
+
+We will examine the neocortex in sufficient detail to show how its structure captures the structure of the world. This discussion will be the most technical part of the book, but interested nonscientist readers should be able to understand it.
+
+## 1 Artificial Intelligence
+
+I was going to study brains, not only to understand how they worked, but to use that knowledge as a foundation for new technologies, to build intelligent machines.
+
+Timing is everything in business.
+
+Computers and brains are built on completely different principles. One is programmed, one is self-learning.
+
+After understanding how the neocortex worked, then we could go about building intelligent machines, but not before.
+
+A thesis of this book is that understanding cannot be measured by external behavior; as we’ll see in the coming chapters, it is instead an internal metric of how the brain remembers things and uses its memories to make predictions.
+
+## 2 Neural networks
+
+the structure of the brain and how it would implement any of their theories.
+
+first: Real brains process rapidly changing streams of information. There is nothing static about the flow of information into and out of the brain. 
+
+second: the importance of feedback. Feedback dominates most connections throughout the neocortex as well.
+
+third: that any theory or model of the brain should account for the physical architecture of the brain.
+
+Intelligence is something that is happening in your head.
+
+History shows that the best solutions to scientific problems are simple and elegant.
+
+The brain is incredibly complex, a vast and daunting tangle of cells.
+
+if a mad scientist were to replace each of your neurons with a functionally equivalent micromachine replica, you should come out of the procedure feeling no less your own true self than you had at the outset. 
+
+To succeed, we will need to crib heavily from nature’s engine of intelligence, the neocortex. We have to extract intelligence from within the brain. No other road will get us there.
+
+## 3 The human brain
+
+[neocortex](https://en.wikipedia.org/wiki/Neocortex), almost everthing we think of as intelligence—perception, language, imagination, mathematics, art, music, and planning—occurs here.
+
+An intelligent machine need not have sexual urges, hunger, a pulse, muscles, emotions, or a humanlike body. A human is much more than an intelligent machine.
+
+[thalamus](https://en.wikipedia.org/wiki/Thalamus):
+
+[hippocampus](https://en.wikipedia.org/wiki/Hippocampus): 
+
+Its(cortex) size is quite impressive as it surrounds and envelops most of the rest of the brain.
+
+Functionally they(the brain areas) are arranged in a branching hierarchy.
+
+The notion of a hierarchy is critical, so I want to take a moment to carefully define it. I’ll be referring to it throughout the book.
+
+All the functional areas of the cortex reside in the same convoluted cortical sheet.
+
+What is referred to as feedback in sensory regions is the output of the motor region, and vice versa.
+
+As you read aloud, higher regions of your cortex send more signals “down” to your primary visual cortex than your eye receives from the printed page!
+
+then our neocortex would have roughly thirty trillion synapses altogether. That is an astronomically large number, well beyond our intuitive grasp. It is apparently sufficient to store all the things you can learn in a lifetime.
+
+If you look closely enough you find them. Regions of cortex vary in thickness, cell density, relative proportion of cell types, length of horizontal connections, synapse density, and many other ways that can be tricky to discover.
+
+he shows that despite the differences, the neocortex is remarkably uniform. The same layers, cell types, and connections exist throughout.
+
+the way the cortex processes signals from the ear is the same as the way it processes signals from the eyes. He goes on to say that motor control works on the same principle, too.
+
+The cortex does something universal that can be applied to any type of sensory or motor system.
+
+The best ideas in science are always simple, elegant, and unexpected, and this is one of the best.
+
+All this goes to show that brain regions develop specialized functions based largely on the kind of information that flows into them during development.
+
+In fact, the brain is the only part of your body that has no senses itself.
+
+Natural vision, experienced as patterns entering the brain, flows like a river. Vision is more like a song than a painting.
+
+——time dimension is an essential factor of sensory, like sound, vision, touch, etc.
+
+Vision is more like three senses—motion, color, and luminance (black-and-white contrast). Touch has pressure, temperature, pain, and vibration.
+
+This means you don’t need any one of your senses or any particular combination of senses to be intelligent.
+
+Helen Keller had no sight and no hearing, yet she learned language and became a more skillful writer than most sighted and hearing people.
+
+This kind of remarkable flexibility in the human mind gives me high hopes for the **brain-inspired technology** we will create.
+
+The senses create patterns that are sent to the cortex, and processed by the same cortical algorithm to create a model of the world.
+
+## 4 Memory
+
+A neuron collects inputs from its synapses, and combines these inputs together to decide when to output a spike to other neurons.
+
+The entire cortex is a memory system.
+
+the neocortex uses stored memories to solve problems and produce behavior.
+
+there are four attributes of neocortical memory that are fundamentally different from computer memory: 
+
+• The neocortex stores **sequences of patterns**. 
+
+• The neocortex recalls patterns **auto-associatively**. 
+
+• The neocortex stores patterns in an **invariant form**. 
+
+• The neocortex stores patterns in a **hierarchy**.
+
+You know all these things plus thousands more and can recall them in great detail. These memories are stored in your cortex.
+
+Truly random thoughts don’t exist. Memory recall almost always follows a pathway of association.
+
+Your memory of the alphabet is a sequence of patterns. It isn’t something stored or recalled in an instant or in an arbitrary order. The same thing goes for the days of the week, the months of the year, your phone number, and countless other things.
+
+As you start to recall what is in your home, one set of neurons becomes active, which then leads to another set of neurons being active, and so on. An adult human neocortex has an incredibly large memory capacity. But, even though we have stored so many things, we can only remember a few at any time and can only do so in a sequence of associations.
+
+Most of the information is sitting there idly waiting for the appropriate cues to invoke it.
+
+At any time, a piece can activate the whole. This is the essence of auto-associative memories.
+
+However, the problem of understanding how your cortex forms invariant representations remains one of the biggest mysteries in all of science.
+
+How is it possible that we learn and apply concepts in this world of infinitely various forms and ever-shifting sensations?
+
+because the brain remembers the important relationships in the world, independent of the details.
+
+Another interesting example is your signature. Somewhere in your motor cortex, in your frontal lobe, you have an invariant representation of your autograph.
+
+The way you understand the world is by finding invariant structure in the constantly changing stream of input.
+
+that making predictions is the essence of intelligence.
+
+## 5 A new framework of intelligence
+
+Understanding must be the result of neural activity.
+
+Our brains use stored memories to constantly make predictions about everything we see, feel, and hear.
+
+While this may sound superficially similar to how I described my brain checking each of its myriad predictions as I glanced around my office, the difference is real and far-reaching.
+
+Prediction is not just one of the things your brain does. It is the *primary funtion* of the neocortex, and the foundation of intelligence.
+
+The more you think about this idea, the more you’ll realize that prediction is pervasive and the basis for how you understand the world.
+
+If you spend some time observing yourself, you can begin to understand that your perception of the world, your understanding of the world, is intimately tied to prediction. Your brain has made a model of the world and is constantly checking that model against reality. You know where you are and what you are doing by the validity of this model.
+
+Intelligence is measured by the capacity to remember and predict patterns in the world, including language, mathematics, physical properties of objects, and social situations. Your brain receive patterns from the outside world, stores them as memories, and makes predictions by combinin what it has seen before and what is happening now.
+
+a human brain has something really important that a reptile does not have: a large cortex.
+
+Remember, the cortex is built using a common repeated element.
+
+We got smart by adding many more elements of a common cortical algorithm.
+
+However, the human neocortex itself is a relatively new structure and hasn’t been around long enough to undergo much long-term evolutionary refinement.
+
+memory and prediction are the keys to unlocking the mystery of intelligence.
+
+By comparing the actual sensory input with recalled memory, the animal not only understands where it is but can see into the future.
+
+When our animal finds itself in the same or a similar situation, it not only sees into the future but recalls which behaviors led to that future vision.
+
+Only humans create written and spoken language.
+
+the cortex predicts seeing the arm, and this prediction is what causes the motor commands to make the prediction come true. You think first, which causes you to act to make your thought come true.
+
+Our ability to make exceptionally complex movements stems from the fact that our motor cortex makes many more connections with the muscles in our bodies.
+
+but humans are unique in the dominant, advanced role the cortex plays in our behavior.
+
+prideciton, not behavior, is the proof of intelligence.
+
+## 6 How the cortex works
+
+If you don't have a picture of the puzzle's solution, the bottom-up method is sometimes the only way to proceed.
+
+**invariant representations**
+
+As noted earlier, about three times a second your eyes make a quick movement, called a saccade, and a stop, called a fiaxtion.
+

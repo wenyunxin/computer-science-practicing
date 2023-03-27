@@ -259,7 +259,7 @@ curly braces  卷括号，大括号 { }
 
 significand 有效位数； 用于科学计数法
 
-base-ten notation  十进制计数法，也称为decimal（十进制）
+base-ten notation  十进制表示法，也称为decimal（十进制）
 
 digraphs  二维码？
 
@@ -270,6 +270,18 @@ Arduino Uno  微型控制器
 solid state component  固态元件
 
 semiconductor: most made of silicon.
+
+[symbolic links](https://en.wikipedia.org/wiki/Symbolic_link)
+
+whitespace 空白字符（whitespace character，如制表符，回车符，换行符等），space特指空格键
+
+form feed 翻页符
+
+backereferences 背景资料，参考文献？
+
+alphanumeric characters 字母和数字符号
+
+
 
 #### Crash course: computer science
 
@@ -680,6 +692,52 @@ map 映射
 
 rounding  四舍五入
 
+### command line command
+
+pwd - present work directory
+
+cd - change directory
+
+ls - list directory contents  ls -l 列出关于当前目前更详细的信息
+
+例子：ls -l /home 出现如下信息
+
+drwxr-xr-x 1 missing  users  4096 Jun 15  2019 missing
+
+`d`代表`missing`是一个目录。接下来九个字符，每三个一组，分别代表文件所有者（`missing`）,用户组（`users`）以及其他所有人所具有的权限。其中`-`表示该用户不具备相应的权限。
+
+wxr: 修改（`w`），某个文件夹 （例如，添加或删除文件夹中的文件）。为了进入某个文件夹，用户需要具备该文件夹以及其父文件夹的“搜索”权限（以“可执行”：`x`）权限表示。为了列出它的包含的内容，用户必须对该文件夹具备读权限（`r`）
+
+mv - move
+
+cp - copy file
+
+mkdir - make directory
+
+man [command] - 展示command的使用文档说明，按q退出
+
+echo 输出流
+
+ls -l | tail -n2 列出最后两个文件的详细信息
+
+最简单的重定向是 `< file` 和 `> file`。这两个命令可以将程序的输入输出流分别重定向到文件，还可以使用 `>>` 来向一个文件追加内容。
+
+```bash
+# 以下这条命令是向semester文件输入#!/bin/sh
+echo '#!/bin/sh' > semester
+
+# 向semester文件追加内容：
+echo 'curl --head --silent https://missing.csail.mit.edu' >> semester
+```
+
+chmod  该命令全称是chang file modes or access control lists
+
+[shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) on Unix-like operating system
+
+
+
+
+
 
 
 ### Algorithms & Data Structures
@@ -706,9 +764,13 @@ Hashing is an example of a [space-time tradeoff](https://en.wikipedia.org/wiki/S
 
 ---
 
-## Internet
+## Common issue
 
-VPS: 
+**Floating Point Arithmetic**: Python use the "double precision" under the [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754), also the [decimal](https://docs.python.org/3/library/decimal.html#module-decimal) module can be a lot of help.
+
+**Date representation**
+
+
 
 
 
@@ -838,6 +900,8 @@ string literals 字符串常量？
 
 constants 常数（Python的built-in constants有：`False`, `True`, `None`, `NotImplemented`, `Ellipsis`）. `__debug__`, `True`, `False` and `None` are the only **true constants** in Python, i.e. these 4 are the only global variables in Python that you cannot overwrite with a new value.
 
+mro(method resolution order) 方法解析顺序
+
 
 
 ### verbs
@@ -871,11 +935,67 @@ Two problems often exist with deep copy operations that don’t exist with shall
 
 unpacking assignments ? 解包赋值
 
-Name mangling 名字重构？
+Name mangling 名称修饰
 
  decouple  解耦
 
 suspend  延缓
+
+### Python official demo
+
+beer.py    Well-known programming example: Bottles of beer
+
+the `sys` module?
+
+eiffel.py         Python advanced magic: A metaclass for Eiffel 
+
+advanced magic?(magic methods?) metaclass? Eiffel?
+
+`unitest` and `types` modules
+
+`class definition` private methods: 
+
+`assert` statement
+
+string format: `%`
+
+function arguments, position argument symbol: `*`? keyword argument symbol: `**`?
+
+hanoi.py          Well-known programming example: Towers of Hanoi
+
+`tkinter` module, 
+
+life.py           Curses programming: Simple game-of-life.
+
+display animation
+
+markov.py         Algorithms: Markov chain simulation.
+
+mcast.py          Network programming: Send and receive UDP 
+
+UDP
+
+queens.py         Well-known programming example: N-Queens problem.
+
+This solution is inspired by Dijkstra(Structured Programming)
+
+redemo.py         Regular Expressions: GUI script to test regexes.
+
+regexes
+
+rpython.py        Network programming: Small client for remote code execution
+
+execute Python commands remotely and send output back
+
+rpythond.py       Network programming: Small server for remote code execution
+
+sortvisu.py       GUI programming: Visualization of different sort algorithms
+
+sort algorithms
+
+spreadsheet.py    GUI/Application programming: A simple spreadsheet application.
+
+vector.py         Python basics: A vector class demonstrating special methods
 
 
 
@@ -883,7 +1003,13 @@ suspend  延缓
 
 ### delibareted practicing
 
-string format:
+python script executable 
+
+python script executable parameters retrieving
+
+《自学是门手艺》中提到的Python符号表
+
+自动化单元测试和功能测试
 
 #### function
 
@@ -911,6 +1037,22 @@ keyword-only argumetns 唯关键字参数
 
 #### class:
 
+注意OOP范式在编程语言中的共性，和其在Python实现中的一些特性。
+
+关于OOP的基本术语：
+
+> - 对象，封装，抽象
+> - 界面，属性，方法
+> - 继承，类，子类，实例
+
+- 你创建了一个类（Class）之后，你是这个类的创作者，从创作者的角度望过去，这就是个类；
+- 当开始使用这类进行实例化（Instantial）之后，从使用这的角度看，是在对实例化的对象（Object）进行操作；
+- 基于以上两点看，类是对对象的*抽象*（Abstract），对象是对类的*实例化*
+
+Python中的metaclass
+
+
+
 iterator:
 
 generator:
@@ -932,6 +1074,1373 @@ container.\_\_iter__()
 #### Exceptions:
 
 #### regular expression:
+
+**Source code:** [Lib/re/](https://github.com/python/cpython/tree/3.11/Lib/re/)
+
+This module provides regular expression matching operations similar to those found in Perl.
+
+Both patterns and strings to be searched can be Unicode strings ([`str`](https://docs.python.org/3/library/stdtypes.html#str)) as well as 8-bit strings ([`bytes`](https://docs.python.org/3/library/stdtypes.html#bytes)). However, Unicode strings and 8-bit strings cannot be mixed: that is, you cannot match a Unicode string with a byte pattern or vice-versa; similarly, when asking for a substitution, the replacement string must be of the same type as both the pattern and the search string.
+
+> 该模块提供了类似于Perl中的正则表达式匹配操作。
+>
+> 要搜索的模式和字符串都可以是Unicode字符串（[`str`](https://docs.python.org/3/library/stdtypes.html#str)），也可以是8位字符串（[`bytes`](https://docs.python.org/3/library/stdtypes.html#bytes) ）。然而，Unicode字符串和8位字符串不能混合使用：也就是说，你不能用字节模式匹配Unicode字符串，反之亦然；同样，当要求进行替换时，替换的字符串必须与模式和搜索字符串的类型相同。
+
+Regular expressions use the backslash character (`'\'`) to indicate special forms or to allow special characters to be used without invoking their special meaning.  This collides with Python’s usage of the same character for the same purpose in string literals; for example, to match a literal backslash, one might have to write `'\\\\'` as the pattern string, because the regular expression must be `\\`, and each backslash must be expressed as `\\` inside a regular Python string literal. Also, please note that any invalid escape sequences in Python’s usage of the backslash in string literals now generate a [`DeprecationWarning`](https://docs.python.org/3/library/exceptions.html#DeprecationWarning) and in the future this will become a [`SyntaxError`](https://docs.python.org/3/library/exceptions.html#SyntaxError). This behaviour will happen even if it is a valid escape sequence for a regular expression.
+
+The solution is to use Python’s raw string notation for regular expression patterns; backslashes are not handled in any special way in a string literal prefixed with `'r'`.  So `r"\n"` is a two-character string containing `'\'` and `'n'`, while `"\n"` is a one-character string containing a newline.  Usually patterns will be expressed in Python code using this raw string notation.
+
+It is important to note that most regular expression operations are available as module-level functions and methods on [compiled regular expressions](https://docs.python.org/3/library/re.html#re-objects).  The functions are shortcuts that don’t require you to compile a regex object first, but miss some fine-tuning parameters.
+
+- `.`
+
+  (Dot.)  In the default mode, this matches any character except a newline.  If the [`DOTALL`](https://docs.python.org/3/library/re.html#re.DOTALL) flag has been specified, this matches any character including a newline.
+
+- `^`
+
+  (Caret.)  Matches the start of the string, and in [`MULTILINE`](https://docs.python.org/3/library/re.html#re.MULTILINE) mode also matches immediately after each newline.
+
+- `$`
+
+  Matches the end of the string or just before the newline at the end of the string, and in [`MULTILINE`](https://docs.python.org/3/library/re.html#re.MULTILINE) mode also matches before a newline.  `foo` matches both ‘foo’ and ‘foobar’, while the regular expression `foo$` matches only ‘foo’.  More interestingly, searching for `foo.$` in `'foo1\nfoo2\n'` matches ‘foo2’ normally, but ‘foo1’ in [`MULTILINE`](https://docs.python.org/3/library/re.html#re.MULTILINE) mode; searching for a single `$` in `'foo\n'` will find two (empty) matches: one just before the newline, and one at the end of the string.
+
+- `*`
+
+  Causes the resulting RE to match 0 or more repetitions of the preceding RE, as many repetitions as are possible.  `ab*` will match ‘a’, ‘ab’, or ‘a’ followed by any number of ‘b’s.
+
+- `+`
+
+  Causes the resulting RE to match 1 or more repetitions of the preceding RE. `ab+` will match ‘a’ followed by any non-zero number of ‘b’s; it will not match just ‘a’.
+
+- `?`
+
+  Causes the resulting RE to match 0 or 1 repetitions of the preceding RE. `ab?` will match either ‘a’ or ‘ab’.
+
+- `*?`, `+?`, `??`
+
+  The `'*'`, `'+'`, and `'?'` quantifiers are all *greedy*; they match as much text as possible.  Sometimes this behaviour isn’t desired; if the RE `<.*>` is matched against `'<a> b <c>'`, it will match the entire string, and not just `'<a>'`.  Adding `?` after the quantifier makes it perform the match in *non-greedy* or *minimal* fashion; as *few* characters as possible will be matched.  Using the RE `<.*?>` will match only `'<a>'`.
+
+- `*+`, `++`, `?+`
+
+  Like the `'*'`, `'+'`, and `'?'` quantifiers, those where `'+'` is appended also match as many times as possible. However, unlike the true greedy quantifiers, these do not allow back-tracking when the expression following it fails to match. These are known as *possessive* quantifiers. For example, `a*a` will match `'aaaa'` because the `a*` will match all 4 `'a'`s, but, when the final `'a'` is encountered, the expression is backtracked so that in the end the `a*` ends up matching 3 `'a'`s total, and the fourth `'a'` is matched by the final `'a'`. However, when `a*+a` is used to match `'aaaa'`, the `a*+` will match all 4 `'a'`, but when the final `'a'` fails to find any more characters to match, the expression cannot be backtracked and will thus fail to match. `x*+`, `x++` and `x?+` are equivalent to `(?>x*)`, `(?>x+)` and `(?>x?)` correspondingly.  New in version 3.11.
+
+> - `.`
+>
+>   (Dot.) 在默认模式下，它匹配除换行以外的任何字符。 如果指定了[`DOTALL`](https://docs.python.org/3/library/re.html#re.DOTALL)标志，这将匹配包括换行在内的任何字符。
+>
+> - `^`
+>
+>   (Caret.) 匹配字符串的开头，在[`MULTILINE`](https://docs.python.org/3/library/re.html#re.MULTILINE)模式下，还可以在每个换行后立即匹配。
+>
+> - `$`
+>
+>   匹配字符串的末尾或字符串末尾的换行前，在[`MULTILINE`](https://docs.python.org/3/library/re.html#re.MULTILINE)模式下也匹配换行前。 `foo`同时匹配 'foo' 和 'foobar'，而正则表达式`foo$`只匹配 "foo"。 更有趣的是，在`'foo1\nfoo2\n'`中搜索`foo.$`，正常情况下匹配'foo2'，但在[`MULTILINE`](https://docs.python.org/3/library/re.html#re.MULTILINE)模式下匹配'foo1'；在`'foo\n'`中搜索单个`$`会发现两个（空）匹配：一个在换行前，一个在字符串的末尾。
+>
+> - `*`
+>
+>   导致产生的RE与前面的RE的0个或多个重复相匹配，重复的次数越多越好。 `ab*`将匹配'a', 'ab', 或'a'后面有任意数量的'b'.
+>
+> - `+`
+>
+>   导致产生的RE与前面的RE的1个或多个重复相匹配。`ab+`将匹配'a'后面有任何非零数量的'b'；它不会只匹配'a'。
+>
+> - `?`
+>
+>   导致产生的RE与前面的RE的0或1次重复相匹配。`ab?`将匹配'a'或'ab'。
+>
+> - `*?`, `+?`, `??`
+>
+>   `'*'`、`'+'`和`'?'`数量符都是*贪婪的*；它们尽可能多地匹配文本。有时这种行为并不是想要的；如果 RE `<.*>`与`'<a> b <c>'`相匹配，它将匹配整个字符串，而不是仅仅匹配`'<a>'`。在数量符后面加一个`?`将执行非贪婪或者最小量方式匹配；匹配尽可能少的字符。使用RE `<.*?>`将仅匹配`'<a>'`。
+>
+> - `*+`, `++`, `?+`
+>
+>   像`'*'`、`'+'`和`'?'`数量符一样，那些附加了`'+'`的数量符也是尽可能多地匹配。然而，与真正的贪婪数量符不同，这些数量符不允许在它后面的表达式无法匹配时进行回溯。这些被称为*占有式*数量符。例如，`a*a` 将匹配`'aaaa'`，因为 `a*`将匹配所有4个 `'a'`，但是，当遇到最后的 `'a'` 时，表达式会被回溯，所以最后 `a*`总共匹配3个 `'a'`，而第四个 `'a'` 被最后的 `'a'` 匹配。然而，当使用`a*+a`来匹配`'aaaa'`时，`a*+`将匹配所有4个`'a'`，但是当最后的`'a'`未能找到更多的字符来匹配时，该表达式不能被回溯，因此将无法匹配。`x*+`、`x++`和`x?+`相应地等同于`(?>x*)`、`(?>x+)`和`(?>x? )`。 3.11版中的新内容。
+
+- `{m}`
+
+  Specifies that exactly *m* copies of the previous RE should be matched; fewer matches cause the entire RE not to match.  For example, `a{6}` will match exactly six `'a'` characters, but not five.
+
+- `{m,n}`
+
+  Causes the resulting RE to match from *m* to *n* repetitions of the preceding RE, attempting to match as many repetitions as possible.  For example, `a{3,5}` will match from 3 to 5 `'a'` characters.  Omitting *m* specifies a lower bound of zero,  and omitting *n* specifies an infinite upper bound.  As an example, `a{4,}b` will match `'aaaab'` or a thousand `'a'` characters followed by a `'b'`, but not `'aaab'`. The comma may not be omitted or the modifier would be confused with the previously described form.
+
+- `{m,n}?`
+
+  Causes the resulting RE to match from *m* to *n* repetitions of the preceding RE, attempting to match as *few* repetitions as possible.  This is the non-greedy version of the previous quantifier.  For example, on the 6-character string `'aaaaaa'`, `a{3,5}` will match 5 `'a'` characters, while `a{3,5}?` will only match 3 characters.
+
+- `{m,n}+`
+
+  Causes the resulting RE to match from *m* to *n* repetitions of the preceding RE, attempting to match as many repetitions as possible *without* establishing any backtracking points. This is the possessive version of the quantifier above. For example, on the 6-character string `'aaaaaa'`, `a{3,5}+aa` attempt to match 5 `'a'` characters, then, requiring 2 more `'a'`s, will need more characters than available and thus fail, while `a{3,5}aa` will match with `a{3,5}` capturing 5, then 4 `'a'`s by backtracking and then the final 2 `'a'`s are matched by the final `aa` in the pattern. `x{m,n}+` is equivalent to `(?>x{m,n})`. New in version 3.11.
+
+> - `{m}`
+>
+>   指定应准确匹配前一个RE的*m*个副本；更少的匹配导致整个RE不被匹配。 例如，`a{6}`将精确匹配六个`'a'`字符，而不是五个。
+>
+> - `{m,n}`
+>
+>   导致产生的RE从*m*到*n*次重复匹配前面的RE，试图匹配尽可能多的重复。 例如，`a{3,5}`将匹配3到5个`'a'`字符。 省略*m*指定的下限是0，省略*n*指定的上限是无限的。 例如，`a{4,}b` 将匹配`'aaaab'`或1000个 `'a'` 字符后跟一个 `'b'`，但不匹配`'aab'`。逗号不能省略，否则修饰语会与之前描述的形式相混淆。
+>
+> - `{m,n}?`。
+>
+>   导致产生的RE从*m*到*n*次重复的前面的RE进行匹配，试图尽可能少地匹配重复的内容。 这是前一个量词符的**非贪婪版本**。 例如，在6个字符的字符串`'aaaaa'`上，`a{3,5}`将匹配5个`'a'`字符，而`a{3,5}?`将只匹配3个字符。
+>
+> - `{m,n}+`
+>
+>   导致产生的RE从*m*到*n*次重复匹配前面的RE，试图在不建立任何回溯点的情况下，尽可能多地匹配重复。这是上述量词符的**占有式版本**。例如，在6个字符的字符串`'aaaaa'`上，`a{3,5}+aa`试图匹配5个`'a'`字符，然后，还需要2个`'a'`，将需要比可用的字符更多，因此失败，而`a{3,5}aa`将与`a{3,5}`捕获5，然后通过回溯匹配4个`'a'`，然后最后的2`'a‘`被模式中最后的`aa`匹配。`x{m,n}+`等同于`(?>x{m,n})`。3.11版中的新内容。
+
+- `\`
+
+  Either escapes special characters (permitting you to match characters like `'*'`, `'?'`, and so forth), or signals a special sequence; special sequences are discussed below. If you’re not using a raw string to express the pattern, remember that Python also uses the backslash as an escape sequence in string literals; if the escape sequence isn’t recognized by Python’s parser, the backslash and subsequent character are included in the resulting string.  However, if Python would recognize the resulting sequence, the backslash should be repeated twice.  This is complicated and hard to understand, so it’s highly recommended that you use raw strings for all but the simplest expressions.
+
+- `[]`
+
+  Used to indicate a set of characters.  In a set:
+
+  - Characters can be listed individually, e.g. `[amk]` will match `'a'`, `'m'`, or `'k'`.
+
+  - Ranges of characters can be indicated by giving two characters and separating them by a `'-'`, for example `[a-z]` will match any lowercase ASCII letter, `[0-5][0-9]` will match all the two-digits numbers from `00` to `59`, and `[0-9A-Fa-f]` will match any hexadecimal digit.  If `-` is escaped (e.g. `[a\-z]`) or if it’s placed as the first or last character (e.g. `[-a]` or `[a-]`), it will match a literal `'-'`.
+  - Special characters lose their special meaning inside sets.  For example, `[(+*)]` will match any of the literal characters `'('`, `'+'`, `'*'`, or `')'`.
+
+  - Character classes such as `\w` or `\S` (defined below) are also accepted inside a set, although the characters they match depends on whether [`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII) or [`LOCALE`](https://docs.python.org/3/library/re.html#re.LOCALE) mode is in force.
+
+  - Characters that are not within a range can be matched by *complementing* the set.  If the first character of the set is `'^'`, all the characters that are *not* in the set will be matched.  For example, `[^5]` will match any character except `'5'`, and `[^^]` will match any character except `'^'`.  `^` has no special meaning if it’s not the first character in the set.
+  - To match a literal `']'` inside a set, precede it with a backslash, or place it at the beginning of the set.  For example, both `[()[\]{}]` and `[]()[{}]` will both match a parenthesis.
+
+  - Support of nested sets and set operations as in [Unicode Technical Standard #18](https://unicode.org/reports/tr18/) might be added in the future.  This would change the syntax, so to facilitate this change a [`FutureWarning`](https://docs.python.org/3/library/exceptions.html#FutureWarning) will be raised in ambiguous cases for the time being. That includes sets starting with a literal `'['` or containing literal character sequences `'--'`, `'&&'`, `'~~'`, and `'||'`.  To avoid a warning escape them with a backslash.
+
+  Changed in version 3.7: [`FutureWarning`](https://docs.python.org/3/library/exceptions.html#FutureWarning) is raised if a character set contains constructs that will change semantically in the future.
+
+- `|`
+
+  `A|B`, where *A* and *B* can be arbitrary REs, creates a regular expression that will match either *A* or *B*.  An arbitrary number of REs can be separated by the `'|'` in this way.  This can be used inside groups (see below) as well.  As the target string is scanned, REs separated by `'|'` are tried from left to right. When one pattern completely matches, that branch is accepted. This means that once *A* matches, *B* will not be tested further, even if it would produce a longer overall match.  In other words, the `'|'` operator is never greedy.  To match a literal `'|'`, use `\|`, or enclose it inside a character class, as in `[|]`.
+  
+- `(...)`
+
+  Matches whatever regular expression is inside the parentheses, and indicates the start and end of a group; the contents of a group can be retrieved after a match has been performed, and can be matched later in the string with the `\number` special sequence, described below.  To match the literals `'('` or `')'`, use `\(` or `\)`, or enclose them inside a character class: `[(]`, `[)]`.
+
+> - `\`
+>
+> 要么**转义**特殊字符 (允许你匹配像`'*'`、`'?'`这样的字符，等等)，要么发出特殊序列的信号；**特殊序列**将在下面讨论。
+>
+> 如果你不是用一个原始的字符串来表达模式，请记住，Python 在字符串字面中也使用反斜杠作为**转义序列**；如果转义序列不被 Python 的分析器识别，反斜杠和随后的字符将包含在结果字符串中。 然而，如果 Python 能识别结果序列，那么反斜线应该重复两次。 这很复杂，也很难理解，所以强烈建议你除了最简单的表达式外，都使用原始字符串。
+>
+> - `[]`
+>
+> 用来表示一个**字符集**。 在一个集合中：
+>
+> - 字符可以**单独列出**，例如，`[amk]`将匹配`'a'`、`'m'`或 `'k'`。
+>
+> - **字符的范围**可以通过给出两个字符并以`'-'`分隔来表示，例如`[a-z]`将匹配任何小写ASCII字母，`[0-5][0-9]`将匹配从`00`到`59`的所有两位数，而`[0-9A-Fa-f]`将匹配任何十六进制数字。 如果`-`被转义（例如`[a\-z]`），或者它被放在第一个或最后一个字符（例如`[-a]`或`[a-]`），它将匹配字面常量的`'-'`。
+> - **特殊字符在集合内失去其特殊意义**。 例如，`[(+*)]`将匹配任何字面常量字符`'('`、`'+'`、`'*'`或`')'`。
+>
+> - 诸如`\w`或`\S`（定义见下文）这样的**字符类**也可以在一个集合内接受，不过它们匹配的字符取决于[`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII)或[`LOCALE`](https://docs.python.org/3/library/re.html#re.LOCALE)模式是否生效。
+>
+> - 不在一个范围内的字符可以通过***补全*集**来匹配。 如果集合的第一个字符是`'^'`，所有不在集合中的字符都将被匹配。 例如，`[^5]`将匹配除`'5'`以外的任何字符，而`[^^]`将匹配除`'^'`以外的任何字符。 `^`没有特殊含义，如果它不是集合中的第一个字符。
+> - 要在一个集合中**匹配一个字面常量**的`']'`，在它**前面加一个反斜杠**，或者把它放在集合的开头。 例如，`[()[\]{}]`和 `[]()[{}]`都可以匹配一个小括号。
+>
+> - 未来可能会增加对[Unicode Technical Standard #18](https://unicode.org/reports/tr18/)中**嵌套集合和集合操作**的支持。 这将改变语法，所以为了促进这一变化，在模棱两可的情况下，将暂时发出[`FutureWarning`](https://docs.python.org/3/library/exceptions.html#FutureWarning) 。这包括以文字`'['`开始的集合或包含文字序列`'--'`、`'&&'`、`'~~'`和`'||'`。 为了避免警告，可以用反斜杠转义。
+>
+> 在3.7版本中改变了：如果一个字符集包含的结构将在未来发生语义上的变化，[`FutureWarning`](https://docs.python.org/3/library/exceptions.html#FutureWarning)将被提出。
+>
+> - `|`
+>
+>   `A|B`，其中*A*和*B*可以是任意的RE，创建一个将匹配*A*或*B*的正则表达式。 可以用这种方式用`'|'`来分隔任意数量的RE。 这也可以在组内使用（见下文）。 在扫描目标字符串时，由`'|'`分隔的RE从左到右被尝试。当一个模式完全匹配时，该分支被接受。这意味着**一旦*A*匹配，*B*将不会被进一步测试**，即使它将产生更长的整体匹配。 换句话说，`'|'`运算符**从不贪婪**。 要匹配一个字面常量的`’|‘`，请使用`'\|'`，或者将其包含在一个字符类中，如`[|]`。
+>   
+> - `(...)`
+>
+>   匹配括号内的任何正则表达式，并表示一个组的开始和结束；一个组的内容可以在进行匹配后被检索到，并且可以在字符串的后面用`/number`特殊序列进行匹配，如下所述。 要匹配字面常量`'('`或`')'`，请使用`\(`或 `\)`，或将它们**括在一个字符类中**。`[(]`, `[)]`.
+
+- `(?...)`
+
+  This is an extension notation (a `'?'` following a `'('` is not meaningful otherwise).  The first character after the `'?'` determines what the meaning and further syntax of the construct is. Extensions usually do not create a new group; `(?P<name>...)` is the only exception to this rule. Following are the currently supported extensions.
+
+- `(?aiLmsux)`
+
+  (One or more letters from the set `'a'`, `'i'`, `'L'`, `'m'`, `'s'`, `'u'`, `'x'`.)  The group matches the empty string; the letters set the corresponding flags: [`re.A`](https://docs.python.org/3/library/re.html#re.A) (ASCII-only matching), [`re.I`](https://docs.python.org/3/library/re.html#re.I) (ignore case), [`re.L`](https://docs.python.org/3/library/re.html#re.L) (locale dependent), [`re.M`](https://docs.python.org/3/library/re.html#re.M) (multi-line), [`re.S`](https://docs.python.org/3/library/re.html#re.S) (dot matches all), `re.U` (Unicode matching), and [`re.X`](https://docs.python.org/3/library/re.html#re.X) (verbose), for the entire regular expression. (The flags are described in [Module Contents](https://docs.python.org/3/library/re.html#contents-of-module-re).) This is useful if you wish to include the flags as part of the regular expression, instead of passing a *flag* argument to the [`re.compile()`](https://docs.python.org/3/library/re.html#re.compile) function.  Flags should be used first in the expression string. Changed in version 3.11: This construction can only be used at the start of the expression.
+
+- `(?:...)`
+
+  A non-capturing version of regular parentheses.  Matches whatever regular expression is inside the parentheses, but the substring matched by the group *cannot* be retrieved after performing a match or referenced later in the pattern.
+
+- `(?aiLmsux-imsx:...)`
+
+  (Zero or more letters from the set `'a'`, `'i'`, `'L'`, `'m'`, `'s'`, `'u'`, `'x'`, optionally followed by `'-'` followed by one or more letters from the `'i'`, `'m'`, `'s'`, `'x'`.) The letters set or remove the corresponding flags: [`re.A`](https://docs.python.org/3/library/re.html#re.A) (ASCII-only matching), [`re.I`](https://docs.python.org/3/library/re.html#re.I) (ignore case), [`re.L`](https://docs.python.org/3/library/re.html#re.L) (locale dependent), [`re.M`](https://docs.python.org/3/library/re.html#re.M) (multi-line), [`re.S`](https://docs.python.org/3/library/re.html#re.S) (dot matches all), `re.U` (Unicode matching), and [`re.X`](https://docs.python.org/3/library/re.html#re.X) (verbose), for the part of the expression. (The flags are described in [Module Contents](https://docs.python.org/3/library/re.html#contents-of-module-re).) The letters `'a'`, `'L'` and `'u'` are mutually exclusive when used as inline flags, so they can’t be combined or follow `'-'`.  Instead, when one of them appears in an inline group, it overrides the matching mode in the enclosing group.  In Unicode patterns `(?a:...)` switches to ASCII-only matching, and `(?u:...)` switches to Unicode matching (default).  In byte pattern `(?L:...)` switches to locale depending matching, and `(?a:...)` switches to ASCII-only matching (default). This override is only in effect for the narrow inline group, and the original matching mode is restored outside of the group. New in version 3.6.  Changed in version 3.7: The letters `'a'`, `'L'` and `'u'` also can be used in a group.
+
+- `(?>...)`
+
+  Attempts to match `...` as if it was a separate regular expression, and if successful, continues to match the rest of the pattern following it. If the subsequent pattern fails to match, the stack can only be unwound to a point *before* the `(?>...)` because once exited, the expression, known as an *atomic group*, has thrown away all stack points within itself. Thus, `(?>.*).` would never match anything because first the `.*` would match all characters possible, then, having nothing left to match, the final `.` would fail to match. Since there are no stack points saved in the Atomic Group, and there is no stack point before it, the entire expression would thus fail to match. New in version 3.11.
+
+- `(?P<name>...)`
+
+  Similar to regular parentheses, but the substring matched by the group is accessible via the symbolic group name *name*.  Group names must be valid Python identifiers, and each group name must be defined only once within a regular expression.  A symbolic group is also a numbered group, just as if the group were not named. Named groups can be referenced in three contexts.  If the pattern is `(?P<quote>['"]).*?(?P=quote)` (i.e. matching a string quoted with either single or double quotes):    Context of reference to group “quote” Ways to reference it  in the same pattern itself `(?P=quote)` (as shown) `\1`  when processing match object *m* `m.group('quote')` `m.end('quote')` (etc.)  in a string passed to the *repl* argument of `re.sub()` `\g<quote>` `\g<1>` `\1`    Deprecated since version 3.11: Group names containing non-ASCII characters in bytes patterns.
+
+- `(?P=name)`
+
+  A backreference to a named group; it matches whatever text was matched by the earlier group named *name*.
+
+- `(?#...)`
+
+  A comment; the contents of the parentheses are simply ignored.
+
+- `(?=...)`
+
+  Matches if `...` matches next, but doesn’t consume any of the string.  This is called a *lookahead assertion*.  For example, `Isaac (?=Asimov)` will match `'Isaac '` only if it’s followed by `'Asimov'`.
+
+- `(?!...)`
+
+  Matches if `...` doesn’t match next.  This is a *negative lookahead assertion*. For example, `Isaac (?!Asimov)` will match `'Isaac '` only if it’s *not* followed by `'Asimov'`.
+
+- `(?<=...)`
+
+  Matches if the current position in the string is preceded by a match for `...` that ends at the current position.  This is called a *positive lookbehind assertion*. `(?<=abc)def` will find a match in `'abcdef'`, since the lookbehind will back up 3 characters and check if the contained pattern matches. The contained pattern must only match strings of some fixed length, meaning that `abc` or `a|b` are allowed, but `a*` and `a{3,4}` are not.  Note that patterns which start with positive lookbehind assertions will not match at the beginning of the string being searched; you will most likely want to use the [`search()`](https://docs.python.org/3/library/re.html#re.search) function rather than the [`match()`](https://docs.python.org/3/library/re.html#re.match) function: >>>``
+
+```
+import re
+m = re.search('(?<=abc)def', 'abcdef')
+m.group(0)
+'def'
+```
+
+This example looks for a word following a hyphen:
+
+\>>>
+
+```
+
+m = re.search(r'(?<=-)\w+', 'spam-egg')
+```
+
+
+
+- `(?<!...)`
+
+  Matches if the current position in the string is not preceded by a match for `...`.  This is called a *negative lookbehind assertion*.  Similar to positive lookbehind assertions, the contained pattern must only match strings of some fixed length.  Patterns which start with negative lookbehind assertions may match at the beginning of the string being searched.
+
+- `(?(id/name)yes-pattern|no-pattern)`
+
+  Will try to match with `yes-pattern` if the group with given *id* or *name* exists, and with `no-pattern` if it doesn’t. `no-pattern` is optional and can be omitted. For example, `(<)?(\w+@\w+(?:\.\w+)+)(?(1)>|$)` is a poor email matching pattern, which will match with `'<user@host.com>'` as well as `'user@host.com'`, but not with `'<user@host.com'` nor `'user@host.com>'`. Deprecated since version 3.11: Group *id* containing anything except ASCII digits.
+
+> - `(?...)`  扩展符号？module content, flag, re function
+>
+>   这是一个**扩展符号**（`'?'`跟在`'('`后面没有意义）。 `'?'`后面的第一个字符决定了该结构体的含义和进一步的语法是什么。扩展通常不创建新的组；`(?P<name>...)`是这个规则的唯一例外。以下是目前支持的扩展。
+>
+> - `(?aiLmsux)`
+>
+>   (从`'a'`, `'i'`, `'L'`, `'m'`, `'s'`, `'u'`, `'x'`集合中的一个或多个字母。)  该组匹配空字符串；字母设置相应的标志。[`re.A`](https://docs.python.org/3/library/re.html#re.A) (只匹配ASCII码), [`re.I`](https://docs.python.org/3/library/re.html#re.I) (忽略大小写), [`re.L`](https://docs.python.org/3/library/re.html#re.L) (与地域有关), [`re.M`](https://docs.python.org/3/library/re.html#re.M) (多行), [`re.S`](https://docs.python.org/3/library/re.html#re.S) (点匹配所有) , `re.U`（统一码匹配）, 和 [`re.X`](https://docs.python.org/3/library/re.html#re.X) （粗话），用于整个正规表达。(这些标志在[模块内容](https://docs.python.org/3/library/re.html#contents-of-module-re)中描述）。如果你希望将标志作为正则表达式的一部分，而不是向 [`re.compile()`](https://docs.python.org/3/library/re.html#re.compile) 函数传递一个*flag*参数，这很有用。 标志应该在表达式字符串中首先使用。在3.11版本中改变了：这种结构只能在**表达式的开头**使用。
+>
+> - `(?:...)`
+>
+>   正则括号的非捕获版本。 匹配括号内的任何正则表达式，但在执行匹配后不能*检索该组匹配的子串，也不能在模式中的后面引用。
+>
+> - `(?aiLmsux-imsx:...)`.
+>
+>   (从`'a'`, `'i'`, `'L'`, `'m'`, `'s'`, `'u'`, `'x'`集合中的零个或多个字母，可选择在`'-'`后跟一个或多个来自`'i'`, `'m'`, `'s'`, `'x'`的字母。) 这些字母设置或删除相应的标志。[`re.A`](https://docs.python.org/3/library/re.html#re.A) (只匹配ASCII码), [`re.I`](https://docs.python.org/3/library/re.html#re.I) (忽略大小写), [`re.L`](https://docs.python.org/3/library/re.html#re.L) (与地域有关), [`re.M`](https://docs.python.org/3/library/re.html#re.M) (多行), [`re.S`](https://docs.python.org/3/library/re.html#re.S) (点匹配所有), `re.U` (Unicode匹配), 和 [`re.X`](https://docs.python.org/3/library/re.html#re.X) (verbose) ，针对表达的部分。(这些标志在[模块内容](https://docs.python.org/3/library/re.html#contents-of-module-re)中描述)。字母`'a'`，`'L'`和`'u'`作为内联标志使用时是相互排斥的，所以它们不能合并或跟在`'-'`后面。 相反，当它们中的一个出现在一个内联组中时，它将覆盖包围组中的匹配模式。 在Unicode模式中，`(?a:...)`切换到纯ASCII匹配，`(?u:...)`切换到Unicode匹配（默认）。 在字节模式中，`(?L:...)`切换到根据地域匹配，`(?a:...)`切换到仅ASCII匹配（默认）。这个覆盖只对狭窄的内联组有效，在组外则恢复原来的匹配模式。3.6版中的新功能。 3.7版中的改变：字母`'a'`、`'L'`和`'u'`也可以在组中使用。
+>
+> - `(?>...)`
+>
+>   尝试匹配`...`，就像它是一个单独的正则表达式一样，如果成功，继续匹配它后面的模式。如果后面的模式匹配失败，堆栈只能解开到`(?>...)`之前的一个点，因为一旦退出，这个被称为*原子组的表达式已经丢弃了自己内部的所有堆栈点。因此，`(?>.*).`永远不会匹配任何东西，因为首先`.*`会匹配所有可能的字符，然后，由于没有剩余的字符可以匹配，最后的`.`将无法匹配。由于原子组中没有保存堆栈点，而且在它之前也没有堆栈点，因此整个表达式将无法匹配。3.11版的新内容。
+
+The special sequences consist of `'\'` and a character from the list below. If the ordinary character is not an ASCII digit or an ASCII letter, then the resulting RE will match the second character.  For example, `\$` matches the character `'$'`.
+
+> **特殊序列**由`'\'`和以下列表中的一个字符组成。如果普通字符不是ASCII数字或ASCII字母，那么产生的RE将匹配第二个字符。 例如，`\$`匹配字符`'$'`。
+
+- `\number`
+
+  Matches the contents of the group of the same number.  Groups are numbered starting from 1.  For example, `(.+) \1` matches `'the the'` or `'55 55'`, but not `'thethe'` (note the space after the group).  This special sequence can only be used to match one of the first 99 groups.  If the first digit of *number* is 0, or *number* is 3 octal digits long, it will not be interpreted as a group match, but as the character with octal value *number*. Inside the `'['` and `']'` of a character class, all numeric escapes are treated as characters.
+
+- `\A`
+
+  Matches only at the start of the string.
+
+- `\b`
+
+  Matches the empty string, but only at the beginning or end of a word. A word is defined as a sequence of word characters.  Note that formally, `\b` is defined as the boundary between a `\w` and a `\W` character (or vice versa), or between `\w` and the beginning/end of the string. This means that `r'\bfoo\b'` matches `'foo'`, `'foo.'`, `'(foo)'`, `'bar foo baz'` but not `'foobar'` or `'foo3'`. By default Unicode alphanumerics are the ones used in Unicode patterns, but this can be changed by using the [`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII) flag.  Word boundaries are determined by the current locale if the [`LOCALE`](https://docs.python.org/3/library/re.html#re.LOCALE) flag is used. Inside a character range, `\b` represents the backspace character, for compatibility with Python’s string literals.
+
+- `\B`
+
+  Matches the empty string, but only when it is *not* at the beginning or end of a word.  This means that `r'py\B'` matches `'python'`, `'py3'`, `'py2'`, but not `'py'`, `'py.'`, or `'py!'`. `\B` is just the opposite of `\b`, so word characters in Unicode patterns are Unicode alphanumerics or the underscore, although this can be changed by using the [`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII) flag.  Word boundaries are determined by the current locale if the [`LOCALE`](https://docs.python.org/3/library/re.html#re.LOCALE) flag is used.
+
+- `\d`
+
+  For Unicode (str) patterns:Matches any Unicode decimal digit (that is, any character in Unicode character category [Nd]).  This includes `[0-9]`, and also many other digit characters.  If the [`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII) flag is used only `[0-9]` is matched. For 8-bit (bytes) patterns:Matches any decimal digit; this is equivalent to `[0-9]`.
+
+- `\D`
+
+  Matches any character which is not a decimal digit. This is the opposite of `\d`. If the [`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII) flag is used this becomes the equivalent of `[^0-9]`.
+
+- `\s`
+
+  For Unicode (str) patterns:Matches Unicode whitespace characters (which includes `[ \t\n\r\f\v]`, and also many other characters, for example the non-breaking spaces mandated by typography rules in many languages). If the [`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII) flag is used, only `[ \t\n\r\f\v]` is matched. For 8-bit (bytes) patterns:Matches characters considered whitespace in the ASCII character set; this is equivalent to `[ \t\n\r\f\v]`.
+
+- `\S`
+
+  Matches any character which is not a whitespace character. This is the opposite of `\s`. If the [`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII) flag is used this becomes the equivalent of `[^ \t\n\r\f\v]`.
+
+- `\w`
+
+  For Unicode (str) patterns:Matches Unicode word characters; this includes most characters that can be part of a word in any language, as well as numbers and the underscore. If the [`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII) flag is used, only `[a-zA-Z0-9_]` is matched. For 8-bit (bytes) patterns:Matches characters considered alphanumeric in the ASCII character set; this is equivalent to `[a-zA-Z0-9_]`.  If the [`LOCALE`](https://docs.python.org/3/library/re.html#re.LOCALE) flag is used, matches characters considered alphanumeric in the current locale and the underscore.
+
+- `\W`
+
+  Matches any character which is not a word character. This is the opposite of `\w`. If the [`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII) flag is used this becomes the equivalent of `[^a-zA-Z0-9_]`.  If the [`LOCALE`](https://docs.python.org/3/library/re.html#re.LOCALE) flag is used, matches characters which are neither alphanumeric in the current locale nor the underscore.
+
+- `\Z`
+
+  Matches only at the end of the string.
+
+> - `\number`
+>
+>   匹配**相同编号**的组的内容。组的编号从1开始。例如，`(.+)\1`匹配 `the the'` 或 `'55 55'`，但不匹配`'thethe'`（注意组后面的空格）。这个特殊的序列只能用于匹配前99组中的一组。 如果*number*的第一个数字是0，或者*number*是3个八进制数字，它将不会被解释为组别匹配，而是解释为**八进制**值*number*的字符。在一个字符类的`'['`和`']'`内，所有数字**转义**都被当作字符处理。
+>
+> - `\A`
+>
+>   只在字符串的开头匹配。
+>
+> - `\b`
+>
+>   （这里的`b` 是boundary的缩写）匹配空字符串，但只在一个词的**开头或结尾**。一个单词被定义为**一个单词字符的序列**。 请注意，从形式上看，`\b`被定义为`\w`和`\W` 字符（或反之）之间的边界，或者 `\w`和字符串的开头/结尾之间的边界。这意味着`r'\bfoo\b'`可以匹配`'foo'`、`'foo.'`、`'(foo)'`、`'bar foo baz'`，但不能匹配`'foobar'`或`'foo3'`。默认情况下，**Unicode字母数字**是**Unicode模式中使用的字母数字**，但这可以通过使用[`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII)标志来改变。 如果使用了[`LOCALE`](https://docs.python.org/3/library/re.html#re.LOCALE)标志，字的边界由当前的locale决定。在一个字符范围内，`\b`代表**退格字符**，以便与Python的字符串字面常量兼容。
+>
+> - `\B`
+>
+>   匹配空字符串，但只有当它*不*在一个词的开头或结尾时。 这意味着`r'py\B'`匹配`'python'`, `'py3'`, `'py2'`, 但不匹配`'py'`, `'py.'`, 或`'py! `。`\B`与`\b`正好相反，所以**Unicode模式中的单词字符是Unicode字母数字或下划线**，尽管这可以通过使用[`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII)标志来改变。 如果使用了[`LOCALE`](https://docs.python.org/3/library/re.html#re.LOCALE)标志，字的边界由当前的地域决定。
+>
+> - `\d`
+>
+>   （这里的 `d` 是digit的缩写）对于Unicode（str）模式：匹配任何**Unicode十进制数字**（即Unicode字符类别[Nd]中的任何字符）。 这包括`[0-9]`，也包括许多其他数字字符。 如果使用[`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII)标志，只匹配`[0-9]`。对于8位（字节）模式：匹配任何十进制数字；这等同于`[0-9]`。
+>
+> - `\D`
+>
+>   匹配任何非十进制数字的字符。这与`\d` 相反。如果使用[`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII)标志，则相当于`[^0-9]`。
+>
+> - `\s`
+>
+>   （`s` 是`space` 的缩写）对于Unicode（str）模式：匹配**Unicode空白字符**（包括`[ \t\n\r\f\v]`，以及许多其他字符，例如许多语言的排版规则规定的非断裂空格）。如果使用[`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII)标志，只有`[ \t\n\r\f\v]`被匹配。对于8位（字节）模式：匹配ASCII字符集中被视为空白的字符；这相当于`[ \t\n\rf\v]`。
+>
+> - `\S`
+>
+>   匹配任何不是空白字符的字符。这与`\s`相反。如果使用[`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII)标志，则相当于`[^ \t\n\r\f\v]`。
+>
+> - `\w`
+>
+>   （`w` 是`word` 的缩写）对于Unicode(str)模式：匹配**Unicode单词字符**；这包括在任何语言中可以作为单词组成部分的**大多数字符，以及数字和下划线**。如果使用[`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII)标志，只匹配`[a-zA-Z0-9_]`。对于8位（字节）模式：匹配ASCII字符集中认为是字母数字的字符；这相当于`[a-zA-Z0-9_]`。 如果使用了[`LOCALE`](https://docs.python.org/3/library/re.html#re.LOCALE)标志，则匹配在当前地区视为字母数字的字符和下划线。
+>
+> - `\W`
+>
+>   匹配任何不属于单词的字符。这与`\w`相反。如果使用[`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII)标志，这就相当于`[^a-zA-Z0-9_]`。 如果使用了[`LOCALE`](https://docs.python.org/3/library/re.html#re.LOCALE)标志，则匹配在当前区域内既不是字母数字也不是下划线的字符。
+>
+> - `\Z`
+>
+>   只在**字符串的末尾**进行匹配。
+
+Most of the standard escapes supported by Python string literals are also accepted by the regular expression parser:
+
+> 大部分被Python字符串字面常量支持的标准转移也同样被正则表达式解析器接受。
+
+```
+\a      \b      \f      \n
+\N      \r      \t      \u
+\U      \v      \x      \\
+```
+
+(Note that `\b` is used to represent word boundaries, and means “backspace” only inside character classes.)
+
+`'\u'`, `'\U'`, and `'\N'` escape sequences are only recognized in Unicode patterns.  In bytes patterns they are errors.  Unknown escapes of ASCII letters are reserved for future use and treated as errors.
+
+Octal escapes are included in a limited form.  If the first digit is a 0, or if there are three octal digits, it is considered an octal escape. Otherwise, it is a group reference.  As for string literals, octal escapes are always at most three digits in length.
+
+Changed in version 3.3: The `'\u'` and `'\U'` escape sequences have been added.
+
+Changed in version 3.6: Unknown escapes consisting of `'\'` and an ASCII letter now are errors.
+
+Changed in version 3.8: The `'\N{name}'` escape sequence has been added. As in string literals, it expands to the named Unicode character (e.g. `'\N{EM DASH}'`).
+
+> (注意，`\b`是用来表示词的边界的，只在字符类中表示 "backspace"。)
+>
+> `'\u'`, `'\U'`, 和`'\N'`的转义序列只在Unicode模式中被识别。 在字节模式中，它们是错误的。 ASCII字母的**未知转义**被保留给未来使用，并被视为错误。
+>
+> 八进制转义以一种有限的形式被包括在内。 如果第一个数字是0，或者有三个八进制数字，它被认为是一个**八进制转义**。否则，它就是一个分组引用。 至于字符串字面，八进制转义的长度总是最多三位数。
+>
+> 3.3版中的修改：增加了`'\u'`和`'\U'`的转义序列。
+>
+> 在3.6版本中进行了修改。由`'\'` 和一个ASCII字母组成的未知转义现在是错误的。
+>
+> 在3.8版中进行了修改。增加了`'\N{name}'`转义序列。如同在字符串字面中一样，它可以扩展到指定的Unicode字符（例如：`'\N{EM DASH}'`）。
+
+The module defines several functions, constants, and an exception. Some of the functions are simplified versions of the full featured methods for compiled regular expressions.  Most non-trivial applications always use the compiled form.
+
+> 该模块定义了几个函数、常数和一个异常。一些函数是用于**编译正则表达式**的全功能方法的简化版本。 大多数非微不足道的应用总是使用编译后的形式。
+
+**Flags**
+
+Changed in version 3.6: Flag constants are now instances of [`RegexFlag`](https://docs.python.org/3/library/re.html#re.RegexFlag), which is a subclass of [`enum.IntFlag`](https://docs.python.org/3/library/enum.html#enum.IntFlag).
+
+- *class* re.RegexFlag
+
+  An [`enum.IntFlag`](https://docs.python.org/3/library/enum.html#enum.IntFlag) class containing the regex options listed below. New in version 3.11: - added to `__all__`
+
+- re.A
+
+- re.ASCII
+
+  Make `\w`, `\W`, `\b`, `\B`, `\d`, `\D`, `\s` and `\S` perform ASCII-only matching instead of full Unicode matching.  This is only meaningful for Unicode patterns, and is ignored for byte patterns. Corresponds to the inline flag `(?a)`. Note that for backward compatibility, the `re.U` flag still exists (as well as its synonym `re.UNICODE` and its embedded counterpart `(?u)`), but these are redundant in Python 3 since matches are Unicode by default for strings (and Unicode matching isn’t allowed for bytes).
+
+- re.DEBUG
+
+  Display debug information about compiled expression. No corresponding inline flag.
+
+- re.I
+
+- re.IGNORECASE
+
+  Perform case-insensitive matching; expressions like `[A-Z]` will also match lowercase letters.  Full Unicode matching (such as `Ü` matching `ü`) also works unless the [`re.ASCII`](https://docs.python.org/3/library/re.html#re.ASCII) flag is used to disable non-ASCII matches.  The current locale does not change the effect of this flag unless the [`re.LOCALE`](https://docs.python.org/3/library/re.html#re.LOCALE) flag is also used. Corresponds to the inline flag `(?i)`. Note that when the Unicode patterns `[a-z]` or `[A-Z]` are used in combination with the [`IGNORECASE`](https://docs.python.org/3/library/re.html#re.IGNORECASE) flag, they will match the 52 ASCII letters and 4 additional non-ASCII letters: ‘İ’ (U+0130, Latin capital letter I with dot above), ‘ı’ (U+0131, Latin small letter dotless i), ‘ſ’ (U+017F, Latin small letter long s) and ‘K’ (U+212A, Kelvin sign). If the [`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII) flag is used, only letters ‘a’ to ‘z’ and ‘A’ to ‘Z’ are matched.
+
+- re.L
+
+- re.LOCALE
+
+  Make `\w`, `\W`, `\b`, `\B` and case-insensitive matching dependent on the current locale.  This flag can be used only with bytes patterns.  The use of this flag is discouraged as the locale mechanism is very unreliable, it only handles one “culture” at a time, and it only works with 8-bit locales.  Unicode matching is already enabled by default in Python 3 for Unicode (str) patterns, and it is able to handle different locales/languages. Corresponds to the inline flag `(?L)`. Changed in version 3.6: [`re.LOCALE`](https://docs.python.org/3/library/re.html#re.LOCALE) can be used only with bytes patterns and is not compatible with [`re.ASCII`](https://docs.python.org/3/library/re.html#re.ASCII).  Changed in version 3.7: Compiled regular expression objects with the [`re.LOCALE`](https://docs.python.org/3/library/re.html#re.LOCALE) flag no longer depend on the locale at compile time.  Only the locale at matching time affects the result of matching.
+
+- re.M
+
+- re.MULTILINE
+
+  When specified, the pattern character `'^'` matches at the beginning of the string and at the beginning of each line (immediately following each newline); and the pattern character `'$'` matches at the end of the string and at the end of each line (immediately preceding each newline).  By default, `'^'` matches only at the beginning of the string, and `'$'` only at the end of the string and immediately before the newline (if any) at the end of the string. Corresponds to the inline flag `(?m)`.
+
+- re.NOFLAG
+
+  Indicates no flag being applied, the value is `0`.  This flag may be used as a default value for a function keyword argument or as a base value that will be conditionally ORed with other flags.  Example of use as a default value: `def myfunc(text, flag=re.NOFLAG):    return re.match(text, flag) `  New in version 3.11.
+
+- re.S
+
+- re.DOTALL
+
+  Make the `'.'` special character match any character at all, including a newline; without this flag, `'.'` will match anything *except* a newline. Corresponds to the inline flag `(?s)`.
+
+- re.X
+
+- re.VERBOSE
+
+  This flag allows you to write regular expressions that look nicer and are more readable by allowing you to visually separate logical sections of the pattern and add comments. Whitespace within the pattern is ignored, except when in a character class, or when preceded by an unescaped backslash, or within tokens like `*?`, `(?:` or `(?P<...>`. For example, `(? :` and `* ?` are not allowed. When a line contains a `#` that is not in a character class and is not preceded by an unescaped backslash, all characters from the leftmost such `#` through the end of the line are ignored. This means that the two following regular expression objects that match a decimal number are functionally equal: `a = re.compile(r"""\d +  # the integral part                   \.    # the decimal point                   \d *  # some fractional digits""", re.X) b = re.compile(r"\d+\.\d*") ` Corresponds to the inline flag `(?x)`.
+
+> 在3.6版本中有所改变。标志常量现在是 [`RegexFlag`](https://docs.python.org/3/library/re.html#re.RegexFlag) 的实例，它是 [`enum.IntFlag`](https://docs.python.org/3/library/enum.html#enum.IntFlag) 的子类。
+>
+> - *class* re.RegexFlag
+>
+>   一个[`enum.IntFlag`](https://docs.python.org/3/library/enum.html#enum.IntFlag)类，包含下面列出的regex选项。3.11版中的新内容： - 添加到`__all__`中
+>
+> - re.A
+>
+> - re.ASCII
+>
+>   使`\w`、`\W`、`\b`、`\B`、`\d`、`\D`、`\s`和`\S`只进行ASCII匹配，而不是完全的Unicode匹配。 这只对Unicode模式有意义，对字节模式则被忽略。对应于内联标志`(?a)`。注意，为了向后兼容，`re.U`标志仍然存在 (以及它的同义词`re.UNICODE`和它的嵌入式对应标志`(?u)`)，但是这些在Python 3中是多余的，因为对字符串的匹配默认为Unicode (而对字节不允许Unicode匹配)。
+>
+> - re.DEBUG
+>
+>   显示编译后的表达式的调试信息。没有相应的内联标志。
+>
+> - re.I
+>
+> - re.IGNORECASE
+>
+>   进行**不区分大小写**的匹配；像`[A-Z]`这样的表达式也会匹配小写字母。 除非使用[`re.ASCII`](https://docs.python.org/3/library/re.html#re.ASCII)标志禁用非ASCII匹配，否则完整的Unicode匹配（如`Ü`匹配`ü`）也能工作。 除非同时使用[`re.LOCALE`](https://docs.python.org/3/library/re.html#re.LOCALE)标志，否则当前的语言环境不会改变该标志的效果。对应于内联标志`(?i)`。注意，当Unicode模式`[a-z]`或`[A-Z]`与[`IGNORECASE`](https://docs.python.org/3/library/re.html#re.IGNORECASE)标志，它们将匹配52个ASCII字母和4个额外的非ASCII字母：'İ'（U+0130，拉丁大写字母I，上面有点），'ı'（U+0131，拉丁小字母无点i），'ſ'（U+017F，拉丁小字母长S）和'K'（U+212A，开尔文符号）。如果使用[`ASCII`](https://docs.python.org/3/library/re.html#re.ASCII)标志，只匹配'a'到'z'和'A'到'Z'的字母。
+>
+> - re.L
+>
+> - re.LOCALE
+>
+>   使`\w`、`\W`、`\b`、`\B`和不区分大小写的匹配取决于当前的语言环境。 这个标志只能用于字节模式。 不鼓励使用这个标志，因为locale机制非常不可靠，它一次只能处理一种 "文化"，而且它只适用于8位的locale。 在Python 3中，Unicode匹配已经默认启用，用于Unicode (str) 模式，并且能够处理不同的locale/语言。对应于内联标志`(?L)`。在3.6版本中改变了：[`re.LOCALE`](https://docs.python.org/3/library/re.html#re.LOCALE)只能用于字节模式，与[`re.ASCII`](https://docs.python.org/3/library/re.html#re.ASCII)不兼容。 在3.7版本中改变了：使用[`re.LOCALE`](https://docs.python.org/3/library/re.html#re.LOCALE)标志编译的正则表达式对象不再依赖于编译时的语言环境。 只有匹配时的locale才会影响匹配的结果。
+>
+> - re.M
+>
+> - re.MULTILINE
+>
+>   当指定时，模式字符`'^'`在字符串的开头和每一行的开头（紧接着每个换行）匹配；模式字符`'$'`在字符串的结尾和每一行的结尾（紧接着每个换行）匹配。 默认情况下，`'^'`只在字符串的开头匹配，而`'$'`只在字符串的结尾和紧接着字符串结尾的换行（如果有）之前匹配。对应于内联标志`(?m)`。
+
+- re.NOFLAG
+
+  Indicates no flag being applied, the value is `0`.  This flag may be used as a default value for a function keyword argument or as a base value that will be conditionally ORed with other flags.  Example of use as a default value: 
+
+  ```python
+  def myfunc(text, flag=re.NOFLAG):
+      return re.match(text, flag) ` 
+  ```
+
+  New in version 3.11.
+
+- re.S
+
+- re.DOTALL
+
+  Make the `'.'` special character match any character at all, including a newline; without this flag, `'.'` will match anything *except* a newline. Corresponds to the inline flag `(?s)`.
+
+- re.X
+
+- re.VERBOSE
+
+  This flag allows you to write regular expressions that look nicer and are more readable by allowing you to visually separate logical sections of the pattern and add comments. Whitespace within the pattern is ignored, except when in a character class, or when preceded by an unescaped backslash, or within tokens like `*?`, `(?:` or `(?P<...>`. For example, `(? :` and `* ?` are not allowed. When a line contains a `#` that is not in a character class and is not preceded by an unescaped backslash, all characters from the leftmost such `#` through the end of the line are ignored. This means that the two following regular expression objects that match a decimal number are functionally equal:
+
+  ```python
+  a = re.compile(r"""\d +  # the integral part
+                     \.    # the decimal point
+                     \d *  # some fractional digits""", re.X)
+  b = re.compile(r"\d+\.\d*")
+  ```
+
+  Corresponds to the inline flag `(?x)`.
+
+> - re.NOFLAG
+>
+>   表示没有应用任何标志，其值为`0`。 这个标志可以作为一个函数关键字参数的默认值，或者作为一个基础值，将与其他标志有条件地进行OR。 作为默认值使用的例子。
+>
+>   ```python
+>   def myfunc(text, flag=re.NOFLAG):
+>       return re.match(text, flag) 
+>   ```
+>
+>   3.11版中的新内容。
+>
+> - re.S
+>
+> - re.DOTALL
+>
+>   让`'.'` 特殊字符匹配任何字符，包括换行；如果没有这个标志，`'.'` 将匹配任何字符，*不包括*换行。对应于内联标志`(?s)`。
+>
+> - re.X
+>
+> - re.VERBOSE
+>
+>   这个标志允许你写的正则表达式看起来更漂亮，更有可读性，允许你从视觉上分离模式的逻辑部分并添加注释。模式中的空白将被忽略，除非是在一个字符类中，或者前面有一个未转义的反斜杠，或者在像`*?`、`(?:`或`(?P<...>`这样的标记中。例如，`(?:`和`* ?`是不允许的。当一行包含一个不属于某个字符类的`#`，并且前面没有一个未转义的反斜杠，从最左边的这种`#`到行尾的所有字符都会被忽略。这意味着下面两个匹配十进制数字的正则表达式对象在功能上是相同的。
+>
+>   ```python
+>   a = re.compile(r""\d + # 积分部分
+>                      \.    # 小数点
+>                      \d * # 一些小数位"""，re.X)
+>   b = re.compile(r"\d+\.\d*")
+>   ```
+>
+>   对应于内联标志`(?x)`。
+
+**Functions**
+
+- re.compile(*pattern*, *flags=0*)
+
+  Compile a regular expression pattern into a [regular expression object](https://docs.python.org/3/library/re.html#re-objects), which can be used for matching using its [`match()`](https://docs.python.org/3/library/re.html#re.Pattern.match), [`search()`](https://docs.python.org/3/library/re.html#re.Pattern.search) and other methods, described below. The expression’s behaviour can be modified by specifying a *flags* value. Values can be any of the following variables, combined using bitwise OR (the `|` operator). The sequence
+
+  `prog = re.compile(pattern) result = prog.match(string) ` 
+
+  is equivalent to
+
+  `result = re.match(pattern, string) ` 
+
+  but using [`re.compile()`](https://docs.python.org/3/library/re.html#re.compile) and saving the resulting regular expression object for reuse is more efficient when the expression will be used several times in a single program. 
+
+  Note The compiled versions of the most recent patterns passed to [`re.compile()`](https://docs.python.org/3/library/re.html#re.compile) and the module-level matching functions are cached, so programs that use only a few regular expressions at a time needn’t worry about compiling regular expressions.
+
+- re.search(*pattern*, *string*, *flags=0*)
+
+  Scan through *string* looking for the first location where the regular expression *pattern* produces a match, and return a corresponding [match object](https://docs.python.org/3/library/re.html#match-objects).  Return `None` if no position in the string matches the pattern; note that this is different from finding a zero-length match at some point in the string.
+
+- re.match(*pattern*, *string*, *flags=0*)
+
+  If zero or more characters at the beginning of *string* match the regular expression *pattern*, return a corresponding [match object](https://docs.python.org/3/library/re.html#match-objects).  Return `None` if the string does not match the pattern; note that this is different from a zero-length match. Note that even in [`MULTILINE`](https://docs.python.org/3/library/re.html#re.MULTILINE) mode, [`re.match()`](https://docs.python.org/3/library/re.html#re.match) will only match at the beginning of the string and not at the beginning of each line. If you want to locate a match anywhere in *string*, use [`search()`](https://docs.python.org/3/library/re.html#re.search) instead (see also [search() vs. match()](https://docs.python.org/3/library/re.html#search-vs-match)).
+
+- re.fullmatch(*pattern*, *string*, *flags=0*)
+
+  If the whole *string* matches the regular expression *pattern*, return a corresponding [match object](https://docs.python.org/3/library/re.html#match-objects).  Return `None` if the string does not match the pattern; note that this is different from a zero-length match. New in version 3.4.
+
+- re.split(*pattern*, *string*, *maxsplit=0*, *flags=0*)
+
+  Split *string* by the occurrences of *pattern*.  If capturing parentheses are used in *pattern*, then the text of all groups in the pattern are also returned as part of the resulting list. If *maxsplit* is nonzero, at most *maxsplit* splits occur, and the remainder of the string is returned as the final element of the list. 
+
+  ```python
+  re.split(r'\W+', 'Words, words, words.')
+  ['Words', 'words', 'words', '']
+  re.split(r'(\W+)', 'Words, words, words.')
+  ['Words', ', ', 'words', ', ', 'words', '.', '']
+  re.split(r'\W+', 'Words, words, words.', 1)
+  ['Words', 'words, words.']
+  re.split('[a-f]+', '0a3B9', flags=re.IGNORECASE)
+  ['0', '3', '9']
+  ```
+
+  If there are capturing groups in the separator and it matches at the start of the string, the result will start with an empty string.  The same holds for the end of the string:
+
+  ```python
+  re.split(r'(\W+)', '...words, words...')
+  ['', '...', 'words', ', ', 'words', '...', '']
+  ```
+
+  That way, separator components are always found at the same relative indices within the result list.
+
+  Empty matches for the pattern split the string only when not adjacent to a previous empty match.
+
+  ```python
+  re.split(r'\b', 'Words, words, words.')
+  ['', 'Words', ', ', 'words', ', ', 'words', '.']
+  re.split(r'\W*', '...words...')
+  ['', '', 'w', 'o', 'r', 'd', 's', '', '']
+  ```
+
+  Changed in version 3.1: Added the optional flags argument.
+
+  Changed in version 3.7: Added support of splitting on a pattern that could match an empty string.
+
+- re.findall(*pattern*, *string*, *flags=0*)
+
+  Return all non-overlapping matches of *pattern* in *string*, as a list of strings or tuples.  The *string* is scanned left-to-right, and matches are returned in the order found.  Empty matches are included in the result. 
+
+  The result depends on the number of capturing groups in the pattern. If there are no groups, return a list of strings matching the whole pattern.  If there is exactly one group, return a list of strings matching that group.  If multiple groups are present, return a list of tuples of strings matching the groups.  Non-capturing groups do not affect the form of the result.
+
+  ```python
+  re.findall(r'\bf[a-z]*', 'which foot or hand fell fastest')
+  ['foot', 'fell', 'fastest']
+  ```
+
+- re.finditer(*pattern*, *string*, *flags=0*)
+
+  Return an [iterator](https://docs.python.org/3/glossary.html#term-iterator) yielding [match objects](https://docs.python.org/3/library/re.html#match-objects) over all non-overlapping matches for the RE *pattern* in *string*.  The *string* is scanned left-to-right, and matches are returned in the order found.  Empty matches are included in the result. Changed in version 3.7: Non-empty matches can now start just after a previous empty match.
+
+- re.sub(*pattern*, *repl*, *string*, *count=0*, *flags=0*)
+
+  Return the string obtained by replacing the leftmost non-overlapping occurrences of *pattern* in *string* by the replacement *repl*.  If the pattern isn’t found, *string* is returned unchanged.  *repl* can be a string or a function; if it is a string, any backslash escapes in it are processed.  That is, `\n` is converted to a single newline character, `\r` is converted to a carriage return, and so forth.  Unknown escapes of ASCII letters are reserved for future use and treated as errors.  Other unknown escapes such as `\&` are left alone. Backreferences, such as `\6`, are replaced with the substring matched by group 6 in the pattern. For example: 
+  
+  ```python
+  re.sub(r'def\s+([a-zA-Z_][a-zA-Z_0-9]*)\s*\(\s*\):',
+  
+         r'static PyObject*\npy_\1(void)\n{',
+  
+         'def myfunc():')
+  'static PyObject*\npy_myfunc(void)\n{'
+  ```
+  
+  If *repl* is a function, it is called for every non-overlapping occurrence of *pattern*.  The function takes a single [match object](https://docs.python.org/3/library/re.html#match-objects) argument, and returns the replacement string.  For example:
+  
+  ```python
+  def dashrepl(matchobj):
+  
+      if matchobj.group(0) == '-': return ' '
+  
+      else: return '-'
+  
+  re.sub('-{1,2}', dashrepl, 'pro----gram-files')
+  'pro--gram files'
+  
+  re.sub(r'\sAND\s', ' & ', 'Baked Beans And Spam', flags=re.IGNORECASE)
+  'Baked Beans & Spam'
+  ```
+  
+  The pattern may be a string or a [pattern object](https://docs.python.org/3/library/re.html#re-objects).
+  
+  The optional argument *count* is the maximum number of pattern occurrences to be replaced; *count* must be a non-negative integer.  If omitted or zero, all occurrences will be replaced. Empty matches for the pattern are replaced only when not adjacent to a previous empty match, so `sub('x*', '-', 'abxd')` returns `'-a-b--d-'`.
+  
+  In string-type *repl* arguments, in addition to the character escapes and backreferences described above, `\g<name>` will use the substring matched by the group named `name`, as defined by the `(?P<name>...)` syntax. `\g<number>` uses the corresponding group number; `\g<2>` is therefore equivalent to `\2`, but isn’t ambiguous in a replacement such as `\g<2>0`.  `\20` would be interpreted as a reference to group 20, not a reference to group 2 followed by the literal character `'0'`.  The backreference `\g<0>` substitutes in the entire substring matched by the RE.
+  
+  Changed in version 3.1: Added the optional flags argument.
+  
+  Changed in version 3.5: Unmatched groups are replaced with an empty string.
+  
+  Changed in version 3.6: Unknown escapes in *pattern* consisting of `'\'` and an ASCII letter now are errors.
+  
+  Changed in version 3.7: Unknown escapes in *repl* consisting of `'\'` and an ASCII letter now are errors.
+  
+  Changed in version 3.7: Empty matches for the pattern are replaced when adjacent to a previous non-empty match.
+  
+  Deprecated since version 3.11: Group *id* containing anything except ASCII digits. Group names containing non-ASCII characters in bytes replacement strings.
+
+- re.subn(*pattern*, *repl*, *string*, *count=0*, *flags=0*)
+
+  Perform the same operation as [`sub()`](https://docs.python.org/3/library/re.html#re.sub), but return a tuple `(new_string, number_of_subs_made)`. Changed in version 3.1: Added the optional flags argument.  Changed in version 3.5: Unmatched groups are replaced with an empty string.
+
+- re.escape(*pattern*)
+
+  Escape special characters in *pattern*. This is useful if you want to match an arbitrary literal string that may have regular expression metacharacters in it.  For example: 
+  
+  ```python
+  print(re.escape('https://www.python.org'))
+  https://www\.python\.org
+  
+  legal_chars = string.ascii_lowercase + string.digits + "!#$%&'*+-.^_`|~:"
+  
+  print('[%s]+' % re.escape(legal_chars))
+  [abcdefghijklmnopqrstuvwxyz0123456789!\#\$%\&'\*\+\-\.\^_`\|\~:]+
+  
+  operators = ['+', '-', '*', '/', '**']
+  
+  print('|'.join(map(re.escape, sorted(operators, reverse=True))))
+  /|\-|\+|\*\*|\*
+  ```
+  
+  This function must not be used for the replacement string in [`sub()`](https://docs.python.org/3/library/re.html#re.sub) and [`subn()`](https://docs.python.org/3/library/re.html#re.subn), only backslashes should be escaped.  For example:
+  
+  ```python
+  digits_re = r'\d+'
+  
+  sample = '/usr/sbin/sendmail - 0 errors, 12 warnings'
+  
+  print(re.sub(digits_re, digits_re.replace('\\', r'\\'), sample))
+  /usr/sbin/sendmail - \d+ errors, \d+ warnings
+  ```
+  
+  Changed in version 3.3: The `'_'` character is no longer escaped.
+  
+  Changed in version 3.7: Only characters that can have special meaning in a regular expression are escaped. As a result, `'!'`, `'"'`, `'%'`, `"'"`, `','`, `'/'`, `':'`, `';'`, `'<'`, `'='`, `'>'`, `'@'`, and `"`"` are no longer escaped.
+
+- re.purge()
+
+  Clear the regular expression cache.
+
+> - re.compile(*pattern*, *flags=0*)
+>
+>   将一个正则表达式模式编译成一个[正则表达式对象](https://docs.python.org/3/library/re.html#re-objects)，可以使用其[`match()`](https://docs.python.org/3/library/re.html#re.Pattern.match)、[`search()`](https://docs.python.org/3/library/re.html#re.Pattern.search)和其他方法进行匹配，如下所述。表达式的行为可以通过指定一个*flags*值来修改。值可以是以下任何一个变量，使用位法OR（`|`运算符）组合。
+>
+>   序列
+>
+>   `prog = re.compile(pattern) `
+>
+>   `result = prog.match(string) `
+>
+>   相当于
+>
+>   `result = re.match(pattern, string) `
+>
+>   但使用 [`re.compile()`](https://docs.python.org/3/library/re.html#re.compile) 并保存产生的正则表达式对象以便重复使用，当表达式在一个程序中被多次使用时，效率更高。
+>
+>   注意 传递给 [`re.compile()`](https://docs.python.org/3/library/re.html#re.compile) 和模块级匹配函数的最新模式的编译版本被缓存，所以一次只使用几个正则表达式的程序不需要担心编译正则表达式的问题。
+>
+> - re.search(*pattern*, *string*, *flags=0*)
+>
+>   扫描*string*，寻找正则表达式*pattern*产生匹配的**第一个位置**，并返回一个相应的[匹配对象](https://docs.python.org/3/library/re.html#match-objects)。 如果字符串中没有匹配的位置，则返回 `None`；注意，这与在字符串的某个位置找到零长度的匹配不同。
+>
+> - re.match(*pattern*, *string*, *flags=0*)
+>
+>   如果*string*开头的零个或多个字符与正则表达式*pattern*相匹配，返回一个相应的[匹配对象](https://docs.python.org/3/library/re.html#match-objects)。 如果字符串不匹配该模式，则返回`None`；注意这与零长度匹配不同。注意，即使在[`MULTILINE`](https://docs.python.org/3/library/re.html#re.MULTILINE)模式下，[`re.match()`](https://docs.python.org/3/library/re.html#re.match)也只能在字符串的开头匹配，而不是在每行的开头。如果你想在*string*的任何地方定位匹配，请使用[`search()`](https://docs.python.org/3/library/re.html#re.search)代替(参见[search()vs. match()](https://docs.python.org/3/library/re.html#search-vs-match))。
+>
+> - re.fullmatch(*pattern*, *string*, *flags=0*)
+>
+>   如果整个*string*与正则表达式*pattern*相匹配，返回一个相应的[match对象](https://docs.python.org/3/library/re.html#match-objects)。 如果字符串与模式不匹配，返回 `None`；注意，这与零长度匹配不同。3.4版中的新内容。
+>
+> - re.split(*pattern*, *string*, *maxsplit=0*, *flags=0*)
+>
+>   通过*pattern*的出现来分割*string*。 如果在*pattern*中使用了括号，那么模式中所有组的文本也会作为结果列表的一部分返回。如果*maxsplit*为非零，则最多发生*maxsplit*次分割，字符串的剩余部分将作为列表的最后元素返回。
+>
+>   ```python
+>   re.split(r'\W+', 'Words, words, words.')
+>   ['Words', 'words', 'words', '']
+>
+>   re.split(r'(\W+)', 'Words, words, words.')
+>   ['Words', ', ', 'words', ', ', 'words', '.', '']
+>
+>   re.split(r'\W+', 'Words, words, words.', 1)
+>   ['Words', 'words, words.']
+>
+>   re.split('[a-f]+', '0a3B9', flags=re.IGNORECASE)
+>   ['0', '3', '9']
+>   ```
+>
+>   如果分离器中存在捕获组，并且在字符串的开始处匹配，结果将以空字符串开始。 对于字符串的结尾也是如此。
+>
+>   ```python
+>   re.split(r'(\W+)', '...words, words...')
+>   ['', '...', 'words', ', ', 'words', '...', '']
+>   ```
+>
+>   这样，分离器组件总是在结果列表中的相同相对索引处被找到。
+>
+>   模式的空匹配只在与之前的空匹配不相邻时才分割字符串。
+>
+>   ```python
+>   re.split(r'\b', 'Words, words, words.')
+>   ['', 'Words', ', ', 'words', ', ', 'words', '.']
+>
+>   re.split(r'\W*', '...words...')
+>   ['', '', 'w', 'o', 'r', 'd', 's', '', '']
+>
+>   re.split(r'(\W*)', '...words...')
+>   ['', '...', '', '', 'w', '', 'o', '', 'r', '', 'd', '', 's', '...', '', '', '']
+>   ```
+>
+>   在3.1版本中有所改变。增加了可选的flags参数。
+>
+>   在3.7版本中修改：增加了对可能匹配空字符串的模式的分割支持。
+>
+> - re.findall(*pattern*, *string*, *flags=0*)
+>
+>   返回*string*中*pattern*的**所有非重叠匹配**，作为一个字符串或元组的列表。 对*string*进行从左到右的扫描，并按照找到的顺序返回匹配结果。 空的匹配会被包括在结果中。
+>
+>   结果取决于模式中捕获组的数量。如果没有组，返回一个与整个模式匹配的字符串列表。 如果正好有一个组，返回一个与该组匹配的字符串列表。 如果有多个组，返回一个与组相匹配的字符串的列表。 非抓取组不会影响结果的形式。
+>
+>   ```python
+>   re.findall(r'\bf[a-z]*', 'which foot or hand fell fastest')
+>   ['foot', 'fell', 'fastest']
+>
+>   re.findall(r'(\w+)=(\d+)', 'set width=20 and height=10')
+>   [('width', '20'), ('height', '10')]
+>   ```
+>
+>   Changed in version 3.7: Non-empty matches can now start just after a previous empty match.
+>
+> - re.finditer(*pattern*, *string*, *flags=0*)
+>
+>   返回一个[迭代器](https://docs.python.org/3/glossary.html#term-iterator)，在*string*中的RE *pattern*的所有非重叠匹配上产生[匹配对象](https://docs.python.org/3/library/re.html#match-objects) 。 对*string*进行从左到右的扫描，并按照找到的顺序返回匹配对象。 空的匹配会被包括在结果中。在3.7版本中改变了：非空匹配现在可以在前一个空匹配之后开始。
+>
+> - re.sub(*pattern*, *repl*, *string*, *count=0*, *flags=0*)
+>
+>   返回由*string*中*pattern*的最左边的非重叠出现处被替换为*repl*而得到的字符串。 如果没有找到模式，*string*将被原样返回。 *repl*可以是一个**字符串**或者一个**函数**；如果它是一个字符串，其中的**反斜杠转义将被处理**。 也就是说，`\n`被转换为一个换行符，`\r`被转换为一个回车符，以此类推。 未知的ASCII字母转义被保留给将来使用，并被视为错误。 其他未知的转义，如`\&`，则不作处理。反向引用，如`\6`，将被替换为模式中第6组匹配的子串。比如说 
+>
+>   ```python
+>   re.sub(r'def\s+([a-zA-Z_][a-zA-Z_0-9]*)\s*\(\s*\):',
+>   
+>          r'static PyObject*\npy_\1(void)\n{',
+>   
+>          'def myfunc():')
+>   'static PyObject*\npy_myfunc(void)\n{'
+>   ```
+>
+>   如果*repl*是一个函数，它将为*pattern*的每一次非重叠出现被调用。 该函数接受一个[匹配对象](https://docs.python.org/3/library/re.html#match-objects)参数，并返回替换的字符串。 比如说
+>
+>   ```python
+>   def dashrepl(matchobj):
+>   
+>       if matchobj.group(0) == '-': return ' '
+>   
+>       else: return '-'
+>   
+>   re.sub('-{1,2}', dashrepl, 'pro----gram-files')
+>   'pro--gram files'
+>   
+>   re.sub(r'\sAND\s', ' & ', 'Baked Beans And Spam', flags=re.IGNORECASE)
+>   'Baked Beans & Spam'
+>   ```
+>
+>   模式可以是一个字符串或一个[模式对象](https://docs.python.org/3/library/re.html#re-objects)。
+>
+>   可选的参数*count*是要替换的模式出现的最大数量；*count*必须是一个非负的整数。 如果省略或为零，所有出现的情况都将被替换。模式的空匹配只在与之前的空匹配不相邻时被替换，所以`sub('x*', '-', 'abxd')`返回`'-a-b--d'`。
+>
+>   在字符串类型的*repl*参数中，除了上述的字符转义和反向引用外，`g\<name>`将使用由`name`组匹配的子字符串，如`(?P<name>...)`语法定义。`\g<number>`使用相应的组号；因此`\g<2>`等同于`\2`，但在`\g<2>0`这样的替换中不会有歧义。 `\20`将被解释为对第20组的引用，而不是对第2组的引用，后面是字面常量字符 `‘0’`。 backreference `\g<0>`会替换为RE所匹配的整个子串。
+>
+>   在3.1版本中有所改变。增加了可选的flags参数。
+>
+>   在3.5版本中改变了：未匹配的组被替换为空字符串。
+>
+>   在3.6版中改变了：在*pattern*中由 `'\'` 和一个ASCII字母组成的未知转义现在是错误的。
+>
+>   在3.7版中改变了：*repl*中由`'\'` 和一个ASCII字母组成的未知转义现在是错误的。
+>
+>   在3.7版中改变了：当模式的空匹配与之前的非空匹配相邻时，会被替换。
+>
+>   从3.11版开始弃用：组*id*包含除ASCII数字以外的任何内容。在字节替换字符串中包含非ASCII字符的组名。
+>
+> - re.subn(*pattern*, *repl*, *string*, *count=0*, *flags=0*)
+>
+>   执行与[`sub()`](https://docs.python.org/3/library/re.html#re.sub)相同的操作，但返回一个元组`(new_string, number_of_subs_made)`。在3.1版本中有所改变。增加了可选的flags参数。 在3.5版本中改变了：未匹配的组被替换为空字符串。
+>   
+> - re.escape(*pattern*)
+>
+>   转义*pattern*中的特殊字符。如果你想匹配一个任意的字面常量字符串，其中可能有正则表达式的元字符，这很有用。 例如：
+>
+>   ```python
+>   print(re.escape('https://www.python.org'))
+>   https://www\.python\.org
+>   
+>   legal_chars = string.ascii_lowercase + string.digits + "!#$%&'*+-.^_`|~:"
+>   
+>   print('[%s]+' % re.escape(legal_chars))
+>   [abcdefghijklmnopqrstuvwxyz0123456789!\#\$%\&'\*\+\-\.\^_`\|\~:]+
+>   
+>   operators = ['+', '-', '*', '/', '**']
+>   
+>   print('|'.join(map(re.escape, sorted(operators, reverse=True))))
+>   /|\-|\+|\*\*|\*
+>   ```
+>
+>   这个函数不能用于[`sub()`](https://docs.python.org/3/library/re.html#re.sub)和[`subn()`](https://docs.python.org/3/library/re.html#re.subn)中的替换字符串，只有反斜线应该被转义。 比如说
+>
+>   ```python
+>   digits_re = r'\d+'
+>   
+>   sample = '/usr/sbin/sendmail - 0 errors, 12 warnings'
+>   
+>   print(re.sub(digits_re, digits_re.replace('\\', r'\\'), sample))
+>   /usr/sbin/sendmail - \d+ errors, \d+ warnings
+>   ```
+>
+>   在3.3版本中改变了：`'_'` 字符不再被转义。
+>
+>   在3.7版中改变了：只有那些在正则表达式中具有特殊意义的字符才被转义。因此，`'!'`, `'"'`, `'%'`, `"'"`, `','`, `'/'`, `':'`, `';'`, `'<'`, `'='`, `'>'`, `'@'`, 和   "`" 不再被转义了。
+>
+> - re.purge()
+>
+>   清除正则表达式缓存。
+
+**Exceptions**
+
+- *exception* re.error(*msg*, *pattern=None*, *pos=None*)
+
+  Exception raised when a string passed to one of the functions here is not a valid regular expression (for example, it might contain unmatched parentheses) or when some other error occurs during compilation or matching.  It is never an error if a string contains no match for a pattern.  The error instance has the following additional attributes:  
+
+  **msg**
+
+  ​        The unformatted error message.   
+
+  **pattern** 
+
+  ​        The regular expression pattern.   
+
+  **pos** 
+
+  ​        The index in *pattern* where compilation failed (may be `None`).   
+
+  **lineno** 
+
+  ​        The line corresponding to *pos* (may be `None`).   
+
+  **colno** 
+
+  ​        The column corresponding to *pos* (may be `None`).  
+
+  Changed in version 3.5: Added additional attributes.
+
+> *exception* re.error(*msg*, *pattern=None*, *pos=None*)
+>
+> 当传递给这里的一个函数的字符串不是一个有效的正则表达式（例如，它可能包含未匹配的括号），或者在编译或匹配过程中发生一些其他错误时，会产生异常。 如果一个字符串不包含匹配的模式，这绝不是一个错误。 错误实例有以下附加属性：
+>
+> **msg**
+>
+> 没有格式化的错误信息。  
+>
+> **pattern** 
+>
+> 正则表达式模式。  
+>
+> **pos** 
+>
+> 编译失败的*pattern*中的索引（可能是 `None`）。  
+>
+> **lineno** 
+>
+> 与*pos*相对应的行（可以是 `None`）。  
+>
+> **colno** 
+>
+> 与*pos*相对应的列（可以是 `None`）。 
+>
+> 3.5版中的变化：增加了额外的属性。
+
+**Regular Expression Objects**
+
+Compiled regular expression objects support the following methods and attributes:
+
+- Pattern.search(*string*[, *pos*[, *endpos*]])
+
+  Scan through *string* looking for the first location where this regular expression produces a match, and return a corresponding [match object](https://docs.python.org/3/library/re.html#match-objects).  Return `None` if no position in the string matches the pattern; note that this is different from finding a zero-length match at some point in the string. The optional second parameter *pos* gives an index in the string where the search is to start; it defaults to `0`.  This is not completely equivalent to slicing the string; the `'^'` pattern character matches at the real beginning of the string and at positions just after a newline, but not necessarily at the index where the search is to start. The optional parameter *endpos* limits how far the string will be searched; it will be as if the string is *endpos* characters long, so only the characters from *pos* to `endpos - 1` will be searched for a match.  If *endpos* is less than *pos*, no match will be found; otherwise, if *rx* is a compiled regular expression object, `rx.search(string, 0, 50)` is equivalent to `rx.search(string[:50], 0)`. 
+
+  ```python
+  pattern = re.compile("d")
+  
+  pattern.search("dog")     # Match at index 0
+  <re.Match object; span=(0, 1), match='d'>
+  
+  pattern.search("dog", 1)  # No match; search doesn't include the "d"
+  ```
+
+- Pattern.match(*string*[, *pos*[, *endpos*]])
+
+  If zero or more characters at the *beginning* of *string* match this regular expression, return a corresponding [match object](https://docs.python.org/3/library/re.html#match-objects). Return `None` if the string does not match the pattern; note that this is different from a zero-length match. The optional *pos* and *endpos* parameters have the same meaning as for the [`search()`](https://docs.python.org/3/library/re.html#re.Pattern.search) method. 
+
+  ```python
+  pattern = re.compile("o")
+  
+  pattern.match("dog")      # No match as "o" is not at the start of "dog".
+  
+  pattern.match("dog", 1)   # Match as "o" is the 2nd character of "dog".
+  <re.Match object; span=(1, 2), match='o'>
+  ```
+
+  If you want to locate a match anywhere in *string*, use [`search()`](https://docs.python.org/3/library/re.html#re.Pattern.search) instead (see also [search() vs. match()](https://docs.python.org/3/library/re.html#search-vs-match)).
+
+- Pattern.fullmatch(*string*[, *pos*[, *endpos*]])
+
+  If the whole *string* matches this regular expression, return a corresponding [match object](https://docs.python.org/3/library/re.html#match-objects).  Return `None` if the string does not match the pattern; note that this is different from a zero-length match. The optional *pos* and *endpos* parameters have the same meaning as for the [`search()`](https://docs.python.org/3/library/re.html#re.Pattern.search) method. 
+
+  ```python
+  pattern = re.compile("o[gh]")
+  
+  pattern.fullmatch("dog")      # No match as "o" is not at the start of "dog".
+  
+  pattern.fullmatch("ogre")     # No match as not the full string matches.
+  
+  pattern.fullmatch("doggie", 1, 3)   # Matches within given limits.
+  <re.Match object; span=(1, 3), match='og'>
+  ```
+
+  New in version 3.4.
+
+- Pattern.split(*string*, *maxsplit=0*)
+
+  Identical to the [`split()`](https://docs.python.org/3/library/re.html#re.split) function, using the compiled pattern.
+
+- Pattern.findall(*string*[, *pos*[, *endpos*]])
+
+  Similar to the [`findall()`](https://docs.python.org/3/library/re.html#re.findall) function, using the compiled pattern, but also accepts optional *pos* and *endpos* parameters that limit the search region like for [`search()`](https://docs.python.org/3/library/re.html#re.search).
+
+- Pattern.finditer(*string*[, *pos*[, *endpos*]])
+
+  Similar to the [`finditer()`](https://docs.python.org/3/library/re.html#re.finditer) function, using the compiled pattern, but also accepts optional *pos* and *endpos* parameters that limit the search region like for [`search()`](https://docs.python.org/3/library/re.html#re.search).
+
+- Pattern.sub(*repl*, *string*, *count=0*)
+
+  Identical to the [`sub()`](https://docs.python.org/3/library/re.html#re.sub) function, using the compiled pattern.
+
+- Pattern.subn(*repl*, *string*, *count=0*)
+
+  Identical to the [`subn()`](https://docs.python.org/3/library/re.html#re.subn) function, using the compiled pattern.
+
+- Pattern.flags
+
+  The regex matching flags.  This is a combination of the flags given to [`compile()`](https://docs.python.org/3/library/re.html#re.compile), any `(?...)` inline flags in the pattern, and implicit flags such as `UNICODE` if the pattern is a Unicode string.
+
+- Pattern.groups
+
+  The number of capturing groups in the pattern.
+
+- Pattern.groupindex
+
+  A dictionary mapping any symbolic group names defined by `(?P<id>)` to group numbers.  The dictionary is empty if no symbolic groups were used in the pattern.
+
+- Pattern.pattern
+
+  The pattern string from which the pattern object was compiled.
+
+Changed in version 3.7: Added support of [`copy.copy()`](https://docs.python.org/3/library/copy.html#copy.copy) and [`copy.deepcopy()`](https://docs.python.org/3/library/copy.html#copy.deepcopy).  Compiled regular expression objects are considered atomic.
+
+> 编译的**正则表达式对象**支持以下方法和属性：
+>
+> - Pattern.search(*string*[, *pos*[, *endpos*]])
+>
+>   扫描*string*，寻找该正则表达式产生**匹配的第一个位置**，并返回一个相应的[匹配对象](https://docs.python.org/3/library/re.html#match-objects)。 如果字符串中没有任何位置与该模式相匹配，则返回 `None`；注意，这与在字符串的某个位置找到一个零长度的匹配不同。可选的第二个参数*pos*给出了在字符串中**开始搜索的索引**；默认为`0`。 这并不完全等同于切分字符串；`'^'` 模式字符在字符串的真正开头和换行后的位置匹配，但不一定在搜索开始的索引处。可选的参数*endpos*限制了**字符串被搜索的范围**；就像字符串有*endpos*个字符那么长，所以只有从*pos*到`endpos - 1`的字符会被搜索到匹配。 如果*endpos*小于*pos*，将找不到匹配的字符；否则，如果*rx*是一个已编译的正则表达式对象，`rx.search(string, 0, 50)`就等同于`rx.search(string[:50], 0)`。
+>
+>   ```python
+>   pattern = re.compile("d")
+>   
+>   pattern.search("dog")     # Match at index 0
+>   <re.Match object; span=(0, 1), match='d'>
+>   
+>   pattern.search("dog", 1)  # No match; search doesn't include the "d"
+>   ```
+>
+> - Pattern.match(*string*[, *pos*[, *endpos*]])
+>
+>   如果在*string*的**开头**有0个或更多的字符与此正则表达式相匹配，则返回一个相应的[匹配对象](https://docs.python.org/3/library/re.html#match-objects)。如果字符串不匹配该模式，则返回`None`；注意，这与零长度匹配不同。可选的*pos*和*endpos*参数与[`search()`](https://docs.python.org/3/library/re.html#re.Pattern.search)方法的含义相同。
+>
+>   ```python
+>   pattern = re.compile("o")
+>   
+>   pattern.match("dog")      # No match as "o" is not at the start of "dog".
+>   
+>   pattern.match("dog", 1)   # Match as "o" is the 2nd character of "dog".
+>   <re.Match object; span=(1, 2), match='o'>
+>   ```
+>
+>   如果你想在*string*的任何地方找到一个匹配，可以使用[`search()`](https://docs.python.org/3/library/re.html#re.Pattern.search)来代替(参见[search()vs. match()](https://docs.python.org/3/library/re.html#search-vs-match))。
+>
+> - Pattern.fullmatch(*string*[, *pos*[, *endpos*]])
+>
+>   如果整个*string*与这个正则表达式相匹配，返回一个相应的[匹配对象](https://docs.python.org/3/library/re.html#match-objects)。 如果字符串不匹配该模式，则返回`None`；注意，这与零长度匹配不同。可选的*pos*和*endpos*参数与[`search()`](https://docs.python.org/3/library/re.html#re.Pattern.search)方法的含义相同。
+>
+>   ```python
+>   pattern = re.compile("o[gh]")
+>   
+>   pattern.fullmatch("dog")      # No match as "o" is not at the start of "dog".
+>   
+>   pattern.fullmatch("ogre")     # No match as not the full string matches.
+>   
+>   pattern.fullmatch("doggie", 1, 3)   # Matches within given limits.
+>   <re.Match object; span=(1, 3), match='og'>
+>   ```
+>
+>   3.4版本中的新内容。
+>   
+> - Pattern.split(*string*, *maxsplit=0*)
+>
+>   与[`split()`](https://docs.python.org/3/library/re.html#re.split)函数相同，使用编译后的模式。
+>
+> - Pattern.findall(*string*[, *pos*[, *endpos*]])
+>
+>   类似于[`findall()`](https://docs.python.org/3/library/re.html#re.findall)函数，使用编译后的模式，但也接受可选的*pos*和*endpos*参数，像[`search()`](https://docs.python.org/3/library/re.html#re.search)那样限制搜索区域。
+>
+> - Pattern.finditer(*string*[, *pos*[, *endpos*]])
+>
+>   类似于[`finditer()`](https://docs.python.org/3/library/re.html#re.finditer)函数，使用编译好的模式，但也接受可选的*pos*和*endpos*参数，像[`search()`](https://docs.python.org/3/library/re.html#re.search)那样限制搜索区域。
+>
+> - Pattern.sub(*repl*, *string*, *count=0*)
+>
+>   与[`sub()`](https://docs.python.org/3/library/re.html#re.sub)函数相同，使用编译后的模式。
+>
+> - Pattern.subn(*repl*, *string*, *count=0*)
+>
+>   与[`subn()`](https://docs.python.org/3/library/re.html#re.subn)函数相同，使用编译后的模式。
+>
+> - Pattern.flags
+>
+>   正则匹配标志。 这是给[`compile()`](https://docs.python.org/3/library/re.html#re.compile)的标志的组合，模式中的任何`(?...)`内联标志，以及隐含的标志，如`UNICODE`，如果模式是一个Unicode字符串。
+>
+> - Pattern.groups
+>
+>   模式中捕获组的数量。
+>
+> - Pattern.groupindex
+>
+>   一个字典，将任何由`(?P<id>)`定义的符号组名映射到组号。 如果模式中没有使用符号组，该字典为空。
+>
+> - Pattern.pattern
+>
+>   编译模式对象的模式字符串。
+>
+> 3.7版中的变化：增加了对[`copy.copy()`](https://docs.python.org/3/library/copy.html#copy.copy)和[`copy.deepcopy()`](https://docs.python.org/3/library/copy.html#copy.deepcopy)的支持。 编译的正则表达式对象被认为是原子性的。
+
+**Match Objects**
+
+Match objects always have a boolean value of `True`. Since [`match()`](https://docs.python.org/3/library/re.html#re.Pattern.match) and [`search()`](https://docs.python.org/3/library/re.html#re.Pattern.search) return `None` when there is no match, you can test whether there was a match with a simple `if` statement:
+
+```python
+match = re.search(pattern, string)
+if match:
+    process(match)
+```
+
+Match objects support the following methods and attributes:
+
+- Match.expand(*template*)
+
+  Return the string obtained by doing backslash substitution on the template string *template*, as done by the [`sub()`](https://docs.python.org/3/library/re.html#re.Pattern.sub) method. Escapes such as `\n` are converted to the appropriate characters, and numeric backreferences (`\1`, `\2`) and named backreferences (`\g<1>`, `\g<name>`) are replaced by the contents of the corresponding group. Changed in version 3.5: Unmatched groups are replaced with an empty string.
+
+- Match.group([*group1*, *...*])
+
+  Returns one or more subgroups of the match.  If there is a single argument, the result is a single string; if there are multiple arguments, the result is a tuple with one item per argument. Without arguments, *group1* defaults to zero (the whole match is returned). If a *groupN* argument is zero, the corresponding return value is the entire matching string; if it is in the inclusive range [1..99], it is the string matching the corresponding parenthesized group.  If a group number is negative or larger than the number of groups defined in the pattern, an [`IndexError`](https://docs.python.org/3/library/exceptions.html#IndexError) exception is raised. If a group is contained in a part of the pattern that did not match, the corresponding result is `None`. If a group is contained in a part of the pattern that matched multiple times, the last match is returned. 
+  
+  ```python
+  m = re.match(r"(\w+) (\w+)", "Isaac Newton, physicist")
+  
+  m.group(0)       # The entire match
+  'Isaac Newton'
+  
+  m.group(1)       # The first parenthesized subgroup.
+  'Isaac'
+  
+  m.group(2)       # The second parenthesized subgroup.
+  'Newton'
+  
+  m.group(1, 2)    # Multiple arguments give us a tuple.
+  ('Isaac', 'Newton')
+  ```
+  
+  If the regular expression uses the `(?P<name>...)` syntax, the *groupN* arguments may also be strings identifying groups by their group name.  If a string argument is not used as a group name in the pattern, an [`IndexError`](https://docs.python.org/3/library/exceptions.html#IndexError) exception is raised.
+  
+  A moderately complicated example:
+  
+  ```python
+  m = re.match(r"(?P<first_name>\w+) (?P<last_name>\w+)", "Malcolm Reynolds")
+  
+  m.group('first_name')
+  'Malcolm'
+  
+  m.group('last_name')
+  'Reynolds'
+  ```
+  
+  Named groups can also be referred to by their index:
+  
+  ```python
+  m.group(1)
+  'Malcolm'
+  
+  m.group(2)
+  'Reynolds'
+  ```
+  
+  If a group matches multiple times, only the last match is accessible:
+  
+  ```python
+  m = re.match(r"(..)+", "a1b2c3")  # Matches 3 times.
+  
+  m.group(1)                        # Returns only the last match.
+  'c3'
+  ```
+
+- Match.\__getitem__(*g*)
+
+  This is identical to `m.group(g)`.  This allows easier access to an individual group from a match:
+  
+  ```python
+  m = re.match(r"(\w+) (\w+)", "Isaac Newton, physicist")
+  
+  m[0]       # The entire match
+  'Isaac Newton'
+  
+  m[1]       # The first parenthesized subgroup.
+  'Isaac'
+  
+  m[2]       # The second parenthesized subgroup.
+  'Newton'
+  ```
+  
+  Named groups are supported as well:
+  
+  ```python
+  m = re.match(r"(?P<first_name>\w+) (?P<last_name>\w+)", "Isaac Newton")
+  
+  m['first_name']
+  'Isaac'
+  
+  m['last_name']
+  'Newton'
+  ```
+  
+  New in version 3.6.
+
+- Match.groups(*default=None*)
+
+  Return a tuple containing all the subgroups of the match, from 1 up to however many groups are in the pattern.  The *default* argument is used for groups that did not participate in the match; it defaults to `None`. For example: 
+  
+  ```python
+  m = re.match(r"(\d+)\.(\d+)", "24.1632")
+  
+  m.groups()
+  ('24', '1632')
+  ```
+  
+  If we make the decimal place and everything after it optional, not all groups might participate in the match.  These groups will default to `None` unless the *default* argument is given:
+  
+  ```python
+  m = re.match(r"(\d+)\.?(\d+)?", "24")
+  
+  m.groups()      # Second group defaults to None.
+  ('24', None)
+  
+  m.groups('0')   # Now, the second group defaults to '0'.
+  ('24', '0')
+  ```
+
+- Match.groupdict(*default=None*)
+
+  Return a dictionary containing all the *named* subgroups of the match, keyed by the subgroup name.  The *default* argument is used for groups that did not participate in the match; it defaults to `None`.  For example: 
+  
+  ```python
+  m = re.match(r"(?P<first_name>\w+) (?P<last_name>\w+)", "Malcolm Reynolds")
+  
+  m.groupdict()
+  {'first_name': 'Malcolm', 'last_name': 'Reynolds'}
+  ```
+
+- Match.start([*group*])
+
+- Match.end([*group*])
+
+  Return the indices of the start and end of the substring matched by *group*; *group* defaults to zero (meaning the whole matched substring). Return `-1` if *group* exists but did not contribute to the match.  For a match object *m*, and a group *g* that did contribute to the match, the substring matched by group *g* (equivalent to `m.group(g)`) is `m.string[m.start(g):m.end(g)] ` Note that `m.start(group)` will equal `m.end(group)` if *group* matched a null string.  For example, after `m = re.search('b(c?)', 'cba')`, `m.start(0)` is 1, `m.end(0)` is 2, `m.start(1)` and `m.end(1)` are both 2, and `m.start(2)` raises an [`IndexError`](https://docs.python.org/3/library/exceptions.html#IndexError) exception. An example that will remove *remove_this* from email addresses: >>>``
+
+```
+email = "tony@tiremove_thisger.net"
+m = re.search("remove_this", email)
+```
+
+
+
+- Match.span([*group*])
+
+  For a match *m*, return the 2-tuple `(m.start(group), m.end(group))`. Note that if *group* did not contribute to the match, this is `(-1, -1)`. *group* defaults to zero, the entire match.
+
+- Match.pos
+
+  The value of *pos* which was passed to the [`search()`](https://docs.python.org/3/library/re.html#re.Pattern.search) or [`match()`](https://docs.python.org/3/library/re.html#re.Pattern.match) method of a [regex object](https://docs.python.org/3/library/re.html#re-objects).  This is the index into the string at which the RE engine started looking for a match.
+
+- Match.endpos
+
+  The value of *endpos* which was passed to the [`search()`](https://docs.python.org/3/library/re.html#re.Pattern.search) or [`match()`](https://docs.python.org/3/library/re.html#re.Pattern.match) method of a [regex object](https://docs.python.org/3/library/re.html#re-objects).  This is the index into the string beyond which the RE engine will not go.
+
+- Match.lastindex
+
+  The integer index of the last matched capturing group, or `None` if no group was matched at all. For example, the expressions `(a)b`, `((a)(b))`, and `((ab))` will have `lastindex == 1` if applied to the string `'ab'`, while the expression `(a)(b)` will have `lastindex == 2`, if applied to the same string.
+
+- Match.lastgroup
+
+  The name of the last matched capturing group, or `None` if the group didn’t have a name, or if no group was matched at all.
+
+- Match.re
+
+  The [regular expression object](https://docs.python.org/3/library/re.html#re-objects) whose [`match()`](https://docs.python.org/3/library/re.html#re.Pattern.match) or [`search()`](https://docs.python.org/3/library/re.html#re.Pattern.search) method produced this match instance.
+
+- Match.string
+
+  The string passed to [`match()`](https://docs.python.org/3/library/re.html#re.Pattern.match) or [`search()`](https://docs.python.org/3/library/re.html#re.Pattern.search).
+
+Changed in version 3.7: Added support of [`copy.copy()`](https://docs.python.org/3/library/copy.html#copy.copy) and [`copy.deepcopy()`](https://docs.python.org/3/library/copy.html#copy.deepcopy).  Match objects are considered atomic.
+
+> - Match.expand(*template*)
+>
+>   返回通过对模板字符串*template*进行反斜杠替换得到的字符串，正如[`sub()`](https://docs.python.org/3/library/re.html#re.Pattern.sub)方法所做的那样。诸如`\n` 会被转换为适当的字符，数字向后引用（`\1`，`\2`）和命名向后引用（`\g<1>`，`\g<name>`）会被相应组的内容所取代。在3.5版本中改变了：未匹配的组被替换为空字符串。
+>
+> - Match.group([*group1*, *...*])
+>
+> - 返回匹配的一个或多个子群。如果有一个参数，结果是一个字符串；如果有多个参数，结果是一个元组，每个参数有一个项目。如果没有参数，group1默认为零（整个匹配被返回）。如果groupN参数为0，相应的返回值是整个匹配的字符串；如果它在包容范围[1...99]内，它是匹配相应括号内的组的字符串。如果一个组的编号为负数或大于模式中定义的组数，则会产生一个IndexError异常。如果一个组包含在模式的一个部分中，但没有匹配，那么相应的结果是`None`。如果一个组包含在多次匹配的模式的一部分中，则返回最后的匹配结果
+>
+>   ```python
+>   m = re.match(r"(\w+) (\w+)", "Isaac Newton, physicist")
+>
+>   m.group(0)       # The entire match
+>   'Isaac Newton'
+>
+>   m.group(1)       # The first parenthesized subgroup.
+>   'Isaac'
+>
+>   m.group(2)       # The second parenthesized subgroup.
+>   'Newton'
+>
+>   m.group(1, 2)    # Multiple arguments give us a tuple.
+>   ('Isaac', 'Newton')
+>   ```
+>
+>   如果正则表达式使用`(?P<name>...)`语法，*groupN*参数也可以是字符串，通过组名来识别组。 如果在模式中没有使用字符串参数作为组名，就会产生一个[`IndexError`](https://docs.python.org/3/library/exceptions.html#IndexError)异常。
+>
+>   一个适度复杂的例子：
+>
+>   ```python
+>   m = re.match(r"(?P<first_name>\w+) (?P<last_name>\w+)", "Malcolm Reynolds")
+>
+>   m.group('first_name')
+>   'Malcolm'
+>
+>   m.group('last_name')
+>   'Reynolds'
+>   ```
+>
+>   命名的组也可以通过其索引来引用：
+>
+>   ```python
+>   m.group(1)
+>   'Malcolm'
+>
+>   m.group(2)
+>   'Reynolds'
+>   ```
+>
+>   如果一个组匹配了多次，只有最后一个匹配才可以访问：
+>
+>   ```python
+>   m = re.match(r"(..)+", "a1b2c3")  # Matches 3 times.
+>
+>   m.group(1)                        # Returns only the last match.
+>   'c3'
+>
+> - 
+
+
+
+#### modules
+
+[`sys`](https://docs.python.org/3/library/sys.html):
+
+#### string formatting
+
+[what the f-strings?](https://sadh.life/post/what-the-f-strings/)
 
 
 
@@ -1017,6 +2526,19 @@ file encoding format: utf-8
 
 the search order(local scope - enclosing scope - gloabal scope - builtin scope)
 
+[小整数缓存](https://docs.python.org/3.8/c-api/long.html#c.PyLong_FromLong)使[-5,256]范围内的整数重复使用同一对象的相同值。[String Interning](http://python-reference.readthedocs.io/en/latest/docs/functions/intern.html)将具有相同内容的字符串的引用指向同一个对象。
+
+在Python中，所有**比较相等的数字值都有相同的哈希值**。
+
+```python
+>>> hash(42) == hash(42.0) == hash(42+0j)
+True
+```
+
+Never pass list comprehensions inside `any` or `all` when you can pass a generator instead. 当可以使用生成器的时候千万不要使用列表推导式，后者是先存储值再查找，前者是逐一查找，后者所需时间比前者多很多
+
+
+
 
 
 #### Funky globals
@@ -1070,10 +2592,19 @@ shifts
 
 看到[函数定义](https://docs.python.org/3/reference/compound_stmts.html#function-definitions)的默认参数的默认值的设置规则的时候才明白，以前看过一个爬虫函数将在函数运行中发生变化的参数默认值设置成 `parameter=None` 的原因。至此加深了编程需要看原始文档的印象。
 
+Python的六种基础数据类型，`str`, `bytes`, `int`, `bool`, `float`, `complex`。其中`str`是关于string数据类型的，`bytes`是关于byte数据类型的，`int`, `bool`, `float`, `complex`这四个是关于数字类型的。在这四种数字类型当中，`bool`是`int`的子类型（subtype）。说明Python的数据操作可大致分为三类：string，byte，数字。编程是关于数据的获取，存储，处理和流转的。对于Python编程而言，基本上就相当于对这三种数据类型的获取，存储，处理和流转。
+
+Python编程的学习思路是基础入门知识，如Python的内置类型，语法等。其次是如何使用函数，以及由此延伸的编程模块和库，强调编写函数的使用文档的重要性。重点是学会应用Python语言的特性——面对对象编程，class对象的创建及封装，以及其派生等用法，都是需要掌握的内容。
+
 
 
 ## Documentation
 
-The [`pprint`](https://docs.python.org/3/library/pprint.html#module-pprint) module offers more sophisticated control over printing both built-in and user defined objects in a way that is readable by the interpreter. When the result is longer than one line, the “pretty printer” adds line breaks and indentation to more clearly reveal data structure:
+Now you can create a file named `usercustomize.py` in that directory and put anything you want in it.  It will affect every invocation of Python, unless it is started with the [`-s`](https://docs.python.org/3/using/cmdline.html#cmdoption-s) option to disable the automatic import.
 
-> 
+`sitecustomize` works in the same way, but is typically created by an administrator of the computer in the global **site-packages** directory, and is imported before `usercustomize`.  See the documentation of the [`site`](https://docs.python.org/3/library/site.html#module-site) module for more details.
+
+> 现在你可以在该目录下创建一个名为 `usercustomize.py` 的文件，并在其中放入任何你想要的东西。 它将影响Python的每次调用，除非用[`-s`](https://docs.python.org/3/using/cmdline.html#cmdoption-s)选项启动，以禁止自动导入。
+>
+> `sitecustomize`的工作方式相同，但通常是由计算机的管理员在**全局**site-packages目录下创建，并在`usercustomize`之前导入。 更多细节见[`site`](https://docs.python.org/3/library/site.html#module-site)模块的文档。
+

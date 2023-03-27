@@ -722,13 +722,13 @@ Conventions for writing good documentation strings (a.k.a. “docstrings”) are
 
 The naming conventions of Python’s library are a bit of a mess, so we’ll never get this completely consistent – nevertheless, here are the currently recommended naming standards. New modules and packages (including third party frameworks) should be written to these standards, but where an existing library has a different style, internal consistency is preferred.
 
-> Python 库的命名规则有点乱，所以我们永远不会让它完全一致--尽管如此，这里是目前推荐的命名标准。新的模块和包 (包括第三方框架) 应该按照这些标准编写，但如果现有的库有不同的风格，内部的一致性是首选。
+> Python 库的命名规则有点乱，所以我们永远不会让它完全一致--尽管如此，这里是目前推荐的命名标准。新的模块和包 (包括第三方框架) 应该按照这些标准编写，但如果现有的库有不同的风格，**内部的一致性**是首选。
 
 ### Overriding principle
 
 Names that are visible to the user as public parts of the API should follow conventions that reflect usage rather than implementation.
 
-> 作为API的公共部分，对用户可见的名称应该遵循反映使用情况而不是实现情况的惯例。
+> 作为API的公共部分，对用户可见的名称应该遵循**反映使用情况**而不是实现情况的惯例。
 >
 
 ### Descriptive: naming style
@@ -763,17 +763,17 @@ The X11 library uses a leading X for all its public functions. In Python, this s
 
 In addition, the following special forms using leading or trailing underscores are recognized (these can generally be combined with any case convention):
 
-- `_single_leading_underscore`: weak “internal use” indicator. E.g. `from M import *` does not import objects whose names start with an underscore.
+- `_single_leading_underscore`: weak “**internal use**” indicator. E.g. `from M import *` does not import objects whose names start with an underscore.
 
-- `single_trailing_underscore_`: used by convention to avoid conflicts with Python keyword, e.g.
+- `single_trailing_underscore_`: used by convention to **avoid conflicts with Python keyword**, e.g.
 
   ```python
   tkinter.Toplevel(master, class_='ClassName')
   ```
 
-- `__double_leading_underscore`: when naming a class attribute, invokes name mangling (inside class FooBar, `__boo` becomes `_FooBar__boo`; see below).
+- `__double_leading_underscore`: when naming a class attribute, invokes **name mangling**（名称修饰） (inside class FooBar, `__boo` becomes `_FooBar__boo`; see below).
 
-- `__double_leading_and_trailing_underscore__`: “magic” objects or attributes that live in user-controlled namespaces. E.g. `__init__`, `__import__` or `__file__`. Never invent such names; only use them as documented.
+- `__double_leading_and_trailing_underscore__`: “magic” objects or attributes that live in user-controlled namespaces. E.g. `__init__`, `__import__` or `__file__`. Never invent such names; **only use them as documented**.
 
 ### Prescriptive: naming conventions
 
@@ -791,7 +791,7 @@ In some fonts, these characters are indistinguishable from the numerals one and 
 
 Identifiers used in the standard library must be ASCII compatible as described in the [policy section](https://peps.python.org/pep-3131#policy-specification) of [PEP 3131](https://peps.python.org/pep-3131).
 
-> 如[PEP 3131](https://peps.python.org/pep-3131)的[政策部分](https://peps.python.org/pep-3131#policy-specification)所述，标准库中使用的标识符必须是ASCII兼容。
+> 如[PEP 3131](https://peps.python.org/pep-3131)的[政策部分](https://peps.python.org/pep-3131#policy-specification)所述，**标准库中使用的标识符**必须是ASCII兼容。
 
 #### [Package and Module Names](https://peps.python.org/pep-0008/#package-and-module-names)
 
@@ -799,9 +799,9 @@ Modules should have short, all-lowercase names. Underscores can be used in the m
 
 When an extension module written in C or C++ has an accompanying Python module that provides a higher level (e.g. more object oriented) interface, the C/C++ module has a leading underscore (e.g. `_socket`).
 
-> 模块应该有简短的、全小写的名字。如果能提高可读性，可以在模块名称中使用下划线。Python 包也应该有短的、全小写的名字，尽管不鼓励使用下划线。
+> 模块应该有**简短的、全小写**的名字。如果能提高可读性，可以在模块名称中使用下划线。Python **包**也应该有短的、全小写的名字，尽管不鼓励使用下划线。
 >
-> 当一个用C或C++编写的扩展模块有一个附带的Python模块，它提供了一个更高级别的(例如，更多的面向对象的)接口，C/C++模块有一个前导下划线(例如，`_socket`)。
+> 当一个用C或C++编写的扩展模块有一个附带的Python模块，它提供了一个更高级别的(例如，更多的面向对象的)接口，C/C++模块有一个**前导下划线**(例如，`_socket`)。
 
 #### [Class Names](https://peps.python.org/pep-0008/#class-names)
 
@@ -811,11 +811,11 @@ The naming convention for functions may be used instead in cases where the inter
 
 Note that there is a separate convention for builtin names: most builtin names are single words (or two words run together), with the CapWords convention used only for exception names and builtin constants.
 
-> 类的名字通常应该使用CapWords惯例。
+> 类的名字通常应该使用**CapWords惯例**。
 >
 > 在接口被记录下来并主要作为可调用的情况下，可以使用函数的命名惯例。
 >
-> 请注意，对于内建程序的名称有一个单独的约定：大多数内建程序的名称是单字（或两个字并列），CapWords约定只用于异常名称和内建程序常量。
+> 请注意，对于**内置名称**有一个单独的约定：大多数内置名称是单字（或两个字并列），CapWords约定只用于异常名称和内建程序常量。
 
 example:
 
@@ -907,7 +907,7 @@ Note: there is some controversy about the use of __names (see below).
 >
 > 只对非公共方法和实例变量使用一个前导下划线。
 >
-> 为了避免与子类的名称冲突，使用两个前导下划线来调用 Python 的名称混合规则。
+> 为了避免与子类的名称冲突，使用两个前导下划线来调用 Python 的**名称修饰**规则。
 >
 > Python 将这些名字与类的名字混在一起：如果类 Foo 有一个名为 `__a` 的属性，它就不能被 `Foo.__a` 访问。(一个执着的用户仍然可以通过调用 `Foo._Foo__a` 获得访问权。)一般来说，双引号应该只用于避免与设计为子类的类中的属性发生名称冲突。
 >
@@ -991,11 +991,11 @@ With this in mind, here are the Pythonic guidelines:
 >
 > - 如果你的类打算被子类化，并且你有不想让子类使用的属性，考虑用双头下划线和无尾下划线来命名它们。这将调用 Python 的名称混合算法，类的名称将被混合成属性名称。这有助于在子类无意中包含相同名称的属性时避免属性名称的冲突。
 >
->   注意1：注意只有简单的类名被用于混杂的名称中，所以如果一个子类选择了相同的类名和属性名，你仍然可以得到名称碰撞。
+>   注意1：注意只有简单的类名被用于混杂的名称中，所以如果一个子类选择了相同的类名和属性名，你仍然可以得到名称冲突。
 >
->   注意 2: 名字混杂会使某些使用变得不那么方便，例如调试和 `__getattr__()`。然而，名称混杂的算法有很好的文件记录，并且很容易手动执行。
+>   注意 2: 名字修饰会使某些使用变得不那么方便，例如调试和 `__getattr__()`。然而，名称修饰的算法有很好的文件记录，并且很容易手动执行。
 >
->   注意 3: 不是每个人都喜欢名字的混杂。试着在避免意外的名字冲突与高级调用者的潜在使用之间取得平衡。
+>   注意 3: 不是每个人都喜欢名字的修饰。试着在避免意外的名字冲突与高级调用者的潜在使用之间取得平衡。
 
 ### [Public and Internal Interfaces](https://peps.python.org/pep-0008/#public-and-internal-interfaces)
 
@@ -1059,7 +1059,7 @@ Imported names should always be considered an implementation detail. Other modul
 >   ```python
 >   # Correct:
 >   if foo is not None:
->         
+>           
 >   # Wrong:
 >   if not foo is None:
 >   ```

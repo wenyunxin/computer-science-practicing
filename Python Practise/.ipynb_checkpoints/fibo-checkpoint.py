@@ -1,22 +1,13 @@
-# Fibonacci numbers module
+#!/usr/bin/env python
 
-def fib(n):
-    a, b = 0, 1
-    while a < n:
-        print(a, end=' ')
+def fibo(num):
+    fibo_list = [1]
+    a, b = 1, 1
+    while a+b < num:
         a, b = b, a+b
-    print()
-
+        fibo_list.append(b)
+    return fibo_list
     
-def fib2(n):   # return Fibonacci series up to n
-    result = []
-    a, b = 0, 1
-    while a < n:
-        result.append(a)
-        a, b = b, a+b
-    return result
-
-
-if __name__ == "__main__":
-    import sys
-    fib(int(sys.argv[1]))
+    
+if __name__ == '__main__':
+    fibo(100)
