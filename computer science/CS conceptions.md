@@ -64,7 +64,7 @@ There may also be a separate introductory guide aimed at giving newcomers enough
 
 operator 运算符，操作符（如`+`，`-`，`*`，`/`）
 
-operand  操作数（运算符操作的对象）
+operand  操作数（运算符操作的对象）, 操作元？
 
 [character(computing)](https://en.wikipedia.org/wiki/Character_(computing)) 字符
 
