@@ -437,7 +437,7 @@ Cluster analysis is the assignment of a set of observations into subsets (called
 
 In [logic](https://en.wikipedia.org/wiki/Logic) and [computer science](https://en.wikipedia.org/wiki/Computer_science), a **metasyntax** describes the allowable structure and composition of phrases and sentences of a [metalanguage](https://en.wikipedia.org/wiki/Metalanguage), which is used to describe either a [natural language](https://en.wikipedia.org/wiki/Natural_language) or a computer [programming language](https://en.wikipedia.org/wiki/Programming_language).[[1\]](https://en.wikipedia.org/wiki/Metasyntax#cite_note-1) Some of the widely used formal metalanguages for computer languages are [Backus–Naur form](https://en.wikipedia.org/wiki/Backus–Naur_form) (BNF), [extended Backus–Naur form](https://en.wikipedia.org/wiki/Extended_Backus–Naur_form) (EBNF), [Wirth syntax notation](https://en.wikipedia.org/wiki/Wirth_syntax_notation) (WSN), and [augmented Backus–Naur form](https://en.wikipedia.org/wiki/Augmented_Backus–Naur_form) (ABNF).
 
-> 在[逻辑学](https://en.wikipedia.org/wiki/Logic)和[计算机科学](https://en.wikipedia.org/wiki/Computer_science)中，**元语法**描述了被用来描述[自然语言](https://en.wikipedia.org/wiki/Natural_language)或计算机[编程语言](https://en.wikipedia.org/wiki/Programming_language)的[元语言](https://en.wikipedia.org/wiki/Metalanguage)的可允许的结构和短语和句子的组成。一些广泛使用的计算机语言的形式元语言是[Backus-Naur形式](https://en.wikipedia.org/wiki/Backus-Naur_form)（BNF），[扩展的Backus-Naur形式](https://en.wikipedia.org/wiki/Extended_Backus-Naur_form)（EBNF），[Wirth syntax notation](https://en.wikipedia.org/wiki/Wirth_syntax_notation)（WSN），以及[增强的Backus-Naur形式](https://en.wikipedia.org/wiki/Augmented_Backus-Naur_form) （ABNF）。
+> 在[逻辑学](https://en.wikipedia.org/wiki/Logic)和[计算机科学](https://en.wikipedia.org/wiki/Computer_science)中，**元语法**描述了被用来描述[自然语言](https://en.wikipedia.org/wiki/Natural_language)或计算机[编程语言](https://en.wikipedia.org/wiki/Programming_language)的[元语言](https://en.wikipedia.org/wiki/Metalanguage)的可允许的短语和句子两者的结构和组成。一些广泛使用的计算机语言的形式元语言是[Backus-Naur形式](https://en.wikipedia.org/wiki/Backus-Naur_form)（BNF），[扩展的Backus-Naur形式](https://en.wikipedia.org/wiki/Extended_Backus-Naur_form)（EBNF），[Wirth syntax notation](https://en.wikipedia.org/wiki/Wirth_syntax_notation)（WSN），以及[增强的Backus-Naur形式](https://en.wikipedia.org/wiki/Augmented_Backus-Naur_form) （ABNF）。
 
 These metalanguages have their own metasyntax each composed of [terminal symbols](https://en.wikipedia.org/wiki/Terminal_symbol), [nonterminal symbols](https://en.wikipedia.org/wiki/Nonterminal_symbol), and *metasymbols*. A terminal symbol, such as a word or a token, is a stand-alone structure in a language being defined. A nonterminal symbol represents a [syntactic](https://en.wikipedia.org/wiki/Syntactic) category, which defines one or more valid phrasal or sentence structure consisted of an n-element subset. Metasymbols provide syntactic information for denotational purposes in a given metasyntax. Terminals, nonterminals, and metasymbols do not apply across all metalanguages.
 
@@ -482,7 +482,7 @@ Typically, the metalanguage for token-level languages (formally called "[regular
 - Grouping: e.g. `(A|B)`
 
 > - 并列：如：`A B`
-> - 备选：如：`A|B`
+> - 备选（或）：如：`A|B`
 > - 重复：例如：`{A B}`
 > - 可选短语：如：`[A B]`
 > - 分组：如：`(A|B)`
@@ -493,7 +493,7 @@ Typically, the metalanguage for token-level languages (formally called "[regular
 
 - '[Backus–Naur form](https://en.wikipedia.org/wiki/Backus–Naur_form)' denotes [nonterminal symbols](https://en.wikipedia.org/wiki/Nonterminal_symbol) by angle bracketing the name of the [syntactic category](https://en.wikipedia.org/wiki/Syntactic_category), while it denotes [terminal symbols](https://en.wikipedia.org/wiki/Terminal_symbol) by double quoting the terminal words. Terminals can never appear on the left-hand side of the metasymbol `::=` in a [derivation](https://en.wikipedia.org/wiki/Parse_tree) rule. The body of the definition on the right-hand side may be composed with several alternative forms with each alternative syntactic construct being separated by the metasymbol `|`. Each of these alternative construct may be either terminal or nonterminal.
 
-> '[Backus-Naur形式](https://en.wikipedia.org/wiki/Backus-Naur_form)'通过角括号表示[非终端符号](https://en.wikipedia.org/wiki/Nonterminal_symbol)，而它通过双引号扩住终端词表示[终端符号](https://en.wikipedia.org/wiki/Terminal_symbol)。在[派生](https://en.wikipedia.org/wiki/Parse_tree)（语法分析树）规则中，终端词永远不能出现在元符号`::=`的左侧。右侧的定义主体可以由几个备选形式组成，每个备选的句法结构都由元符号`|`分隔。每个备选结构都可以是终端符或非终端符。
+> '[Backus-Naur形式](https://en.wikipedia.org/wiki/Backus-Naur_form)'通过角括号表示[非终端符号](https://en.wikipedia.org/wiki/Nonterminal_symbol)，而它通过双引号扩住终端词表示[终端符号](https://en.wikipedia.org/wiki/Terminal_symbol)。在[派生](https://en.wikipedia.org/wiki/Parse_tree)（语法分析树）规则中，终端词永远不能出现在元符号`::=`的左侧。右侧的定义主体可以由几个备选（或）形式组成，每个备选（或）的句法结构都由元符号`|`分隔。每个备选结构都可以是终端符或非终端符。
 
 - '[Extended Backus–Naur form](https://en.wikipedia.org/wiki/Extended_Backus–Naur_form)' uses all facilities in BNF and introduces two more metasymbols for additional features. One of these two new features is applied to denote an optional phrase in a statement by square bracketing the optional phrase. The second feature is applied to denote a phrase that is to be repeated zero or more times by curly bracketing the phrase.
 
@@ -505,7 +505,7 @@ Typically, the metalanguage for token-level languages (formally called "[regular
 
 - '[Augmented Backus–Naur form](https://en.wikipedia.org/wiki/Augmented_Backus–Naur_form)' denotes nonterminal symbols by starting a one-word-name with an alphabet as the name of the syntactic category. Angle brackets are not required. Terminal symbols are either denoted by double quoted words or denoted by the following numeric structure: a `%`, followed by `b` or `x` or `d`, followed by a numeric value or a *concatenation of numeric values* separated by `.`. Metasymbol `-` is placed between two numeric values to denote *value range*. As that of BNF, the terminals of ABNF never occurs on the left-hand-side of the metasymbol `=` in the derivation rule. Metasymbol `/` denotes *alternations*. White space is used to separate elements in the body of the definition. The metasyntax for *repetition* in ABNF has several forms. A `*` preceding an element denotes the element to be repeated zero or more times. Numeric value n1 followed by `*` followed by numeric value n2 followed by an element denotes the element to be repeated at least n1 times and at most n2 times. A single numeric value n preceding an element denotes the element to be repeated n times. *Comments* may be express after metasymbol `;`. As in EBNF, square bracketing a phrase denotes the phrase to be *optional*.
 
-> '[Augmented Backus-Naur form](https://en.wikipedia.org/wiki/Augmented_Backus-Naur_form)'通过以一个字母作为句法类别的名称开始一个单字名来表示非终端符号。角括号是不需要的。终端符号要么用双引号表示，要么用以下数字结构表示：一个`%`，后面是`b`或`x`或`d`，后面是一个数字值或一个由`.`分隔的*数字值的连词*。元符号`-`放在两个数值之间，表示*数值范围*。和BNF一样，ABNF的终端永远不会出现在派生规则中的元符号`=`的左侧。元符号`/`表示*备选项*。空格用于分隔定义主体中的元素。ABNF中的*重复*的元语法有几种形式。一个元素前面的`*`表示该元素将被重复零次或多次。数字值n1后面是`*`，后面是数字值n2，后面是一个元素，表示这个元素至少要重复n1次，最多重复n2次。一个元素前的单一数值n表示该元素将被重复n次。*注释*可以在元符号`;`之后表达。在EBNF中，一个短语的方括号表示该短语是*可选择的*。
+> '[Augmented Backus-Naur form](https://en.wikipedia.org/wiki/Augmented_Backus-Naur_form)'通过以一个字母作为句法类别的名称开始一个单字名来表示非终端符号。角括号是不需要的。终端符号要么用双引号表示，要么用以下数字结构表示：一个`%`，后面是`b`或`x`或`d`，后面是一个数字值或一个由`.`分隔的*数字值的连词*。元符号`-`放在两个数值之间，表示*数值范围*。和BNF一样，ABNF的终端永远不会出现在派生规则中的元符号`=`的左侧。元符号`/`表示*备选（或）项*。空格用于分隔定义主体中的元素。ABNF中的*重复*的元语法有几种形式。一个元素前面的`*`表示该元素将被重复零次或多次。数字值n1后面是`*`，后面是数字值n2，后面是一个元素，表示这个元素至少要重复n1次，最多重复n2次。一个元素前的单一数值n表示该元素将被重复n次。*注释*可以在元符号`;`之后表达。在EBNF中，一个短语的方括号表示该短语是*可选择的*。
 
 ### Variations
 
@@ -554,7 +554,7 @@ A BNF specification is a set of derivation rules, written as
 
 where:
 
-- \<[symbol](https://en.wikipedia.org/wiki/Symbol)> [[1\]](https://en.wikipedia.org/wiki/Backus–Naur_form#cite_note-class-1) is a *[nonterminal](https://en.wikipedia.org/wiki/Nonterminal)* (variable) and the [__expression__](https://en.wikipedia.org/wiki/Expression_(mathematics)) consists of one or more sequences of either terminal or nonterminal symbols;
+- \<[symbol](https://en.wikipedia.org/wiki/Symbol)> [[1\]](https://en.wikipedia.org/wiki/Backus–Naur_form#cite_note-class-1) is a *[nonterminal](https://en.wikipedia.org/wiki/Nonterminal)* (variable) and the [\__expression__](https://en.wikipedia.org/wiki/Expression_(mathematics)) consists of one or more sequences of either terminal or nonterminal symbols;
 - `::=` means that the symbol on the left must be replaced with the expression on the right.
 - more sequences [of symbols] are separated by the [vertical bar](https://en.wikipedia.org/wiki/Vertical_bar) "|", indicating a [choice](https://en.wikipedia.org/wiki/Alternation_(formal_language_theory)), the whole being a possible substitution for the symbol on the left.
 
