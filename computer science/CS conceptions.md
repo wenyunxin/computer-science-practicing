@@ -896,7 +896,7 @@ Mapping: A [mapping](https://docs.python.org/3/glossary.html#term-mapping) objec
 
 interactive interpreter  交互式解释器
 
-string literals 字符串常量？
+string literals 字符串常数？
 
 constants 常数（Python的built-in constants有：`False`, `True`, `None`, `NotImplemented`, `Ellipsis`）. `__debug__`, `True`, `False` and `None` are the only **true constants** in Python, i.e. these 4 are the only global variables in Python that you cannot overwrite with a new value.
 
