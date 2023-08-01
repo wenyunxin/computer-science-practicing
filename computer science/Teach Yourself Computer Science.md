@@ -105,7 +105,7 @@ We recommend working through at least the first three chapters of SICP and doing
 
 Since this guide was first published in 2016, one of the most commonly asked questions has been whether we’d now recommend recordings of a more recent iteration of 61A taught by John DeNero, and/or the corresponding book *[Composing Programs](https://composingprograms.com/)*, which is “in the tradition of SICP” but uses Python. We think the DeNero resources are also great, and some students may end up preferring them, but we still suggest SICP, Scheme, and Brian Harvey’s lectures as the first set of resources to try.
 
-> 自从本指南在2016年首次出版以来，最常问的问题之一是我们现在是否会推荐John DeNero讲授的61A的最新迭代录音，和/或相应的书*[Composing Programs](https://composingprograms.com/)*，它是 "SICP的传统 "但使用Python。我们认为DeNero的资源也很好，有些学生可能最终会喜欢它们，但我们仍然建议把SICP、Scheme和Brian Harvey的讲座作为第一套资源来尝试。
+> 自从本指南在2016年首次出版以来，最常问的问题之一是我们现在是否会推荐John DeNero讲授的61A的最新迭代录音，和/或相应的书*[Composing Programs](https://composingprograms.com/)*，它是"SICP的传统"但使用Python。我们认为DeNero的资源也很好，有些学生可能最终会喜欢它们，但我们仍然建议把SICP、Scheme和Brian Harvey的讲座作为第一套资源来尝试。
 
 Why? Because SICP is unique in its ability—at least potentially—to alter your fundamental beliefs about computers and programming. Not everybody will experience this. Some will hate the book, others won't get past the first few pages. But the potential reward makes it worth trying.
 
@@ -126,7 +126,7 @@ Finally, a point of clarification: this guide is NOT designed for those who are 
 
 Computer Architecture—sometimes called “computer systems” or “computer organization”—is an important first look at computing below the surface of software. In our experience, it’s the most neglected area among self-taught software engineers.
 
-> 计算机体系结构--有时被称为 "计算机系统 "或 "计算机组织"--是对软件表面以下的计算的一个重要的初步了解。根据我们的经验，它是自学成才的软件工程师中最容易被忽视的领域。
+> 计算机体系结构--有时被称为"计算机系统"或"计算机组织"--是对软件表面以下的计算的一个重要的初步了解。根据我们的经验，它是自学成才的软件工程师中最容易被忽视的领域。
 
 Our favorite introductory book is *[Computer Systems: A Programmer's Perspective](http://csapp.cs.cmu.edu/3e/home.html)*, and a typical introductory computer architecture course using the book [would cover](http://csapp.cs.cmu.edu/3e/courses.html) most of chapters 1-6.
 

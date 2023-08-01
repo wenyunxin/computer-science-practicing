@@ -124,6 +124,12 @@ function invocation 函数调用
 
 iterator  迭代器
 
+operator 运算符
+
+operand  运算数
+
+multipier 乘数
+
 multiplicand  被乘数
 
 rational number 有理数
@@ -137,6 +143,8 @@ numerator  分子
 denominator  分母
 
 prompt  提示符**？**
+
+prefix notation 前缀表示法
 
 [BNF](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form): In [computer science](https://en.wikipedia.org/wiki/Computer_science), **Backus–Naur form** ([/ˌbækəs ˈnaʊər/](https://en.wikipedia.org/wiki/Help:IPA/English)) or **Backus normal form** (**BNF**) is a [metasyntax](https://en.wikipedia.org/wiki/Metasyntax) notation for [context-free grammars](https://en.wikipedia.org/wiki/Context-free_grammar), often used to describe the [syntax](https://en.wikipedia.org/wiki/Syntax_(programming_languages)) of [languages](https://en.wikipedia.org/wiki/Formal_language#Programming_languages) used in computing, such as computer [programming languages](https://en.wikipedia.org/wiki/Programming_language), [document formats](https://en.wikipedia.org/wiki/Document_format), [instruction sets](https://en.wikipedia.org/wiki/Instruction_set) and [communication protocols](https://en.wikipedia.org/wiki/Communication_protocol). They are applied wherever exact descriptions of languages are needed: for instance, in official language specifications, in manuals, and in textbooks on programming language theory.
 
@@ -221,6 +229,10 @@ token  标记
 
 comment  注释
 
+bytecode  字节码
+
+opcode  操作码
+
 backslash  反斜线
 
 identifier  标识符
@@ -280,6 +292,8 @@ form feed 翻页符
 backereferences 背景资料，参考文献？
 
 alphanumeric characters 字母和数字符号
+
+concurrent 并发？
 
 
 
@@ -804,6 +818,14 @@ apply Stylus css to jupyter lab
 
 
 
+### Unix filesysem
+
+In [Unix](https://en.wikipedia.org/wiki/Unix) and [operating systems](https://en.wikipedia.org/wiki/Operating_system) inspired by it, the [file system](https://en.wikipedia.org/wiki/File_system) is considered a central component of the operating system.
+
+
+
+
+
 
 
 ## Python
@@ -858,7 +880,7 @@ product  乘积
 
 floor division 下取整除法（或整数除法），符号是 `//`
 
-interpolation 插值？
+interpolation 插值
 
 binary  operation  二元操作？
 
@@ -878,9 +900,11 @@ corountine  协同程序？
 
 EOF: abbr. 文件结束符（end of file）
 
-collection 集，数据集
+collection 数据集
 
 short-circuit operator  **最短线路**运算符
+
+short-circuit evaluation 最短路线运算
 
 list:  Lists are mutable sequences, typically used to store collections of homogeneous items (where the precise degree of similarity will vary by application).
 
@@ -891,6 +915,8 @@ string interpolation operation
 string formatting operations
 
 set:  A *set* object is an unordered collection of distinct [hashable](https://docs.python.org/3/glossary.html#term-hashable) objects. Common uses include membership testing, removing duplicates from a sequence, and computing mathematical operations such as intersection, union, difference, and symmetric difference. (For other containers see the built-in [`dict`](https://docs.python.org/3/library/stdtypes.html#dict), [`list`](https://docs.python.org/3/library/stdtypes.html#list), and [`tuple`](https://docs.python.org/3/library/stdtypes.html#tuple) classes, and the [`collections`](https://docs.python.org/3/library/collections.html#module-collections) module.)
+
+集合
 
 Mapping: A [mapping](https://docs.python.org/3/glossary.html#term-mapping) object maps [hashable](https://docs.python.org/3/glossary.html#term-hashable) values to arbitrary objects. Mappings are mutable objects. There is currently only one standard mapping type, the *dictionary*.
 
@@ -937,7 +963,7 @@ unpacking assignments ? 解包赋值
 
 Name mangling 名称修饰
 
- decouple  解耦
+decouple  解耦
 
 suspend  延缓
 
@@ -1053,9 +1079,9 @@ Python中的metaclass
 
 
 
-iterator:
+iterator: 迭代器
 
-generator:
+generator: 生成器？
 
 generator expressions:
 
@@ -2608,3 +2634,20 @@ Now you can create a file named `usercustomize.py` in that directory and put any
 >
 > `sitecustomize`的工作方式相同，但通常是由计算机的管理员在**全局**site-packages目录下创建，并在`usercustomize`之前导入。 更多细节见[`site`](https://docs.python.org/3/library/site.html#module-site)模块的文档。
 
+
+
+---
+
+
+
+## swift
+
+### nouns
+
+
+
+
+
+### verbs
+
+unwarp: 
